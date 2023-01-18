@@ -12,7 +12,7 @@ library(rlist)
 #'
 #' @return a list with tables from the URL
 download_tables <- function(url) {
-  page_info = GET(url_in) %>%
+  page_info = GET(url) %>%
     content("text") %>%
     readHTMLTable(doc = .)
 
@@ -79,7 +79,8 @@ suggest_tables_to_keep <- function(tables_list) {
   out <- list(
     "named tables" = named_elements,
     "dims ok" = enough_dims,
-    "max cols" = highest_dims
+    "max cols" = highest_dims,
+    "dims" = dims
   )
   return(out)
 }
