@@ -58,7 +58,7 @@ suggest_tables_to_keep <- function(tables_list) {
   # one column
   # also find the tables with the highest numbers of columns and keep only those
   dims <- lapply(tables_list, function(t) dim(t))
-
+  names(dims) <- 1:length(tables_list)
   max_cols <- lapply(dims, function(dim) dim[2]) |>
     unlist() |>
     max()
