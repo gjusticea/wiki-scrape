@@ -4,6 +4,8 @@ library(XML)
 library(httr)
 library(RCurl)
 library(rlist)
+library(lubridate)
+
 
 
 #' Download all wiki tables from a given URL
