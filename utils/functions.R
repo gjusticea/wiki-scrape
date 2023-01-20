@@ -41,6 +41,13 @@ clean_table = function(table){
 
 #' Try to automatically guess which tables to keep from a Wikipedia page
 #'
+#' It uses a few heuristics:
+#' a) if some tables are named, then only keep the named ones
+#' b) only keep tables that have more than one row / column
+#' c) only keep the tables that have the maximum number of columns
+#' d) check the number of cols of the table with the maximum number of rows
+#'    and keep all tables that have that number of columns
+#'
 #' @param tables_list A list of tables as produced by [download_tables()}
 #'
 #' @return a list with three elements: A vector with the index of all named
@@ -48,39 +55,44 @@ clean_table = function(table){
 #' row and a vector with the index of all tables that have the maximum numbers
 #' of columns found on that page
 suggest_tables_to_keep <- function(tables_list) {
-  # first approach: if any of the tables are named and others are not,
-  # then only keep the named ones
-  named_elements <- (1:length(tables_list))[
-    !(names(tables_list) %in% c("NULL", "\n"))
-  ]
 
-  # second approach: check those that have both more than one row and more than
-  # one column
-  # also find the tables with the highest numbers of columns and keep only those
+  # extract dimensions of all the tables
   dims <- lapply(tables_list, function(t) dim(t))
-  names(dims) <- 1:length(tables_list)
-  max_cols <- lapply(dims, function(dim) dim[2]) |>
-    unlist() |>
-    max()
 
-  enough_dims <- list()
-  highest_dims <- list()
-  for (i in 1:length(tables_list)) {
-    if (all(dims[[i]] > 1)) {
-      enough_dims[[i]] <- i
-      if (dims[[i]][2] == max_cols) {
-        highest_dims[[i]] <- i
-      }
-    }
-  }
-  enough_dims <- unlist(enough_dims)
-  highest_dims <- unlist(highest_dims)
+  meta_data <- data.table(
+    index = 1:length(tables_list),
+    name = names(tables_list),
+    nrows = lapply(dims, function(dim) dim[1]) |> unlist(),
+    ncols = lapply(dims, function(dim) dim[2]) |> unlist()
+  )
+
+  named_elements <- meta_data |>
+    filter(!(name %in% c("NULL", "\n"))) |>
+    pull(index)
+
+  enough_dims <- meta_data |>
+    filter(nrows > 1 & ncols > 1) |>
+    pull(index)
+
+  highest_cols <- meta_data |>
+    filter(ncols == max(ncols)) |>
+    pull(index)
+
+  cols_max_row <- meta_data |>
+    filter(nrows == max(nrows)) |>
+    pull(ncols) |>
+    unique() # this could in principle also be more than one if we're unlucky
+
+  cols_highest_rows <- meta_data |>
+    filter(ncols %in% cols_max_row) |>
+    pull(index)
 
   out <- list(
     "named tables" = named_elements,
     "dims ok" = enough_dims,
-    "max cols" = highest_dims,
-    "dims" = dims
+    "max cols" = highest_cols,
+    "cols max row" = cols_highest_rows,
+    "all" = meta_data
   )
   return(out)
 }
