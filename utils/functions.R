@@ -31,6 +31,7 @@ clean_table = function(table){
   table <- table |>
     mutate(across(everything(), na_if, y = "")) %>%
     mutate(across(everything(), ~ gsub(x = .x, pattern = "[\r\n]", replacement = " "))) |>
+    mutate(across(everything(), ~ gsub(x = .x, pattern = "\\p{Pd}", replacement = "-", perl=TRUE))) |>
     mutate(across(everything(), trimws)) %>%
     mutate(across(everything(), str_squish)) |>
     as.data.table()
