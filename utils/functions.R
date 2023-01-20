@@ -6,6 +6,7 @@ library(RCurl)
 library(rlist)
 library(lubridate) # cheat sheet: https://rawgit.com/rstudio/cheatsheets/main/lubridate.pdf
 library(tidyr)
+library(stringr)
 
 
 #' Download all wiki tables from a given URL
@@ -28,9 +29,10 @@ download_tables <- function(url) {
 clean_table = function(table){
 
   table <- table |>
-    mutate(across(everything(), trimws)) %>%
     mutate(across(everything(), na_if, y = "")) %>%
     mutate(across(everything(), ~ gsub(x = .x, pattern = "[\r\n]", replacement = " "))) |>
+    mutate(across(everything(), trimws)) %>%
+    mutate(across(everything(), str_squish)) |>
     as.data.table()
 
   # set first row to column names and remove first row
