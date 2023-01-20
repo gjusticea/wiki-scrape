@@ -4,7 +4,7 @@ library(XML)
 library(httr)
 library(RCurl)
 library(rlist)
-library(lubridate)
+library(lubridate) # cheat sheet: https://rawgit.com/rstudio/cheatsheets/main/lubridate.pdf
 
 
 
@@ -97,6 +97,27 @@ suggest_tables_to_keep <- function(tables_list) {
     "all" = meta_data
   )
   return(out)
+}
+
+
+# Helper function that reads in the current meta data file and updates it with
+# the current entry, then writes everything back
+update_category_info_sheet <- function(new_metadata) {
+
+  filelocation <- "output/category-metadata-info.csv"
+
+  all_metadata <- fread(filelocation)
+
+  # remove current entry if it is present
+  current_category_name <- new_metadata$`Category name`
+  all_metadata <- all_metadata |>
+    filter(`Category name` != current_category_name)
+
+  # add current entry
+  all_metadata <- all_metadata |>
+    rbind(new_metadata)
+
+  fwrite(all_metadata, filelocation)
 }
 
 
