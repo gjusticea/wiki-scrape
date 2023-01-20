@@ -15,11 +15,9 @@ table <- table |>
   rename(Event = `Spill / Vessel`) |>
   mutate(Category = "Major oil spills",
          "Event description" = paste0("Location: ", Location, ", Owner: ", Owner)) |>
-  # parse dates using lubridate
-  mutate(parsed_dates = lubridate::dmy(Dates)) |>
-  mutate("Timepoint start" = ifelse(!is.na(parsed_dates),
-                                    as.character(parsed_dates),
-                                    Dates)) |>
+  tidyr::separate(Dates, c("Timepoint start","Timepoint end"), sep = " – ", fill = "right") |>
+  mutate("Timepoint start" = try_to_parse_date(`Timepoint start`)) |>
+  mutate("Timepoint end" = try_to_parse_date(`Timepoint end`)) |>
   # take the median estimated oil spill as continuous quantity
   mutate(`Min Tonnes` = as.numeric(gsub(",", "", `Min Tonnes`)),
          `Max Tonnes` = as.numeric(gsub(",", "", `Max Tonnes`))) |>

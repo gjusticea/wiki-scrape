@@ -5,7 +5,7 @@ library(httr)
 library(RCurl)
 library(rlist)
 library(lubridate) # cheat sheet: https://rawgit.com/rstudio/cheatsheets/main/lubridate.pdf
-
+library(tidyr)
 
 
 #' Download all wiki tables from a given URL
@@ -133,6 +133,35 @@ add_and_keep_relevant_cols <- function(data) {
            `Accessed on` = Sys.Date()) |>
     select(one_of(cols_to_keep))
 }
+
+# parse a date using a specified parsing function. If that fails, just return
+# the original input
+parse_date <- function(date, parsing_function) {
+  parsed_dates <- parsing_function(date)
+
+  out <- ifelse(!is.na(parsed_dates),
+                as.character(parsed_dates),
+                date)
+  return(out)
+}
+
+
+# try different date parsing functions until one of them sticks
+# cheat sheet: https://rawgit.com/rstudio/cheatsheets/main/lubridate.pdf
+try_to_parse_date <- function(date) {
+  parsing_functions <- c(
+    lubridate::ymd,
+    lubridate::dmy #, could add lubridate::my, but this may be dangerous as it replaces the month with an exact date
+  )
+
+  for (fun in parsing_functions) {
+    date <- suppressWarnings(
+      parse_date(date, fun)
+    )
+  }
+  return(date)
+}
+
 
 
 ## need to add a function that takes all the csv files and combines them
