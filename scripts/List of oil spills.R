@@ -25,11 +25,8 @@ table <- table |>
          `Max Tonnes` = as.numeric(gsub(",", "", `Max Tonnes`))) |>
   rowwise() |>
   mutate("Quantity outcome 1" = mean(c_across(ends_with("Tonnes")))) |>
-  mutate(`Reference/link to data` = url,
-         `Accessed on` = Sys.Date()) |>
-  select(Category, Event, `Event description`, `Timepoint start`,
-         `Quantity outcome 1`,
-         `Reference/link to data`, `Accessed on`)
+  # helper function to do some tidying like selecting cols at the end
+  add_and_keep_relevant_cols()
 
 fwrite(table, "output/list of oil spills.csv")
 

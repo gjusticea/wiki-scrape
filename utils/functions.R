@@ -121,6 +121,19 @@ update_category_info_sheet <- function(new_metadata) {
 }
 
 
+# helper function for the repetetive task of adding a url and date column
+# and for selecting only the columns that are needed in the end
+add_and_keep_relevant_cols <- function(data) {
+  cols_to_keep <- c("Category ID", "Category", "Event", "Event description", "Timepoint start",
+                    "Timepoint end", "subj. confidence", "Binary outcome", "Quantity outcome 1",
+                    "Reference/link to data", "Accessed on", "Comment")
+
+  data |>
+    mutate(`Reference/link to data` = url,
+           `Accessed on` = Sys.Date()) |>
+    select(one_of(cols_to_keep))
+}
+
 
 ## need to add a function that takes all the csv files and combines them
 
