@@ -4,6 +4,9 @@ library(XML)
 library(httr)
 library(RCurl)
 library(rlist)
+library(lubridate) # cheat sheet: https://rawgit.com/rstudio/cheatsheets/main/lubridate.pdf
+library(tidyr)
+library(stringr)
 
 
 #' Download all wiki tables from a given URL
@@ -26,9 +29,11 @@ download_tables <- function(url) {
 clean_table = function(table){
 
   table <- table |>
-    mutate(across(everything(), trimws)) %>%
     mutate(across(everything(), na_if, y = "")) %>%
     mutate(across(everything(), ~ gsub(x = .x, pattern = "[\r\n]", replacement = " "))) |>
+    mutate(across(everything(), ~ gsub(x = .x, pattern = "\\p{Pd}", replacement = "-", perl=TRUE))) |>
+    mutate(across(everything(), trimws)) %>%
+    mutate(across(everything(), str_squish)) |>
     as.data.table()
 
   # set first row to column names and remove first row
@@ -95,6 +100,69 @@ suggest_tables_to_keep <- function(tables_list) {
     "all" = meta_data
   )
   return(out)
+}
+
+
+# Helper function that reads in the current meta data file and updates it with
+# the current entry, then writes everything back
+update_category_info_sheet <- function(new_metadata) {
+
+  filelocation <- "output/category-metadata-info.csv"
+
+  all_metadata <- fread(filelocation)
+
+  # remove current entry if it is present
+  current_category_name <- new_metadata$`Category name`
+  all_metadata <- all_metadata |>
+    filter(`Category name` != current_category_name)
+
+  # add current entry
+  all_metadata <- all_metadata |>
+    rbind(new_metadata)
+
+  fwrite(all_metadata, filelocation)
+}
+
+
+# helper function for the repetetive task of adding a url and date column
+# and for selecting only the columns that are needed in the end
+add_and_keep_relevant_cols <- function(data) {
+  cols_to_keep <- c("Category ID", "Category", "Event", "Event description", "Timepoint start",
+                    "Timepoint end", "subj. confidence", "Binary outcome", "Quantity outcome 1",
+                    "Reference/link to data", "Accessed on", "Comment")
+
+  data |>
+    mutate(`Reference/link to data` = url,
+           `Accessed on` = Sys.Date()) |>
+    select(one_of(cols_to_keep))
+}
+
+# parse a date using a specified parsing function. If that fails, just return
+# the original input
+parse_date <- function(date, parsing_function) {
+  parsed_dates <- parsing_function(date)
+
+  out <- ifelse(!is.na(parsed_dates),
+                as.character(parsed_dates),
+                date)
+  return(out)
+}
+
+
+# try different date parsing functions until one of them sticks
+# cheat sheet: https://rawgit.com/rstudio/cheatsheets/main/lubridate.pdf
+try_to_parse_date <- function(date) {
+  parsing_functions <- c(
+    lubridate::ymd,
+    lubridate::dmy #, could add lubridate::my, but this may be dangerous as it replaces the month with an exact date
+  )
+
+  for (fun in parsing_functions) {
+    date <- suppressWarnings(
+      parse_date(date, fun)
+    )
+  }
+  return(date)
 }
 
 
