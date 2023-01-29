@@ -4,7 +4,6 @@ url = "https://en.wikipedia.org/wiki/List_of_Category_5_Pacific_hurricanes"
 cat_name = "List of Category 5 Pacific hurricanes"
 cat_start = as.Date("")
 
-
 tables = download_tables(url)
 suggested_tables = suggest_tables_to_keep(tables)
 
