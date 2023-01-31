@@ -26,20 +26,24 @@ download_tables <- function(url) {
 
 
 # function to clean up entries and remove empty columns
-clean_table = function(table){
+clean_table = function(table, remove_first = TRUE){
 
   table <- table |>
     mutate(across(everything(), na_if, y = "")) %>%
     mutate(across(everything(), ~ gsub(x = .x, pattern = "[\r\n]", replacement = " "))) |>
     mutate(across(everything(), ~ gsub(x = .x, pattern = "\\p{Pd}", replacement = "-", perl=TRUE))) |>
+    mutate(across(everything(), ~ gsub(x = .x, pattern = "\\[[0-9]+\\]", replacement = ""))) |>
+    # to remove daggers and crosses
     # mutate(across(everything(), ~ gsub(x = .x, pattern = "[\x{2020}\x{2021}\x{271D}]", replacement = " "))) |>
     mutate(across(everything(), trimws)) %>%
     mutate(across(everything(), str_squish)) |>
     as.data.table()
 
   # set first row to column names and remove first row
-  colnames(table) <- as.character(table[1, ])
-  table <- table[-1, ]
+  if(remove_first == TRUE){
+    colnames(table) <- as.character(table[1, ])
+    table <- table[-1, ]
+  }
 
   return(table)
 }
