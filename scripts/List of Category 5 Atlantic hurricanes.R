@@ -9,7 +9,7 @@ suggested_tables = suggest_tables_to_keep(tables)
 # Table 2 is the one we want
 # Table 5 may be interesting if we want a better picture of damage
 table = tables[[2]] %>%
-  .[2:nrow(.),c(1:8)] %>%
+  .[,c(1:8)] %>%
   clean_table()
 colnames(table) = c("Name","Dates","Duration","Wind","Pressure","Areas",
                     "Damage","Deaths")
