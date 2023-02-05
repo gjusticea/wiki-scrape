@@ -7,6 +7,7 @@ cat_name = "List of heads of state and government who died in office"
 tables = download_tables(url)
 suggested_tables = suggest_tables_to_keep(tables)
 
+# Fairly arbitrary, but maybe useful as a reference set
 dev_countries = c("Australia","Austria","Brazil","China","New Zealand",
                   "Portugal","Republic of China","Singapore","Soviet Union",
                   "Spain","Switzerland","United States","England","Scotland",
