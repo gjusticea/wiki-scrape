@@ -11,7 +11,7 @@ suggested_tables = suggest_tables_to_keep(tables)
 table = do.call(rbind,tables[c(5,6)]) %>%
   mutate(Category = cat_name,
          Event = Name,
-         `Event description` = unlist(mapply(FUN = paste0, Title, Country,
+         `Event description` = unlist(mapply(FUN = paste, Title, Country,
                                              `Cause of death`, `Place of Death`,
                                              sep=" - ")),
          `Timepoint start` = Year,
