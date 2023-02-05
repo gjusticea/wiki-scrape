@@ -7,8 +7,15 @@ cat_name = "List of heads of state and government who died in office"
 tables = download_tables(url)
 suggested_tables = suggest_tables_to_keep(tables)
 
+dev_countries = c("Australia","Austria","Brazil","China","New Zealand",
+                  "Portugal","Republic of China","Singapore","Soviet Union",
+                  "Spain","Switzerland","United States","England","Scotland",
+                  "France","Italy","Germany","Denmark","Norway","Sweden",
+                  "Finland","Iceland","Turkey","Canada","Uruguay","Argentina",
+                  "Chile","Belgium","Netherlands")
+
 # Do the cleaning
-table = do.call(rbind,tables[c(5,6)]) %>%
+table_raw = do.call(rbind,tables[c(5,6)]) %>%
   mutate(Category = cat_name,
          Event = Name,
          `Event description` = unlist(mapply(FUN = paste, Title, Country,
@@ -18,11 +25,11 @@ table = do.call(rbind,tables[c(5,6)]) %>%
          `Timepoint end` = Year,
          `Quantity outcome 1` = NA,
          `Reference/link to data` = url,
-         `Accessed on` = Sys.Date()) %>%
-
-select(Category, Event, `Event description`, `Timepoint start`,
-       `Timepoint end`, `Quantity outcome 1`, `Reference/link to data`,
-       `Accessed on`)
+         `Accessed on` = Sys.Date())
+table = table_raw %>%
+  select(Category, Event, `Event description`, `Timepoint start`,
+         `Timepoint end`, `Quantity outcome 1`, `Reference/link to data`,
+         `Accessed on`)
 
 # Write to outputs folder
 fwrite(table,"output/list of deaths of heads of state.csv")
