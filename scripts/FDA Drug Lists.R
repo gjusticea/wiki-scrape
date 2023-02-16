@@ -2,6 +2,8 @@ library(tidyverse)
 library(data.table)
 library(writexl)
 library(lubridate)
+library(jsonlite)
+library(stringdist)
 
 source("utils/functions.R")
 
@@ -57,7 +59,120 @@ subs = read.delim(paste0(data_dir,"Submissions.txt")) %>%
                                               collapse=";; ")),
         by = "ApplNo")
 
-# get a clean list
+# Read in and process classification data
+# USP classification is a way of grouping drugs
+url_usp = "https://www.genome.jp/kegg-bin/download_htext?htext=br08302.keg&format=json"
+usp = fromJSON(url_usp)[['children']]
+
+psych_categories = c(
+  # "Anti-Addiction/Substance Abuse Treatment Agents",
+  "Antidementia Agents",
+  "Antidepressants",
+  "Antipsychotics",
+  "Anxiolytics"
+  , "Bipolar Agents"
+)
+
+usp_frame = matrix(nrow = 0, ncol = 5)
+for(i in c(1:length(usp[['children']]))){
+  name1 = usp[i,"name"]
+  tmp1 = usp[['children']][[i]]
+  for(j in c(1:length(tmp1[['name']]))){
+    name2 = tmp1[j,"name"]
+    if(!is.null(tmp1[['children']][[j]])){
+      tmp2 = tmp1[['children']][[j]]
+      for(k in c(1:length(tmp2[['name']]))){
+        name3 = tmp2[k,"name"]
+        if(!is.null(tmp2[['children']][[k]])){
+          tmp3 = tmp2[['children']][[k]]
+          for(l in c(1:length(tmp3[['name']]))){
+            name4 = tmp3[l,"name"]
+            if(!is.null(tmp3[['children']][[l]])){
+              tmp4 = tmp3[['children']][[l]]
+              for(m in c(1:length(tmp4[['name']]))){
+                name5 = tmp4[m,"name"]
+                usp_frame = rbind(usp_frame,c(name1,name2,name3,name4,name5))
+                rm(name5)
+              }
+            } else {
+              usp_frame = rbind(usp_frame,c(name1,name2,name3,"",name4))
+              rm(name4)
+            }
+          }
+        } else {
+          usp_frame = rbind(usp_frame,c(name1,name2,"","",name3))
+          rm(name3)
+        }
+      }
+    }
+  }
+}
+usp_frame = as.data.frame(usp_frame)
+colnames(usp_frame) = c("group1","group2","group3","group4","name")
+usp_frame = usp_frame %>%
+  mutate(name_clean = gsub("D[0-9]{5}|\\(.*?\\)","",name),
+         name_clean = toupper(trimws(name_clean)))
+
+# # Recursion is cleaner but runs into stack issues
+# get_entry = function(json_entry){
+#   x = json_entry
+#   if(is.null(json_entry$children)){
+#     return(json_entry %>% pull(name))
+#   } else {
+#     return(get_entry(x))
+#   }
+# }
+
+# Fuzzy matching FDA active ingredients to USP names doesn't work
+usp_key = subs %>%
+  select(ActiveIngredient) %>%
+  distinct() %>%
+  crossing(usp_frame %>%
+             mutate(name_clean = toupper(name_clean)) %>%
+             #filter(group1 %in% psych_categories) %>%
+             select(name_clean) %>%
+             distinct()) %>%
+  mutate(dist1 = stringdist(name_clean,ActiveIngredient,
+                           method = "lv"),
+         dist2 = stringdist(name_clean,ActiveIngredient,
+                            method = "qgram")) %>%
+  group_by(ActiveIngredient) %>%
+  filter(dist1 == min(dist1)) %>%
+  filter(dist2 == min(dist2))
+
+# Identify drugs as psych-related using suffixes
+# Psych drug suffixes
+# A word needs to end with it, or needs to be end of string
+# Excludes: barbiturates (-bital),
+# tranquilizers (-bamate, -clone), sedatives (-pidem)
+psych_suff = c("pramine","ridone","triptyline","zepam",
+               "zodone","zolam","axine","giline",
+               "oxetine","peridol","peridone","perone","plon",
+               "troline","pram","azine","etine","promine")
+psych_regex = paste0(paste0(psych_suff,collapse = " |"), " |",
+                     paste0(psych_suff,collapse = "$|"), "$") %>%
+  toupper()
+
+# Test on USP names with known class
+test = usp_frame %>%
+  select(group1,name_clean) %>%
+  mutate(psych = grepl(psych_regex,name_clean))
+test_sum = test %>%
+  count(group1,psych) %>%
+  pivot_wider(names_from = psych,values_from = n) %>%
+  mutate(tagged_percent = `TRUE`/unlist(mapply(FUN = sum,`TRUE`,`FALSE`)))
+
+# Check unmatched potential psych names
+test %>%
+  filter(group1 %in% psych_categories) %>%
+  View
+
+# Check all matched names
+test %>%
+  filter(psych == TRUE) %>%
+  View
+
+# Prepare a formatted list of all approved drugs
 # some drugs have two NDAs as well, this will help clean
 cat_name = "List of FDA Approved Drugs"
 
