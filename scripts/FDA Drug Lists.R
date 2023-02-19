@@ -12,6 +12,17 @@ url = "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-file
 refresh_date = as.Date("2023-02-11")
 data_dir = "ref/drugsatfda20230207/"
 
+# Common salts to eliminate from names to ease matching
+salt_list = c("SULFATE","SODIUM","HYDROCHLORIDE","DISODIUM",
+              "CHLORIDE","MALEATE","BITARTRATE","PHOSPHATE",
+              "DIPHOSPHATE","POTASSIUM","CALCIUM","CITRATE",
+              "MESYLATE","NITRATE","TARTRATE","GLUCONATE",
+              "ALUMINUM","ACETATE","TRISODIUM","MONOHYDRATE",
+              "SUCCINATE","FUMARATE","DIPOTASSIUM",
+              "CARBONATE") %>%
+  paste0(" ",.) %>%
+  paste0(collapse="|")
+
 # Data layout:
 # A drug refers to a pharmaceutical product (not active ingredient or molecule)
 # Each drug has an application number, which is based on its NDA
@@ -52,12 +63,14 @@ subs = read.delim(paste0(data_dir,"Submissions.txt")) %>%
   mutate(SubmissionStatusDate = as.Date(SubmissionStatusDate)) %>%
   merge(read.delim(paste0(data_dir,"Products.txt")) %>%       # Get active ingredient names
           select(ApplNo,ActiveIngredient) %>%
-          mutate(ApplNo = str_pad(ApplNo, 6, pad = "0")) %>%
+          mutate(ApplNo = str_pad(ApplNo, 6, pad = "0"),
+                 ActiveIngredient = gsub(salt_list,"",ActiveIngredient)) %>%
           distinct() %>%
           group_by(ApplNo) %>%
           summarize(ActiveIngredient = paste0(unique(ActiveIngredient),
                                               collapse=";; ")),
-        by = "ApplNo")
+        by = "ApplNo") %>%
+  distinct()
 
 # Read in and process classification data
 # USP classification is a way of grouping drugs
@@ -66,7 +79,7 @@ usp = fromJSON(url_usp)[['children']]
 
 psych_categories = c(
   # "Anti-Addiction/Substance Abuse Treatment Agents",
-  "Antidementia Agents",
+  # "Antidementia Agents",
   "Antidepressants",
   "Antipsychotics",
   "Anxiolytics"
@@ -110,8 +123,15 @@ for(i in c(1:length(usp[['children']]))){
 usp_frame = as.data.frame(usp_frame)
 colnames(usp_frame) = c("group1","group2","group3","group4","name")
 usp_frame = usp_frame %>%
-  mutate(name_clean = gsub("D[0-9]{5}|\\(.*?\\)","",name),
-         name_clean = toupper(trimws(name_clean)))
+  mutate(name_clean = case_when(
+    group3 == "" ~ group2,
+    group4 == "" ~ group3,
+    TRUE ~ group4
+  ),
+  name_clean = gsub("D[0-9]{5}|\\(.*?\\)|\\[.*?\\]","",name_clean),
+  name_clean = toupper(trimws(name_clean))) %>%
+  mutate(name_clean = gsub(salt_list,"",name_clean))
+rm(usp)
 
 # # Recursion is cleaner but runs into stack issues
 # get_entry = function(json_entry){
@@ -123,57 +143,66 @@ usp_frame = usp_frame %>%
 #   }
 # }
 
-# Fuzzy matching FDA active ingredients to USP names doesn't work
-usp_key = subs %>%
-  select(ActiveIngredient) %>%
+# Method 1 - Fuzzy matching USP names to FDA submissions
+# Eliminate compound drugs from the search
+m1_list = subs %>%
+  select(ApplNo,ActiveIngredient) %>%
   distinct() %>%
   crossing(usp_frame %>%
-             mutate(name_clean = toupper(name_clean)) %>%
-             #filter(group1 %in% psych_categories) %>%
+             filter(group1 %in% psych_categories) %>%
              select(name_clean) %>%
+             filter(!grepl("/",name_clean)) %>%
              distinct()) %>%
   mutate(dist1 = stringdist(name_clean,ActiveIngredient,
-                           method = "lv"),
-         dist2 = stringdist(name_clean,ActiveIngredient,
-                            method = "qgram")) %>%
-  group_by(ActiveIngredient) %>%
-  filter(dist1 == min(dist1)) %>%
-  filter(dist2 == min(dist2))
+                           method = "lv")) %>%
+  group_by(name_clean) %>%
+  filter(dist1 == min(dist1)) %>% # just for checking
+  filter(dist1 == 0) %>%
+  ungroup() %>%
+  select(ApplNo,ActiveIngredient)
 
-# Identify drugs as psych-related using suffixes
-# Psych drug suffixes
-# A word needs to end with it, or needs to be end of string
-# Excludes: barbiturates (-bital),
-# tranquilizers (-bamate, -clone), sedatives (-pidem)
-psych_suff = c("pramine","ridone","triptyline","zepam",
-               "zodone","zolam","axine","giline",
-               "oxetine","peridol","peridone","perone","plon",
-               "troline","pram","azine","etine","promine")
-psych_regex = paste0(paste0(psych_suff,collapse = " |"), " |",
-                     paste0(psych_suff,collapse = "$|"), "$") %>%
+# Method 2 - Identify drugs as psych-related using suffixes
+# A name needs to end with it, or needs to be end of string
+# Excludes: barbiturates (-bital), tranquilizers (-bamate, -clone),
+# sedatives (-pidem)
+psych_suffix = c("pramine","ridone","triptyline","zepam",
+               "zodone","zolam","faxine","giline","pidem",
+               "oxetine","peridol","peridone","perone",
+               "troline","opram","xetine","promine")
+psych_regex = paste0(paste0(psych_suffix,collapse = " |"), " |",
+                     paste0(psych_suffix,collapse = "$|"), "$") %>%
   toupper()
 
-# Test on USP names with known class
-test = usp_frame %>%
-  select(group1,name_clean) %>%
-  mutate(psych = grepl(psych_regex,name_clean))
-test_sum = test %>%
-  count(group1,psych) %>%
-  pivot_wider(names_from = psych,values_from = n) %>%
-  mutate(tagged_percent = `TRUE`/unlist(mapply(FUN = sum,`TRUE`,`FALSE`)))
+# # Test on USP names with known class
+# test_usp = usp_frame %>%
+#   filter(!grepl("/",name_clean)) %>%
+#   select(group1,name_clean) %>%
+#   distinct() %>%
+#   mutate(psych = grepl(psych_regex,name_clean))
+# test_sum = test_usp %>%
+#   count(group1,psych) %>%
+#   pivot_wider(names_from = psych,values_from = n) %>%
+#   mutate(tagged_percent = `TRUE`/unlist(mapply(FUN = sum,`TRUE`,`FALSE`)))
+# test_usp %>%
+#   filter(!group1 %in% psych_categories,
+#          psych == TRUE)
 
-# Check unmatched potential psych names
-test %>%
-  filter(group1 %in% psych_categories) %>%
-  View
+# Match a list of FDA drugs using the suffixes
+# Unpaired drugs, and drugs with uncommon salts, should be caught
+m2_list = subs %>%
+  select(ApplNo,ActiveIngredient) %>%
+  filter(grepl(psych_regex,ActiveIngredient))
 
-# Check all matched names
-test %>%
-  filter(psych == TRUE) %>%
-  View
 
-# Prepare a formatted list of all approved drugs
-# some drugs have two NDAs as well, this will help clean
+# Combine the two lists
+psych_drug_list = rbind(m1_list,m2_list) %>%
+  merge(subs) %>%
+  distinct()
+
+
+
+################################################################################
+# All FDA-approved drugs
 cat_name = "List of FDA Approved Drugs"
 
 table_all_drugs = subs %>%
@@ -192,9 +221,6 @@ table_all_drugs = subs %>%
          `Timepoint end`, `Quantity outcome 1`, `Reference/link to data`,
          `Accessed on`)
 
-
-# Number of approvals - done here
-
 fwrite(table_all_drugs,"output/fda approved drugs.csv")
 
 # create an entry for the category entry field.
@@ -212,8 +238,46 @@ metadata <- data.table(
 update_category_info_sheet(metadata)
 
 
+# Number of psych med approvals
+cat_name = "List of FDA Approved Psych Drugs"
+
+table_all_drugs = psych_drug_list %>%
+  group_by(ActiveIngredient, ApplType) %>%
+  summarize(Approval_Date = min(SubmissionStatusDate)) %>%
+  filter(year(Approval_Date) >= 1998) %>%
+  mutate(Category = cat_name,
+         Event = ActiveIngredient,
+         `Event description` = unlist(mapply(FUN = paste0, ActiveIngredient, " - ", ApplType)),
+         `Timepoint start` = as_date(Approval_Date),
+         `Timepoint end` = as_date(Approval_Date),
+         `Quantity outcome 1` = NA,
+         `Reference/link to data` = url,
+         `Accessed on` = refresh_date) %>%
+  select(Category, Event, `Event description`, `Timepoint start`,
+         `Timepoint end`, `Quantity outcome 1`, `Reference/link to data`,
+         `Accessed on`)
+
+fwrite(table_all_drugs,"output/fda approved psych drugs.csv")
+
+# create an entry for the category entry field.
+metadata <- data.table(
+  "Category ID" = "tbd",
+  "Category name" = cat_name,
+  "Description" = "List of approved NDAs and BLAs for new molecular entities with the US FDA since 1998 - limited to psychotropic drugs using their suffix or USP classification",
+  "Description quantity column 1" = "",
+  "Period start" = "1998",
+  "Period end" = "present",
+  "How was the period selected" = "Website: 'Drugs@FDA includes most of the drug products approved since 1939. The majority of patient information, labels, approval letters, reviews, and other information are available for drug products approved since 1998.'",
+  "Collected by" = "FDA, USP"
+)
+
+update_category_info_sheet(metadata)
+
+
+
+
+
 
 # Number of abx approvals - done already elsewhere
 # Number of vax approvals - separate data set
-# Number of psych med approvals - need to tag based on drug type
 
