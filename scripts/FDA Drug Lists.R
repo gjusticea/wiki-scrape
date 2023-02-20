@@ -162,9 +162,10 @@ m1_list = subs %>%
   select(ApplNo,ActiveIngredient)
 
 # Method 2 - Identify drugs as psych-related using suffixes
+# Unpaired drugs, and drugs with uncommon salts, should be caught
 # A name needs to end with it, or needs to be end of string
 # Excludes: barbiturates (-bital), tranquilizers (-bamate, -clone),
-# sedatives (-pidem)
+# sedatives (-plon)
 psych_suffix = c("pramine","ridone","triptyline","zepam",
                "zodone","zolam","faxine","giline","pidem",
                "oxetine","peridol","peridone","perone",
@@ -188,7 +189,6 @@ psych_regex = paste0(paste0(psych_suffix,collapse = " |"), " |",
 #          psych == TRUE)
 
 # Match a list of FDA drugs using the suffixes
-# Unpaired drugs, and drugs with uncommon salts, should be caught
 m2_list = subs %>%
   select(ApplNo,ActiveIngredient) %>%
   filter(grepl(psych_regex,ActiveIngredient))
@@ -272,10 +272,6 @@ metadata <- data.table(
 )
 
 update_category_info_sheet(metadata)
-
-
-
-
 
 
 # Number of abx approvals - done already elsewhere
