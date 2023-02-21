@@ -123,7 +123,8 @@ update_category_info_sheet <- function(new_metadata) {
 
   # add current entry
   all_metadata <- all_metadata |>
-    rbind(new_metadata)
+    list(new_metadata) %>%
+    rbindlist(fill = TRUE)
 
   fwrite(all_metadata, filelocation)
 }
