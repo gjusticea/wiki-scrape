@@ -14,12 +14,12 @@ library(stringr)
 #' @param url string containing the URL from which to download the tables
 #'
 #' @return a list with tables from the URL
-download_tables <- function(url) {
+download_tables <- function(url,rm_first = TRUE) {
   page_info = GET(url) %>%
     content("text") %>%
     readHTMLTable(doc = .)
 
-  page_info <- lapply(page_info, clean_table)
+  page_info <- lapply(page_info, clean_table, remove_first = rm_first)
 
   return(page_info)
 }
