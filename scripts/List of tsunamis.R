@@ -20,13 +20,8 @@ table = fread(path) %>%
                                       "Max water height (m): ",`Maximum Water Height (m)`,"; ",
                                       "Magnitude (Iida): ",`Tsunami Magnitude (Iida)`,
                                       "Deaths: ",Deaths),
-         `Quantity outcome 1` = `Number of Runups`,
-         `Reference/link to data` = "DOI:10.7289/V5PN93H7",
-         `Accessed on` = update_date) %>%
-
-  select(Category, Event, `Event description`, `Timepoint start`,
-         `Timepoint end`, `Quantity outcome 1`, `Reference/link to data`,
-         `Accessed on`)
+         `Quantity outcome 1` = `Number of Runups`) %>%
+  add_and_keep_relevant_cols(ref = "DOI:10.7289/V5PN93H7", access_date = update_date)
 
 # Write to outputs folder
 fwrite(table,"output/list of tsunamis.csv")

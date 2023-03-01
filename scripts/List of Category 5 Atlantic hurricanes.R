@@ -9,7 +9,7 @@ suggested_tables = suggest_tables_to_keep(tables)
 # Table 2 is the one we want
 # Table 5 may be interesting if we want a better picture of damage
 table = tables[[2]] %>%
-  .[2:nrow(.),c(1:8)] %>%
+  .[,c(1:8)] %>%
   clean_table()
 colnames(table) = c("Name","Dates","Duration","Wind","Pressure","Areas",
                     "Damage","Deaths")
@@ -56,13 +56,9 @@ table = table %>%
          `Timepoint start` = start,
          `Timepoint end` = end,
          `Quantity outcome 1` = Duration,
-         `Quantity outcome 2` = Deaths,
-         `Reference/link to data` = url,
-         `Accessed on` = Sys.Date()
+         `Quantity outcome 2` = Deaths
   ) %>%
-  select(Category, Event, `Event description`, `Timepoint start`,
-         `Timepoint end`, `Quantity outcome 1`, `Reference/link to data`,
-         `Accessed on`)
+  add_and_keep_relevant_cols()
 
 fwrite(table,"output/list of cat 5 atlantic hurricanes.csv")
 

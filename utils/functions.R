@@ -14,12 +14,12 @@ library(stringr)
 #' @param url string containing the URL from which to download the tables
 #'
 #' @return a list with tables from the URL
-download_tables <- function(url) {
+download_tables <- function(url,rm_first = TRUE) {
   page_info = GET(url) %>%
     content("text") %>%
     readHTMLTable(doc = .)
 
-  page_info <- lapply(page_info, clean_table)
+  page_info <- lapply(page_info, clean_table, remove_first = rm_first)
 
   return(page_info)
 }
@@ -123,7 +123,8 @@ update_category_info_sheet <- function(new_metadata) {
 
   # add current entry
   all_metadata <- all_metadata |>
-    rbind(new_metadata)
+    list(new_metadata) %>%
+    rbindlist(fill = TRUE)
 
   fwrite(all_metadata, filelocation)
 }
@@ -131,14 +132,14 @@ update_category_info_sheet <- function(new_metadata) {
 
 # helper function for the repetetive task of adding a url and date column
 # and for selecting only the columns that are needed in the end
-add_and_keep_relevant_cols <- function(data) {
+add_and_keep_relevant_cols <- function(data, ref = url, access_date = Sys.Date()) {
   cols_to_keep <- c("Category ID", "Category", "Event", "Event description", "Timepoint start",
                     "Timepoint end", "subj. confidence", "Binary outcome", "Quantity outcome 1",
                     "Reference/link to data", "Accessed on", "Comment")
 
   data |>
-    mutate(`Reference/link to data` = url,
-           `Accessed on` = Sys.Date()) |>
+    mutate(`Reference/link to data` = ref,
+           `Accessed on` = access_date) |>
     select(one_of(cols_to_keep))
 }
 
@@ -159,6 +160,7 @@ parse_date <- function(date, parsing_function) {
 try_to_parse_date <- function(date) {
   parsing_functions <- c(
     lubridate::ymd,
+    lubridate::mdy,
     lubridate::dmy #, could add lubridate::my, but this may be dangerous as it replaces the month with an exact date
   )
 

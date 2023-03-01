@@ -1,0 +1,387 @@
+dat,type,group
+Afghanistan,Country,1
+19-11-1946,Date,1
+Albania,Country,2
+14-12-1955,Date,2
+Algeria,Country,3
+8/10/1962,Date,3
+Andorra,Country,4
+28-07-1993,Date,4
+Angola,Country,5
+1/12/1976,Date,5
+Antigua and Barbuda,Country,6
+11/11/1981,Date,6
+Argentina,Country,7
+24-10-1945,Date,7
+Armenia,Country,8
+2/3/1992,Date,8
+Australia,Country,9
+1/11/1945,Date,9
+Austria,Country,10
+14-12-1955,Date,10
+Azerbaijan,Country,11
+2/3/1992,Date,11
+Bahamas,Country,12
+18-09-1973,Date,12
+Bahrain,Country,13
+21-09-1971,Date,13
+Bangladesh,Country,14
+17-09-1974,Date,14
+Barbados,Country,15
+9/12/1966,Date,15
+Belarus,Country,16
+24-10-1945,Date,16
+Belgium,Country,17
+27-12-1945,Date,17
+Belize,Country,18
+25-09-1981,Date,18
+Benin,Country,19
+20-09-1960,Date,19
+Bhutan,Country,20
+21-09-1971,Date,20
+Bolivia (Plurinational State of),Country,21
+14-11-1945,Date,21
+Bosnia and Herzegovina,Country,22
+22-05-1992,Date,22
+Botswana,Country,23
+17-10-1966,Date,23
+Brazil,Country,24
+24-10-1945,Date,24
+Brunei Darussalam,Country,25
+21-09-1984,Date,25
+Bulgaria,Country,26
+14-12-1955,Date,26
+Burkina Faso,Country,27
+20-09-1960,Date,27
+Burundi,Country,28
+18-09-1962,Date,28
+Cabo Verde,Country,29
+16-09-1975,Date,29
+Cambodia,Country,30
+14-12-1955,Date,30
+Cameroon,Country,31
+20-09-1960,Date,31
+Canada,Country,32
+9/11/1945,Date,32
+Central African Republic,Country,33
+20-09-1960,Date,33
+Chad,Country,34
+20-09-1960,Date,34
+Chile,Country,35
+24-10-1945,Date,35
+China,Country,36
+24-10-1945,Date,36
+Colombia,Country,37
+5/11/1945,Date,37
+Comoros,Country,38
+12/11/1975,Date,38
+Congo,Country,39
+20-09-1960,Date,39
+Costa Rica,Country,40
+2/11/1945,Date,40
+Côte D'Ivoire,Country,41
+20-09-1960,Date,41
+Croatia,Country,42
+22-05-1992,Date,42
+Cuba,Country,43
+24-10-1945,Date,43
+Cyprus,Country,44
+20-09-1960,Date,44
+Czechia,Country,45
+19-01-1993,Date,45
+Democratic People's Republic of Korea,Country,46
+17-09-1991,Date,46
+Democratic Republic of the Congo,Country,47
+20-09-1960,Date,47
+Denmark,Country,48
+24-10-1945,Date,48
+Djibouti,Country,49
+20-09-1977,Date,49
+Dominica,Country,50
+18-12-1978,Date,50
+Dominican Republic,Country,51
+24-10-1945,Date,51
+Ecuador,Country,52
+21-12-1945,Date,52
+Egypt,Country,53
+24-10-1945,Date,53
+El Salvador,Country,54
+24-10-1945,Date,54
+Equatorial Guinea,Country,55
+12/11/1968,Date,55
+Eritrea,Country,56
+28-05-1993,Date,56
+Estonia,Country,57
+17-09-1991,Date,57
+Eswatini,Country,58
+24-09-1968,Date,58
+Ethiopia,Country,59
+13-11-1945,Date,59
+Fiji,Country,60
+13-10-1970,Date,60
+Finland,Country,61
+14-12-1955,Date,61
+France,Country,62
+24-10-1945,Date,62
+Gabon,Country,63
+20-09-1960,Date,63
+Gambia (Republic of The),Country,64
+21-09-1965,Date,64
+Georgia,Country,65
+31-07-1992,Date,65
+Germany,Country,66
+18-09-1973,Date,66
+Ghana,Country,67
+8/3/1957,Date,67
+Greece,Country,68
+25-10-1945,Date,68
+Grenada,Country,69
+17-09-1974,Date,69
+Guatemala,Country,70
+21-11-1945,Date,70
+Guinea,Country,71
+12/12/1958,Date,71
+Guinea Bissau,Country,72
+17-09-1974,Date,72
+Guyana,Country,73
+20-09-1966,Date,73
+Haiti,Country,74
+24-10-1945,Date,74
+Honduras,Country,75
+17-12-1945,Date,75
+Hungary,Country,76
+14-12-1955,Date,76
+Iceland,Country,77
+19-11-1946,Date,77
+India,Country,78
+30-10-1945,Date,78
+Indonesia,Country,79
+28-09-1950,Date,79
+Iran (Islamic Republic of),Country,80
+24-10-1945,Date,80
+Iraq,Country,81
+21-12-1945,Date,81
+Ireland,Country,82
+14-12-1955,Date,82
+Israel,Country,83
+11/5/1949,Date,83
+Italy,Country,84
+14-12-1955,Date,84
+Jamaica,Country,85
+18-09-1962,Date,85
+Japan,Country,86
+18-12-1956,Date,86
+Jordan,Country,87
+14-12-1955,Date,87
+Kazakhstan,Country,88
+2/3/1992,Date,88
+Kenya,Country,89
+16-12-1963,Date,89
+Kiribati,Country,90
+14-09-1999,Date,90
+Kuwait,Country,91
+14-05-1963,Date,91
+Kyrgyzstan,Country,92
+2/3/1992,Date,92
+Lao People’s Democratic Republic,Country,93
+14-12-1955,Date,93
+Latvia,Country,94
+17-09-1991,Date,94
+Lebanon,Country,95
+24-10-1945,Date,95
+Lesotho,Country,96
+17-10-1966,Date,96
+Liberia,Country,97
+2/11/1945,Date,97
+Libya,Country,98
+14-12-1955,Date,98
+Liechtenstein,Country,99
+18-09-1990,Date,99
+Lithuania,Country,100
+17-09-1991,Date,100
+Luxembourg,Country,101
+24-10-1945,Date,101
+Madagascar,Country,102
+20-09-1960,Date,102
+Malawi,Country,103
+1/12/1964,Date,103
+Malaysia,Country,104
+17-09-1957,Date,104
+Maldives,Country,105
+21-09-1965,Date,105
+Mali,Country,106
+28-09-1960,Date,106
+Malta,Country,107
+1/12/1964,Date,107
+Marshall Islands,Country,108
+17-09-1991,Date,108
+Mauritania,Country,109
+27-10-1961,Date,109
+Mauritius,Country,110
+24-04-1968,Date,110
+Mexico,Country,111
+7/11/1945,Date,111
+Micronesia (Federated States of),Country,112
+17-09-1991,Date,112
+Monaco,Country,113
+28-05-1993,Date,113
+Mongolia,Country,114
+27-10-1961,Date,114
+Montenegro,Country,115
+28-06-2006,Date,115
+Morocco,Country,116
+12/11/1956,Date,116
+Mozambique,Country,117
+16-09-1975,Date,117
+Myanmar,Country,118
+19-04-1948,Date,118
+Namibia,Country,119
+23-04-1990,Date,119
+Nauru,Country,120
+14-09-1999,Date,120
+Nepal,Country,121
+14-12-1955,Date,121
+Netherlands,Country,122
+10/12/1945,Date,122
+New Zealand,Country,123
+24-10-1945,Date,123
+Nicaragua,Country,124
+24-10-1945,Date,124
+Niger,Country,125
+20-09-1960,Date,125
+Nigeria,Country,126
+7/10/1960,Date,126
+North Macedonia,Country,127
+8/4/1993,Date,127
+Norway,Country,128
+27-11-1945,Date,128
+Oman,Country,129
+7/10/1971,Date,129
+Pakistan,Country,130
+30-09-1947,Date,130
+Palau,Country,131
+15-12-1994,Date,131
+Panama,Country,132
+13-11-1945,Date,132
+Papua New Guinea,Country,133
+10/10/1975,Date,133
+Paraguay,Country,134
+24-10-1945,Date,134
+Peru,Country,135
+31-10-1945,Date,135
+Philippines,Country,136
+24-10-1945,Date,136
+Poland,Country,137
+24-10-1945,Date,137
+Portugal,Country,138
+14-12-1955,Date,138
+Qatar,Country,139
+21-09-1971,Date,139
+Republic of Korea,Country,140
+17-09-1991,Date,140
+Republic of Moldova,Country,141
+2/3/1992,Date,141
+Romania,Country,142
+14-12-1955,Date,142
+Russian Federation,Country,143
+24-10-1945,Date,143
+Rwanda,Country,144
+18-09-1962,Date,144
+Saint Kitts and Nevis,Country,145
+23-09-1983,Date,145
+Saint Lucia,Country,146
+18-09-1979,Date,146
+Saint Vincent and the Grenadines,Country,147
+16-09-1980,Date,147
+Samoa,Country,148
+15-12-1976,Date,148
+San Marino,Country,149
+2/3/1992,Date,149
+Sao Tome and Principe,Country,150
+16-09-1975,Date,150
+Saudi Arabia,Country,151
+24-10-1945,Date,151
+Senegal,Country,152
+28-09-1960,Date,152
+Serbia,Country,153
+1/11/2000,Date,153
+Seychelles,Country,154
+21-09-1976,Date,154
+Sierra Leone,Country,155
+27-09-1961,Date,155
+Singapore,Country,156
+21-09-1965,Date,156
+Slovakia,Country,157
+19-01-1993,Date,157
+Slovenia,Country,158
+22-05-1992,Date,158
+Solomon Islands,Country,159
+19-09-1978,Date,159
+Somalia,Country,160
+20-09-1960,Date,160
+South Africa,Country,161
+7/11/1945,Date,161
+South Sudan,Country,162
+14-07-2011,Date,162
+Spain,Country,163
+14-12-1955,Date,163
+Sri Lanka,Country,164
+14-12-1955,Date,164
+Sudan,Country,165
+12/11/1956,Date,165
+Suriname,Country,166
+4/12/1975,Date,166
+Sweden,Country,167
+19-11-1946,Date,167
+Switzerland,Country,168
+10/9/2002,Date,168
+Syrian Arab Republic,Country,169
+24-10-1945,Date,169
+Tajikistan,Country,170
+2/3/1992,Date,170
+Thailand,Country,171
+15-12-1946,Date,171
+Timor-Leste,Country,172
+27-09-2002,Date,172
+Togo,Country,173
+20-09-1960,Date,173
+Tonga,Country,174
+14-09-1999,Date,174
+Trinidad and Tobago,Country,175
+18-09-1962,Date,175
+Tunisia,Country,176
+12/11/1956,Date,176
+Türkiye,Country,177
+24-10-1945,Date,177
+Turkmenistan,Country,178
+2/3/1992,Date,178
+Tuvalu,Country,179
+5/9/2000,Date,179
+Uganda,Country,180
+25-10-1962,Date,180
+Ukraine,Country,181
+24-10-1945,Date,181
+United Arab Emirates,Country,182
+9/12/1971,Date,182
+United Kingdom of Great Britain and Northern Ireland,Country,183
+24-10-1945,Date,183
+United Republic of Tanzania,Country,184
+14-12-1961,Date,184
+United States of America,Country,185
+24-10-1945,Date,185
+Uruguay,Country,186
+18-12-1945,Date,186
+Uzbekistan,Country,187
+2/3/1992,Date,187
+Vanuatu,Country,188
+15-09-1981,Date,188
+"Venezuela, Bolivarian Republic of",Country,189
+15-11-1945,Date,189
+Viet Nam,Country,190
+20-09-1977,Date,190
+Yemen,Country,191
+30-09-1947,Date,191
+Zambia,Country,192
+1/12/1964,Date,192
+Zimbabwe,Country,193
+25-08-1980,Date,193
