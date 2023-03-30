@@ -74,4 +74,5 @@ tbd,Nonstate wars,"List of wars between nonstate actors (types 8 and 9), as defi
 tbd,FDA Drug and Biologic Recalls,FDA issued recalls of drug and biologic products,# of unique products included in the recall,2012-06-08,2022-02-20,Data availability/accessibility from FDA,FDA,""
 tbd,FDA Device Recalls,FDA issued recalls of medical devices,# of unique products included in the recall,2012-06-08,2022-02-20,Data availability/accessibility from FDA,FDA,""
 tbd,FDA Food/Cosmetics Recalls,FDA issued recalls of food and cosmetic products,# of unique products included in the recall,2012-06-08,2022-02-20,Data availability/accessibility from FDA,FDA,""
-tbd,FDA Veterinary Recalls,FDA issued recalls of veterinary products,# of unique products included in the recall,2012-06-08,2022-02-20,Data availability/accessibility from FDA,FDA,
+tbd,FDA Veterinary Recalls,FDA issued recalls of veterinary products,# of unique products included in the recall,2012-06-08,2022-02-20,Data availability/accessibility from FDA,FDA,""
+tbd,Sovereign Debt Defaults,Continuous stretches of time when countries were in default on 1+ sources of sovereign debt,"Maximum total amount in default at one point in time across all creditors, in nominal USD",1961,2021,Max range available,Bank of Canada and Bank of England,
