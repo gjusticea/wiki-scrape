@@ -7,13 +7,15 @@ ref1 = "Yang, X., North, R., Carl Romney, &amp; Richards, P. G. (n.d.). Worldwid
 ref2 = "Voytan, D. P., Lay, T., Chaves, E. J., &amp; Ohman, J. T. (2019). Yield estimates for the six North Korean nuclear tests from teleseismicpwave modeling and intercorrelation ofpandpnrecordings. Journal of Geophysical Research: Solid Earth, 124(5), 4916–4939. https://doi.org/10.1029/2019jb017418 "
 
 cat_name = "Nuclear Weapons Tests"
+cat_id = "G7"
 
 # Read in tables and get suggested tables for cleaning
 table = readxl::read_xlsx("ref/nuclear tests.xlsx")
 
 # Do the cleaning
 table = table %>%
-  mutate(Category = cat_name,
+  mutate(`Category ID` = cat_id,
+         Category = cat_name,
          Event = unlist(mapply(FUN = paste0,country," - ",date)),
          `Event description` = unlist(mapply(FUN = paste0,"Name (if applicable): ",
                                                           name2,
@@ -26,7 +28,7 @@ table = table %>%
                                            ref2,ref1),
          `Accessed on` = as.Date("2023-05-01")) %>%
 
-select(Category, Event, `Event description`, `Timepoint start`,
+select(`Category ID`,Category, Event, `Event description`, `Timepoint start`,
        `Timepoint end`, `Quantity outcome 1`, `Reference/link to data`,
        `Accessed on`)
 
@@ -35,7 +37,7 @@ fwrite(table,"output/list of nuclear tests.csv")
 
 # create an entry for the category entry field.
 metadata <- data.table(
-  "Category ID" = "tbd",
+  "Category ID" = cat_id,
   "Category name" = cat_name,
   "Description" = "List of known nuclear weapons tests",
   "Description quantity column 1" = "Yield (kton)",

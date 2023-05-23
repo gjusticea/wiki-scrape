@@ -43,9 +43,11 @@ drugs = fread(paste0(data_dir,"purplebook-search-january-data-download.csv"),
 
 # Write the cleaned up data
 cat_name = "List of FDA Approved Vaccines"
+cat_id = "G72"
 
 vaccines_clean = drugs %>%
-  mutate(Category = cat_name,
+  mutate(`Category ID` = cat_id,
+         Category = cat_name,
          Event = trade_name,
          `Event description` = unlist(mapply(FUN = paste0,ApplNo," - ",trade_name," - ",proper_name)),
          `Timepoint start` = as_date(approval),
@@ -53,7 +55,7 @@ vaccines_clean = drugs %>%
          `Quantity outcome 1` = NA,
          `Reference/link to data` = url,
          `Accessed on` = refresh_date) %>%
-  select(Category, Event, `Event description`, `Timepoint start`,
+  select(`Category ID`,Category, Event, `Event description`, `Timepoint start`,
          `Timepoint end`, `Quantity outcome 1`, `Reference/link to data`,
          `Accessed on`)
 
@@ -61,7 +63,7 @@ fwrite(vaccines_clean,"output/fda approved vaccines.csv")
 
 # create an entry for the category entry field.
 metadata <- data.table(
-  "Category ID" = "tbd",
+  "Category ID" = cat_id,
   "Category name" = cat_name,
   "Description" = "List of approved BLAs for vaccines with the FDA, including licenses since voluntarily revoked",
   "Description quantity column 1" = "",

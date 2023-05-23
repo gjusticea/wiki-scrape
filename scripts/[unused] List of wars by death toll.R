@@ -1,6 +1,8 @@
 source("utils/functions.R")
 
 url <- "https://en.wikipedia.org/wiki/List_of_wars_by_death_toll"
+cat_id = "G68"
+cat_name = "List of wars"
 
 tables <- download_tables(url)
 ids_to_keep <- suggest_tables_to_keep(tables)[["max cols"]]
@@ -25,8 +27,8 @@ fwrite(table, "output/list of wars by death toll.csv")
 
 # create an entry for the category entry field.
 metadata <- data.table(
-  "Category ID" = "tbd",
-  "Category name" = "List of wars",
+  "Category ID" = cat_id,
+  "Category name" = cat_name,
   "Description" = "List of war (by death toll)",
   "Description quantity column 1" = "Quantity as estimated by sources used by Wikipedia",
   "Period start" = "500 BC",

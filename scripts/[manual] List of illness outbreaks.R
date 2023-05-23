@@ -2,6 +2,7 @@ source("utils/functions.R")
 
 url = "https://wwwn.cdc.gov/norsdashboard/"
 cat_name = "List of deadly foodborne or waterborne or enteric disease outbreaks"
+cat_id = "G77"
 
 # Read in tables and get suggested tables for cleaning
 table = readxl::read_xlsx("ref/NationalOutbreakPublicDataTool.xlsx") %>%
@@ -19,7 +20,8 @@ table = readxl::read_xlsx("ref/NationalOutbreakPublicDataTool.xlsx") %>%
 # Do the cleaning
 table_clean = table %>%
   filter(Deaths > 0) %>%
-  mutate(Category = cat_name,
+  mutate(`Category ID` = cat_id,
+         Category = cat_name,
          Event = unlist(mapply(FUN = paste0,
                                `Primary Mode`," - ",
                                State," - ",
@@ -35,7 +37,7 @@ table_clean = table %>%
          `Reference/link to data` = url,
          `Accessed on` = as.Date("2023-02-21")) %>%
 
-select(Category, Event, `Event description`, `Timepoint start`,
+select(`Category ID`,Category, Event, `Event description`, `Timepoint start`,
        `Timepoint end`, `Quantity outcome 1`, `Quantity outcome 2`,
        `Reference/link to data`, `Accessed on`)
 
@@ -44,7 +46,7 @@ fwrite(table_clean,"output/list of deadly food water enteric outbreaks.csv")
 
 # create an entry for the category entry field.
 metadata <- data.table(
-  "Category ID" = "tbd",
+  "Category ID" = cat_id,
   "Category name" = cat_name,
   "Description" = "CDC National Outbreak Reporting System reports of foodborne and waterborne disease outbreaks and enteric (intestinal) disease outbreaks spread by contact with environmental sources, infected people or animals, and other means.",
   "Description quantity column 1" = "Deaths",

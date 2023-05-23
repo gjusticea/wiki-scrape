@@ -53,7 +53,8 @@ intra_list = intra %>%
   merge(type_key) %>%
   select(-WarType) %>%
   group_by_all() %>%
-  mutate(Category = "Intra-state (civil) wars",
+  mutate(`Category ID` = cat_id,
+         Category = "Intra-state (civil) wars",
          Event = WarName,
          `Event description` = paste0(TypeDesc,": ",sidea," vs. ",sideb),
          `Timepoint start` = StartYr,
@@ -63,7 +64,7 @@ intra_list = intra %>%
          `Accessed on` = as.Date("2023-03-23")) %>%
   ungroup() %>%
 
-  select(Category, Event, `Event description`, `Timepoint start`,
+  select(`Category ID`,Category, Event, `Event description`, `Timepoint start`,
          `Timepoint end`, `Quantity outcome 1`, `Reference/link to data`,
          `Accessed on`)
 
@@ -72,7 +73,7 @@ fwrite(intra_list,"output/civil wars.csv")
 
 # create an entry for the category entry field.
 metadata <- data.table(
-  "Category ID" = "tbd",
+  "Category ID" = "G2",
   "Category name" = "Intra-state (civil) wars",
   "Description" = "List of intra-state wars (types 4-7), as defined by COW",
   "Description quantity column 1" = "Total number of combat deaths",
@@ -104,7 +105,8 @@ inter_list = inter %>%
   merge(type_key) %>%
   select(-WarType) %>%
   group_by_all() %>%
-  mutate(Category = "Inter-state wars",
+  mutate(`Category ID` = cat_id,
+         Category = "Inter-state wars",
          Event = WarName,
          `Event description` = paste0(TypeDesc,": ",States),
          `Timepoint start` = StartYr,
@@ -114,7 +116,7 @@ inter_list = inter %>%
          `Accessed on` = as.Date("2023-03-23")) %>%
   ungroup() %>%
 
-  select(Category, Event, `Event description`, `Timepoint start`,
+  select(`Category ID`,Category, Event, `Event description`, `Timepoint start`,
          `Timepoint end`, `Quantity outcome 1`, `Reference/link to data`,
          `Accessed on`)
 
@@ -123,7 +125,7 @@ fwrite(inter_list,"output/interstate wars.csv")
 
 # create an entry for the category entry field.
 metadata <- data.table(
-  "Category ID" = "tbd",
+  "Category ID" = "G3",
   "Category name" = "Inter-state wars",
   "Description" = "List of Inter-state wars (type 1), as defined by COW",
   "Description quantity column 1" = "Total number of combat deaths",
@@ -156,7 +158,8 @@ colonial_list = extra %>%
   merge(type_key) %>%
   select(-WarType) %>%
   group_by_all() %>%
-  mutate(Category = "Colonial wars",
+  mutate(`Category ID` = cat_id,
+         Category = "Colonial wars",
          Event = WarName,
          `Event description` = paste0(TypeDesc,": ",sidea," vs. ",sideb),
          `Timepoint start` = StartYr,
@@ -166,7 +169,7 @@ colonial_list = extra %>%
          `Accessed on` = as.Date("2023-03-23")) %>%
   ungroup() %>%
 
-  select(Category, Event, `Event description`, `Timepoint start`,
+  select(`Category ID`,Category, Event, `Event description`, `Timepoint start`,
          `Timepoint end`, `Quantity outcome 1`, `Reference/link to data`,
          `Accessed on`)
 
@@ -175,7 +178,7 @@ fwrite(colonial_list,"output/colonial wars.csv")
 
 # create an entry for the category entry field.
 metadata <- data.table(
-  "Category ID" = "tbd",
+  "Category ID" = "G4",
   "Category name" = "Colonial wars",
   "Description" = "List of wars between a state and its colony (type 2), as defined by COW",
   "Description quantity column 1" = "Total number of combat deaths",
@@ -208,7 +211,8 @@ sns_list = extra %>%
   merge(type_key) %>%
   select(-WarType) %>%
   group_by_all() %>%
-  mutate(Category = "State-nonstate wars",
+  mutate(`Category ID` = cat_id,
+         Category = "State-nonstate wars",
          Event = WarName,
          `Event description` = paste0(TypeDesc,": ",sidea," vs. ",sideb),
          `Timepoint start` = StartYr,
@@ -218,7 +222,7 @@ sns_list = extra %>%
          `Accessed on` = as.Date("2023-03-23")) %>%
   ungroup() %>%
 
-  select(Category, Event, `Event description`, `Timepoint start`,
+  select(`Category ID`,Category, Event, `Event description`, `Timepoint start`,
          `Timepoint end`, `Quantity outcome 1`, `Reference/link to data`,
          `Accessed on`)
 
@@ -227,7 +231,7 @@ fwrite(sns_list,"output/state nonstate wars.csv")
 
 # create an entry for the category entry field.
 metadata <- data.table(
-  "Category ID" = "tbd",
+  "Category ID" = "G5",
   "Category name" = "State-nonstate wars",
   "Description" = "List of wars between a state and a nonstate (type 3), as defined by COW",
   "Description quantity column 1" = "Total number of combat deaths",
@@ -259,7 +263,8 @@ non_list = non %>%
   merge(type_key) %>%
   select(-WarType) %>%
   group_by_all() %>%
-  mutate(Category = "State-nonstate wars",
+  mutate(`Category ID` = cat_id,
+         Category = "Nonstate wars",
          Event = WarName,
          `Event description` = paste0(TypeDesc,": ",sidea," vs. ",sideb),
          `Timepoint start` = StartYear,
@@ -269,7 +274,7 @@ non_list = non %>%
          `Accessed on` = as.Date("2023-03-23")) %>%
   ungroup() %>%
 
-  select(Category, Event, `Event description`, `Timepoint start`,
+  select(`Category ID`,Category, Event, `Event description`, `Timepoint start`,
          `Timepoint end`, `Quantity outcome 1`, `Reference/link to data`,
          `Accessed on`)
 
@@ -278,7 +283,7 @@ fwrite(non_list,"output/nonstate wars.csv")
 
 # create an entry for the category entry field.
 metadata <- data.table(
-  "Category ID" = "tbd",
+  "Category ID" = "G6",
   "Category name" = "Nonstate wars",
   "Description" = "List of wars between nonstate actors (types 8 and 9), as defined by COW",
   "Description quantity column 1" = "Total number of combat deaths",

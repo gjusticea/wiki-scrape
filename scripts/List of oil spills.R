@@ -1,6 +1,7 @@
 source("utils/functions.R")
 
 url <- "https://en.wikipedia.org/wiki/List_of_oil_spills"
+cat_id = "G78"
 
 tables <- download_tables(url)
 suggested_tables <- suggest_tables_to_keep(tables)
@@ -22,7 +23,8 @@ table <- table |>
   mutate(`Min Tonnes` = as.numeric(gsub(",", "", `Min Tonnes`)),
          `Max Tonnes` = as.numeric(gsub(",", "", `Max Tonnes`))) |>
   rowwise() |>
-  mutate("Quantity outcome 1" = mean(c_across(ends_with("Tonnes")))) |>
+  mutate(`Category ID` = cat_id,
+         "Quantity outcome 1" = mean(c_across(ends_with("Tonnes")))) |>
   # helper function to do some tidying like selecting cols at the end
   add_and_keep_relevant_cols()
 
@@ -30,7 +32,7 @@ fwrite(table, "output/list of oil spills.csv")
 
 # create an entry for the category entry field.
 metadata <- data.table(
-  "Category ID" = "tbd",
+  "Category ID" = cat_id,
   "Category name" = "List of oil spills",
   "Description" = "List of oil spills",
   "Description quantity column 1" = "Mean of min and max estimates for the number of Tonnes of oil spilled",

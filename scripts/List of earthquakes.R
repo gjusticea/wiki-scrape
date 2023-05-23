@@ -2,6 +2,7 @@ source("utils/functions.R")
 
 url = "https://earthquake.usgs.gov/earthquakes/search/"
 cat_name = "List of Magnitude 7+ earthquakes"
+cat_id = "G8"
 
 # Read in tables and get suggested tables for cleaning
 table <- fread("ref/usgs earthquake world 6 1900 present.csv") %>%
@@ -9,6 +10,7 @@ table <- fread("ref/usgs earthquake world 6 1900 present.csv") %>%
          mag >= 7) %>%
   select(time,place,magnitude = mag,latitude,longitude) %>%
   mutate(coord = unlist(mapply(FUN = paste0,latitude,"°, ",longitude,"°")),
+         `Category ID` = cat_id,
          Category = cat_name,
          Event = place,
          `Event description` = unlist(mapply(FUN = paste0,
@@ -21,7 +23,7 @@ table <- fread("ref/usgs earthquake world 6 1900 present.csv") %>%
          `Reference/link to data` = url,
          `Accessed on` = as.Date("2023-04-29")) %>%
 
-select(Category, Event, `Event description`, `Timepoint start`,
+select(`Category ID`,Category, Event, `Event description`, `Timepoint start`,
        `Timepoint end`, `Quantity outcome 1`, `Reference/link to data`,
        `Accessed on`)
 
@@ -30,7 +32,7 @@ fwrite(table,"output/list of major earthquakes.csv")
 
 # create an entry for the category entry field.
 metadata <- data.table(
-  "Category ID" = "tbd",
+  "Category ID" = cat_id,
   "Category name" = cat_name,
   "Description" = "List of magnitude 7+ earthquakes since 1900, excluding tremors due to explosions or nuclear explosions",
   "Description quantity column 1" = "Magnitude (Richter scale)",

@@ -4,12 +4,14 @@ source("utils/functions.R")
 # Update reference file from https://www.ngdc.noaa.gov/hazel/view/hazards/tsunami/event-data?maxYear=2023&minYear=1950
 path = "ref/tsunamis-2023-02-02_21-31-04_-0500.tsv"
 cat_name = "List of tsunamis"
+cat_id = "G73"
 update_date = as.Date("2023-02-02")
 
 # Do the cleaning
 table = fread(path) %>%
   .[c(2:nrow(.))] %>%
   mutate(across(c(Mo,Dy,Hr,Mn,Sec),formatC, width=2, flag="0"),
+         `Category ID` = cat_id,
          Category = cat_name,
          Event = unlist(mapply(FUN = paste0,Country,"-",`Location Name`,": ",
                                Dy,"/",Mo,"/",Year," ",Hr,":",Mn,":",Sec)),
@@ -24,7 +26,7 @@ table = fread(path) %>%
          `Reference/link to data` = "DOI:10.7289/V5PN93H7",
          `Accessed on` = update_date) %>%
 
-  select(Category, Event, `Event description`, `Timepoint start`,
+  select(`Category ID`,Category, Event, `Event description`, `Timepoint start`,
          `Timepoint end`, `Quantity outcome 1`, `Reference/link to data`,
          `Accessed on`)
 
@@ -33,7 +35,7 @@ fwrite(table,"output/list of tsunamis.csv")
 
 # create an entry for the category entry field.
 metadata <- data.table(
-  "Category ID" = "tbd",
+  "Category ID" = cat_id,
   "Category name" = cat_name,
   "Description" = "List of tsunamis since 1950, worldwide",
   "Description quantity column 1" = "Number of runups",

@@ -2,6 +2,7 @@ source("utils/functions.R")
 
 url = "https://www.bankofcanada.ca/2022/08/staff-analytical-note-2022-11/"
 cat_name = "Sovereign Debt Defaults"
+cat_id = "G9"
 
 # Do the cleaning
 table = fread("ref/BoC-BoE-Database-2022-08-18.csv") %>%
@@ -48,7 +49,8 @@ table = fread("ref/BoC-BoE-Database-2022-08-18.csv") %>%
             max_default = max(as.numeric(TOTAL),na.rm=TRUE),
             .groups = "drop") %>%
   select(-period_counter,-default) %>%
-  mutate(Category = cat_name,
+  mutate(`Category ID` = cat_id,
+         Category = cat_name,
          Event = paste0(COUNTRY," - ",year_start),
          `Event description` = paste0(COUNTRY_GROUP,"; ",
                                       COUNTRY," in default with ",
@@ -59,7 +61,7 @@ table = fread("ref/BoC-BoE-Database-2022-08-18.csv") %>%
          `Reference/link to data` = url,
          `Accessed on` = as.Date("2023-03-30")) %>%
 
-select(Category, Event, `Event description`, `Timepoint start`,
+select(`Category ID`,Category, Event, `Event description`, `Timepoint start`,
        `Timepoint end`, `Quantity outcome 1`, `Reference/link to data`,
        `Accessed on`)
 
@@ -68,7 +70,7 @@ fwrite(table,"output/sovereign debt defaults.csv")
 
 # create an entry for the category entry field.
 metadata <- data.table(
-  "Category ID" = "tbd",
+  "Category ID" = cat_id,
   "Category name" = cat_name,
   "Description" = "Continuous stretches of time when countries were in default on 1+ sources of sovereign debt",
   "Description quantity column 1" = "Maximum total amount in default at one point in time across all creditors, in nominal USD",
