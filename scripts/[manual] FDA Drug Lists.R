@@ -9,6 +9,7 @@ source("utils/functions.R")
 
 # Download data here: https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files
 url = "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+ref = "Research, Center for Drug Evaluation and. “Drugs@FDA Data Files.” FDA, February 2023. www.fda.gov, https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files."
 refresh_date = as.Date("2023-02-11")
 data_dir = "ref/drugsatfda20230207/"
 
@@ -217,13 +218,13 @@ table_all_drugs = subs %>%
          `Timepoint start` = as_date(Approval_Date),
          `Timepoint end` = as_date(Approval_Date),
          `Quantity outcome 1` = NA,
-         `Reference/link to data` = url,
+         `Reference/link to data` = ref,
          `Accessed on` = refresh_date) %>%
   select(`Category ID`,Category, Event, `Event description`, `Timepoint start`,
          `Timepoint end`, `Quantity outcome 1`, `Reference/link to data`,
          `Accessed on`)
 
-fwrite(table_all_drugs,"output/fda approved drugs.csv")
+fwrite(table_all_drugs,"output/list of fda approved drugs.csv")
 
 # create an entry for the category entry field.
 metadata <- data.table(
@@ -255,13 +256,13 @@ table_all_drugs = psych_drug_list %>%
          `Timepoint start` = as_date(Approval_Date),
          `Timepoint end` = as_date(Approval_Date),
          `Quantity outcome 1` = NA,
-         `Reference/link to data` = url,
+         `Reference/link to data` = ref,
          `Accessed on` = refresh_date) %>%
   select(`Category ID`,Category, Event, `Event description`, `Timepoint start`,
          `Timepoint end`, `Quantity outcome 1`, `Reference/link to data`,
          `Accessed on`)
 
-fwrite(table_all_drugs,"output/fda approved psych drugs.csv")
+fwrite(table_all_drugs,"output/list of fda approved psych drugs.csv")
 
 # create an entry for the category entry field.
 metadata <- data.table(

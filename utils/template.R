@@ -1,7 +1,10 @@
 source("utils/functions.R")
 
 url = ""
+ref = ""
+
 cat_name = ""
+cat_id = ""
 
 # Read in tables and get suggested tables for cleaning
 tables = download_tables(url)
@@ -10,12 +13,12 @@ suggested_tables = suggest_tables_to_keep(tables)
 # Do the cleaning
 
 
-select(Category, Event, `Event description`, `Timepoint start`,
+select(`Category ID`, Category, Event, `Event description`, `Timepoint start`,
        `Timepoint end`, `Quantity outcome 1`, `Reference/link to data`,
        `Accessed on`)
 
 # Write to outputs folder
-fwrite(table,"output/")
+writexl::write_xlsx(table,path = "output/")
 
 # create an entry for the category entry field.
 metadata <- data.table(

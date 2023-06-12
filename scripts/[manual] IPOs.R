@@ -29,7 +29,7 @@ select(`Category ID`,Category, Event, `Event description`, `Timepoint start`,
        `Reference/link to data`, `Accessed on`)
 
 # Write to outputs folder
-fwrite(table,"output/ipos.csv")
+fwrite(table,"output/list of ipos.csv")
 
 # create an entry for the category entry field.
 metadata <- data.table(

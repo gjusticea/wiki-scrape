@@ -16,7 +16,10 @@ table <- table |>
   rename(Event = `Spill / Vessel`) |>
   mutate(Category = "Major oil spills",
          "Event description" = paste0("Location: ", Location, ", Owner: ", Owner)) |>
-  tidyr::separate(Dates, c("Timepoint start","Timepoint end"), sep = " - ", fill = "right") |>
+  tidyr::separate(Dates, c("Timepoint start","Timepoint end"), sep = "-", fill = "right") |>
+  mutate(across(c(`Timepoint start`,`Timepoint end`),trimws),
+         `Timepoint start` = ifelse(Event == "Katina P","19 April 1992",
+                                    `Timepoint start`)) |>
   mutate("Timepoint start" = try_to_parse_date(`Timepoint start`)) |>
   mutate("Timepoint end" = try_to_parse_date(`Timepoint end`)) |>
   # take the median estimated oil spill as continuous quantity

@@ -2,7 +2,9 @@ source("utils/functions.R")
 
 # Citation: DOI:10.7289/V5PN93H7
 # Update reference file from https://www.ngdc.noaa.gov/hazel/view/hazards/tsunami/event-data?maxYear=2023&minYear=1950
+# DOI:10.7289/V5PN93H7
 path = "ref/tsunamis-2023-02-02_21-31-04_-0500.tsv"
+ref = "National Geophysical Data Center. Global Historical Tsunami Database. NOAA National Centers for Environmental Information. DOI.org (Datacite), https://doi.org/10.7289/V5PN93H7. Accessed 2 February 2023."
 cat_name = "List of tsunamis"
 cat_id = "G73"
 update_date = as.Date("2023-02-02")
@@ -17,13 +19,19 @@ table = fread(path) %>%
                                Dy,"/",Mo,"/",Year," ",Hr,":",Mn,":",Sec)),
          `Timepoint start` = unlist(mapply(FUN = paste0,Year,"-",Mo,"-",Dy)),
          `Timepoint start` = as.Date(`Timepoint start`),
+         `Timepoint start` = case_when(
+           !is.na(`Timepoint start`) ~ as.character(`Timepoint start`),
+           Mo == "NA" ~ as.character(Year),
+           Dy == "NA" ~ as.character(format(as.Date(paste0(Year,"-",Mo,"-01")),
+                                            format = "%b %Y"))
+         ),
          `Timepoint end` = `Timepoint start`,
          `Event description` = paste0("Earthquake mag: ",`Earthquake Magnitude`,"; ",
                                       "Max water height (m): ",`Maximum Water Height (m)`,"; ",
                                       "Magnitude (Iida): ",`Tsunami Magnitude (Iida)`,
                                       "Deaths: ",Deaths),
          `Quantity outcome 1` = `Number of Runups`,
-         `Reference/link to data` = "DOI:10.7289/V5PN93H7",
+         `Reference/link to data` = ref,
          `Accessed on` = update_date) %>%
 
   select(`Category ID`,Category, Event, `Event description`, `Timepoint start`,

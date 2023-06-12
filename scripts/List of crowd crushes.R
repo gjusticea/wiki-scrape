@@ -39,7 +39,7 @@ select(`Category ID`,Category, Event, `Event description`, `Timepoint start`,
        `Accessed on`)
 
 # Write to outputs folder
-fwrite(table,"output/crowd crushes.csv")
+fwrite(table,"output/list of crowd crushes.csv")
 
 # create an entry for the category entry field.
 metadata <- data.table(

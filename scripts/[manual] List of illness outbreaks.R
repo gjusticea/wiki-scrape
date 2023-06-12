@@ -1,6 +1,7 @@
 source("utils/functions.R")
 
 url = "https://wwwn.cdc.gov/norsdashboard/"
+ref = "National Outbreak Reporting System (NORS) Dashboard | CDC. https://wwwn.cdc.gov/norsdashboard/. Accessed 21 February 2023."
 cat_name = "List of deadly foodborne or waterborne or enteric disease outbreaks"
 cat_id = "G77"
 
@@ -34,7 +35,7 @@ table_clean = table %>%
          `Timepoint end` = dte,
          `Quantity outcome 1` = Deaths,
          `Quantity outcome 2` = Illnesses,
-         `Reference/link to data` = url,
+         `Reference/link to data` = ref,
          `Accessed on` = as.Date("2023-02-21")) %>%
 
 select(`Category ID`,Category, Event, `Event description`, `Timepoint start`,

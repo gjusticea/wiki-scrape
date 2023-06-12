@@ -1,6 +1,7 @@
 source("utils/functions.R")
 
 url = "https://www.ngdc.noaa.gov/hazel/view/hazards/volcano/event-search/"
+ref = "National Geophysical Data Center / World Data Service (NGDC/WDS): NCEI/WDS Global Significant Volcanic Eruptions Database. NOAA National Centers for Environmental Information. doi:10.7289/V5JW8BSH"
 cat_name = "List of volcanic eruptions"
 cat_id = "G65"
 
@@ -21,7 +22,7 @@ table = table %>%
          `Timepoint start` = Year,
          `Timepoint end` = Year,
          `Quantity outcome 1` = VEI,
-         `Reference/link to data` = "National Geophysical Data Center / World Data Service (NGDC/WDS): NCEI/WDS Global Significant Volcanic Eruptions Database. NOAA National Centers for Environmental Information. doi:10.7289/V5JW8BSH",
+         `Reference/link to data` = ref,
          `Accessed on` = as.Date("2023-02-27")) %>%
   ungroup() %>%
 
@@ -30,7 +31,7 @@ select(`Category ID`,Category, Event, `Event description`, `Timepoint start`,
        `Accessed on`)
 
 # Write to outputs folder
-fwrite(table,"output/list of volcanic eruptions")
+fwrite(table,"output/list of volcanic eruptions.csv")
 
 # create an entry for the category entry field.
 metadata <- data.table(

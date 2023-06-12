@@ -1,6 +1,7 @@
 source("utils/functions.R")
 
 url = "https://datadashboard.fda.gov/ora/cd/recalls.htm"
+ref = "FDA Dashboards - Recalls. https://datadashboard.fda.gov/ora/cd/recalls.htm. Accessed 20 February 2023."
 cat_name = "FDA Drug and Biologic Recalls"
 cat_id = "G10"
 access_date = as.Date("2022-02-20")
@@ -22,16 +23,16 @@ table = recalls %>%
   summarize(`Product List` = paste0(`Product Description`,collapse=", "),
             product_count = length(unique(`Product ID`)),
             recall_reason = paste0(unique(`Reason for Recall`),collapse=", ")) %>%
-  mutate(Date = as.Date(Date)) %>%
+  mutate(Date = as.Date(Date),
+         recall_reason = substr(recall_reason,1,1000)) %>%
   mutate(`Category ID` = cat_id,
          Category = cat_name,
          Event = paste0("Event ID #",`Event ID`," - ",`Event Classification`," - ",`Product Type`," - ",`Recalling Firm Name`),
-         `Event description` = paste0(recall_reason,";; ",
-                                      `Product List`),
+         `Event description` = recall_reason,
          `Timepoint start` = Date,
          `Timepoint end` = Date,
          `Quantity outcome 1` = product_count,
-         `Reference/link to data` = url,
+         `Reference/link to data` = ref,
          `Accessed on` = access_date) %>%
   ungroup() %>%
 
@@ -40,7 +41,7 @@ select(`Category ID`,Category, Event, `Event description`, `Timepoint start`,
        `Accessed on`)
 
 # Write to outputs folder
-fwrite(table,"output/drug recalls.csv")
+fwrite(table,"output/list of drug recalls.csv")
 
 # create an entry for the category entry field.
 metadata <- data.table(
@@ -77,17 +78,17 @@ table = recalls %>%
            `Event ID`, `Event Classification`) %>%
   summarize(`Product List` = paste0(`Product Description`,collapse=", "),
             product_count = length(unique(`Product ID`)),
-            recall_reason = paste0(unique(`Reason for Recall`),collapse=", ")) %>%
+            recall_reason = paste0(unique(`Reason for Recall`),collapse=", "),
+            recall_reason = substr(recall_reason,1,1000)) %>%
   mutate(Date = as.Date(Date)) %>%
   mutate(`Category ID` = cat_id,
          Category = cat_name,
          Event = paste0("Event ID #",`Event ID`," - ",`Event Classification`," - ",`Product Type`," - ",`Recalling Firm Name`),
-         `Event description` = paste0(recall_reason,";; ",
-                                      `Product List`),
+         `Event description` = recall_reason,
          `Timepoint start` = Date,
          `Timepoint end` = Date,
          `Quantity outcome 1` = product_count,
-         `Reference/link to data` = url,
+         `Reference/link to data` = ref,
          `Accessed on` = access_date) %>%
   ungroup() %>%
 
@@ -96,7 +97,7 @@ table = recalls %>%
          `Accessed on`)
 
 # Write to outputs folder
-fwrite(table,"output/device recalls.csv")
+fwrite(table,"output/list of device recalls.csv")
 
 # create an entry for the category entry field.
 metadata <- data.table(
@@ -134,16 +135,16 @@ table = recalls %>%
   summarize(`Product List` = paste0(`Product Description`,collapse=", "),
             product_count = length(unique(`Product ID`)),
             recall_reason = paste0(unique(`Reason for Recall`),collapse=", ")) %>%
-  mutate(Date = as.Date(Date)) %>%
+  mutate(Date = as.Date(Date),
+         recall_reason = substr(recall_reason,1,1000)) %>%
   mutate(`Category ID` = cat_id,
          Category = cat_name,
          Event = paste0("Event ID #",`Event ID`," - ",`Event Classification`," - ",`Product Type`," - ",`Recalling Firm Name`),
-         `Event description` = paste0(recall_reason,";; ",
-                                      `Product List`),
+         `Event description` = recall_reason,
          `Timepoint start` = Date,
          `Timepoint end` = Date,
          `Quantity outcome 1` = product_count,
-         `Reference/link to data` = url,
+         `Reference/link to data` = ref,
          `Accessed on` = access_date) %>%
   ungroup() %>%
 
@@ -152,7 +153,7 @@ table = recalls %>%
          `Accessed on`)
 
 # Write to outputs folder
-fwrite(table,"output/food cosmetics recalls.csv")
+fwrite(table,"output/list of food cosmetics recalls.csv")
 
 # create an entry for the category entry field.
 metadata <- data.table(
@@ -190,16 +191,16 @@ table = recalls %>%
   summarize(`Product List` = paste0(`Product Description`,collapse=", "),
             product_count = length(unique(`Product ID`)),
             recall_reason = paste0(unique(`Reason for Recall`),collapse=", ")) %>%
-  mutate(Date = as.Date(Date)) %>%
+  mutate(Date = as.Date(Date),
+         recall_reason = substr(recall_reason,1,1000)) %>%
   mutate(`Category ID` = cat_id,
          Category = cat_name,
          Event = paste0("Event ID #",`Event ID`," - ",`Event Classification`," - ",`Product Type`," - ",`Recalling Firm Name`),
-         `Event description` = paste0(recall_reason,";; ",
-                                      `Product List`),
+         `Event description` = recall_reason,
          `Timepoint start` = Date,
          `Timepoint end` = Date,
          `Quantity outcome 1` = product_count,
-         `Reference/link to data` = url,
+         `Reference/link to data` = ref,
          `Accessed on` = access_date) %>%
   ungroup() %>%
 
@@ -208,7 +209,7 @@ table = recalls %>%
          `Accessed on`)
 
 # Write to outputs folder
-fwrite(table,"output/veterinary recalls.csv")
+fwrite(table,"output/list of veterinary recalls.csv")
 
 # create an entry for the category entry field.
 metadata <- data.table(

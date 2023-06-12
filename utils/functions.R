@@ -124,7 +124,7 @@ update_category_info_sheet <- function(new_metadata) {
   current_category_id = new_metadata$`Category ID`
 
   if(current_category_id %in% all_metadata$`Category ID`){
-    stop(paste0("ID",current_category_id,"already in use"))
+    stop(paste0("ID ",current_category_id," already in use"))
   }
 
   # add current entry

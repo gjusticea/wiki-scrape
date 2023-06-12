@@ -9,6 +9,7 @@ source("utils/functions.R")
 
 # Download data here: https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files
 url = "https://purplebooksearch.fda.gov/downloads"
+ref = "FDA Purplebook. February 2023, 19 Feb. 2023, https://purplebooksearch.fda.gov/downloads."
 refresh_date = as.Date("2023-02-19")
 data_dir = "ref/"
 
@@ -53,13 +54,13 @@ vaccines_clean = drugs %>%
          `Timepoint start` = as_date(approval),
          `Timepoint end` = as_date(approval),
          `Quantity outcome 1` = NA,
-         `Reference/link to data` = url,
+         `Reference/link to data` = ref,
          `Accessed on` = refresh_date) %>%
   select(`Category ID`,Category, Event, `Event description`, `Timepoint start`,
          `Timepoint end`, `Quantity outcome 1`, `Reference/link to data`,
          `Accessed on`)
 
-fwrite(vaccines_clean,"output/fda approved vaccines.csv")
+fwrite(vaccines_clean,"output/list of fda approved vaccines.csv")
 
 # create an entry for the category entry field.
 metadata <- data.table(

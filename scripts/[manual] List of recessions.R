@@ -2,6 +2,7 @@ library(tidyverse)
 source("utils/functions.R")
 
 url = "https://data.worldbank.org/indicator/NY.GDP.MKTP.CD"
+ref = "“World Bank Open Data.” World Bank Open Data, https://data.worldbank.org. Accessed 28 February 2023."
 
 # Read in tables and get suggested tables for cleaning
 mtd = fread("ref/API_NY.GDP.MKTP.CD_DS2_en_csv_v2_4898871/Metadata_Country_API_NY.GDP.MKTP.CD_DS2_en_csv_v2_4898871.csv")
@@ -50,7 +51,7 @@ table_clean = table_clean %>%
          `Timepoint start` = as.Date(paste0(Year,"-01-01")),
          `Timepoint end` = as.Date(paste0(Year,"-12-31")),
          `Quantity outcome 1` = yoy_change_perc,
-         `Reference/link to data` = url,
+         `Reference/link to data` = ref,
          `Accessed on` = as.Date("2023-02-28")) %>%
 select(Category, Event, `Event description`, `Timepoint start`,
        `Timepoint end`, `Quantity outcome 1`, `Reference/link to data`,
@@ -67,7 +68,7 @@ table_clean = table_clean %>%
 
 # Write to outputs folder
 fwrite(table_clean %>% select(-cc),
-       "output/list of recessions.csv")
+                    "output/list of recessions.csv")
 
 # create an entry for the category entry field.
 for(i in 1:length(unique(table_clean$cc))){

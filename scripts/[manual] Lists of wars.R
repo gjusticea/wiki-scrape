@@ -69,7 +69,7 @@ intra_list = intra %>%
          `Accessed on`)
 
 # Write to outputs folder
-fwrite(intra_list,"output/civil wars.csv")
+fwrite(intra_list,"output/list of civil wars.csv")
 
 # create an entry for the category entry field.
 metadata <- data.table(
@@ -121,7 +121,7 @@ inter_list = inter %>%
          `Accessed on`)
 
 # Write to outputs folder
-fwrite(inter_list,"output/interstate wars.csv")
+fwrite(inter_list,"output/list of interstate wars.csv")
 
 # create an entry for the category entry field.
 metadata <- data.table(
@@ -174,7 +174,7 @@ colonial_list = extra %>%
          `Accessed on`)
 
 # Write to outputs folder
-fwrite(colonial_list,"output/colonial wars.csv")
+fwrite(colonial_list,"output/list of colonial wars.csv")
 
 # create an entry for the category entry field.
 metadata <- data.table(
@@ -227,7 +227,7 @@ sns_list = extra %>%
          `Accessed on`)
 
 # Write to outputs folder
-fwrite(sns_list,"output/state nonstate wars.csv")
+fwrite(sns_list,"output/list of state nonstate wars.csv")
 
 # create an entry for the category entry field.
 metadata <- data.table(
@@ -279,7 +279,7 @@ non_list = non %>%
          `Accessed on`)
 
 # Write to outputs folder
-fwrite(non_list,"output/nonstate wars.csv")
+fwrite(non_list,"output/list of nonstate wars.csv")
 
 # create an entry for the category entry field.
 metadata <- data.table(

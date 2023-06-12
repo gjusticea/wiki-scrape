@@ -1,6 +1,7 @@
 source("utils/functions.R")
 
 url = "https://www.un.org/en/about-us/growth-in-un-membership"
+ref = "Nations, United. “Growth in United Nations Membership.” United Nations, https://www.un.org/en/about-us/growth-in-un-membership. Accessed 26 February 2023."
 cat_name = "List of UN Member States"
 cat_id = "G1"
 
@@ -18,7 +19,7 @@ table = table %>%
          `Timepoint start` = as.Date(paste0(Year,"-01-01")),
          `Timepoint end` = as.Date(paste0(Year,"-12-31")),
          `Quantity outcome 1` = `Number of states`,
-         `Reference/link to data` = url,
+         `Reference/link to data` = ref,
          `Accessed on` = as.Date("2022-02-26")) %>%
   ungroup() %>%
 select(`Category ID`,Category, Event, `Event description`, `Timepoint start`,

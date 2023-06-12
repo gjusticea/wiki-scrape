@@ -1,6 +1,7 @@
 source("utils/functions.R")
 
 url = "https://www.bankofcanada.ca/2022/08/staff-analytical-note-2022-11/"
+ref = "Beers, David, et al. BoC–BoE Sovereign Default Database: What’s New in 2022? 23 Aug. 2022, https://doi.org/10.34989/san-2022-11."
 cat_name = "Sovereign Debt Defaults"
 cat_id = "G9"
 
@@ -58,7 +59,7 @@ table = fread("ref/BoC-BoE-Database-2022-08-18.csv") %>%
          `Timepoint start` = year_start,
          `Timepoint end` = year_end,
          `Quantity outcome 1` = max_default,
-         `Reference/link to data` = url,
+         `Reference/link to data` = ref,
          `Accessed on` = as.Date("2023-03-30")) %>%
 
 select(`Category ID`,Category, Event, `Event description`, `Timepoint start`,
@@ -66,7 +67,7 @@ select(`Category ID`,Category, Event, `Event description`, `Timepoint start`,
        `Accessed on`)
 
 # Write to outputs folder
-fwrite(table,"output/sovereign debt defaults.csv")
+fwrite(table,"output/list of sovereign debt defaults.csv")
 
 # create an entry for the category entry field.
 metadata <- data.table(
