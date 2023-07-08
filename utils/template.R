@@ -18,18 +18,18 @@ select(`Category ID`, Category, Event, `Event description`, `Timepoint start`,
        `Accessed on`)
 
 # Write to outputs folder
-writexl::write_xlsx(table,path = "output/")
+fwrite(table,file = "output/")
 
 # create an entry for the category entry field.
 metadata <- data.table(
-  "Category ID" = "",
-  "Category name" = "",
+  "Category ID" = cat_id,
+  "Category name" = cat_name,
   "Description" = "",
   "Description quantity column 1" = "",
   "Period start" = "",
   "Period end" = "present",
   "How was the period selected" = "",
-  "Collected by" = "Wikipedia"
+  "Collected by" = ""
 )
 
 update_category_info_sheet(metadata)
