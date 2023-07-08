@@ -29,7 +29,7 @@ select(`Category ID`, Category, Event, `Event description`, `Timepoint start`,
        `Accessed on`)
 
 # Write to outputs folder
-writexl::write_xlsx(table,path = "output/death sentences and exonerations.csv")
+fwrite(table,"output/death sentences and exonerations.csv")
 
 # create an entry for the category entry field.
 metadata <- data.table(
