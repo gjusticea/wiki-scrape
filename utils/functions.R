@@ -121,6 +121,12 @@ update_category_info_sheet <- function(new_metadata) {
   all_metadata <- all_metadata |>
     filter(`Category name` != current_category_name)
 
+  current_category_id = new_metadata$`Category ID`
+
+  if(current_category_id %in% all_metadata$`Category ID`){
+    stop(paste0("ID ",current_category_id," already in use"))
+  }
+
   # add current entry
   all_metadata <- all_metadata |>
     list(new_metadata) %>%

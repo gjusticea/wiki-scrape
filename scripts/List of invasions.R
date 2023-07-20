@@ -2,6 +2,7 @@ source("utils/functions.R")
 
 url = "https://en.wikipedia.org/wiki/List_of_invasions"
 cat_name = "List of invasions"
+cat_id = "G71"
 
 # Read in tables and get suggested tables for cleaning
 tables = download_tables(url)
@@ -22,7 +23,8 @@ table = do.call("rbind",tables[suggested_tables$`max cols`]) %>%
 
 # put into uniform format
 table = table %>%
-  mutate(Category = cat_name,
+  mutate(`Category ID` = cat_id,
+         Category = cat_name,
          Event = Invasion,
          `Event description` = paste0("Invading forces: ",`Invading forces`,
                                       "; Defending forces: ",`Defending forces`),
@@ -37,7 +39,7 @@ fwrite(table,"output/list of invasions.csv")
 
 # create an entry for the category entry field.
 metadata <- data.table(
-  "Category ID" = "tbd",
+  "Category ID" = cat_id,
   "Category name" = "List of invasions",
   "Description" = "Military invasions of sovereign states, including of colonies, excluding civil wars and invasions of/by rebel groups, breakaway states, or provisional governments",
   "Description quantity column 1" = "",

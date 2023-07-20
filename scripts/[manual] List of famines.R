@@ -1,7 +1,9 @@
 source("utils/functions.R")
 
 url = "https://ourworldindata.org/famines#famines-by-world-region-since-1860"
+ref = "Joe Hasell and Max Roser (2013) - 'Famines'. Published online at OurWorldInData.org. Retrieved from: 'https://ourworldindata.org/famines' [Online Resource]"
 cat_name = "List of famines"
+cat_id = "G66"
 
 # Read in tables and get suggested tables for cleaning
 tables = download_tables(url,rm_first = FALSE)
@@ -18,20 +20,22 @@ table = tables$`tablepress-73` %>%
                        names = c("year_start","year_end"),
                        too_few = "align_start") %>%
   group_by_all() %>%
-  mutate(year_end = paste0(substr(year_start,1,4-nchar(year_end)),year_end),
+  mutate(year_start = substr(year_start,1,4),
+         year_end = paste0(substr(year_start,1,4-nchar(year_end)),year_end),
          year_end = ifelse(year_end == "NANA",year_start,year_end)) %>%
 
-  mutate(Category = cat_name,
+  mutate(`Category ID` = cat_id,
+         Category = cat_name,
          Event = paste0(Country,": ",year_start,"-",year_end),
          `Event description` = Event,
          `Timepoint start` = year_start,
          `Timepoint end` = year_end,
          `Quantity outcome 1` = `Excess Mortality midpoint`,
-         `Reference/link to data` = "Joe Hasell and Max Roser (2013) - 'Famines'. Published online at OurWorldInData.org. Retrieved from: 'https://ourworldindata.org/famines' [Online Resource]",
+         `Reference/link to data` = ref,
          `Accessed on` = Sys.Date()) %>%
   ungroup() %>%
 
-select(Category, Event, `Event description`, `Timepoint start`,
+select(`Category ID`,Category, Event, `Event description`, `Timepoint start`,
        `Timepoint end`, `Quantity outcome 1`, `Reference/link to data`,
        `Accessed on`)
 
@@ -40,7 +44,7 @@ fwrite(table,"output/list of famines.csv")
 
 # create an entry for the category entry field.
 metadata <- data.table(
-  "Category ID" = "tbd",
+  "Category ID" = cat_id,
   "Category name" = cat_name,
   "Description" = "List of famines since 1846",
   "Description quantity column 1" = "Excess mortality midpoint",

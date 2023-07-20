@@ -2,6 +2,7 @@ source("utils/functions.R")
 
 url = "https://en.wikipedia.org/wiki/List_of_fatal_crowd_crushes"
 cat_name = "Crowd crushes"
+cat_id = "G14"
 
 # Read in tables and get suggested tables for cleaning
 tables = download_tables(url)
@@ -23,7 +24,8 @@ table = do.call(rbind,tables[suggested_tables$`max cols`]) %>%
             .groups = "drop") %>%
   filter(Date >= as.Date("1900-01-01")) %>%
 
-  mutate(Category = cat_name,
+  mutate(`Category ID` = cat_id,
+         Category = cat_name,
          Event = unlist(mapply(FUN = paste0,Name," - ",Place,", ",Country)),
          `Event description` = Description,
          `Timepoint start` = Date,
@@ -32,16 +34,16 @@ table = do.call(rbind,tables[suggested_tables$`max cols`]) %>%
          `Reference/link to data` = url,
          `Accessed on` = Sys.Date()) %>%
 
-select(Category, Event, `Event description`, `Timepoint start`,
+select(`Category ID`,Category, Event, `Event description`, `Timepoint start`,
        `Timepoint end`, `Quantity outcome 1`, `Reference/link to data`,
        `Accessed on`)
 
 # Write to outputs folder
-fwrite(table,"output/crowd crushes.csv")
+fwrite(table,"output/list of crowd crushes.csv")
 
 # create an entry for the category entry field.
 metadata <- data.table(
-  "Category ID" = "tbd",
+  "Category ID" = cat_id,
   "Category name" = cat_name,
   "Description" = "List of fatal crowd crushes",
   "Description quantity column 1" = "Death count (middle point chosen if range)",

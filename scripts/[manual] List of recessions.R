@@ -2,7 +2,7 @@ library(tidyverse)
 source("utils/functions.R")
 
 url = "https://data.worldbank.org/indicator/NY.GDP.MKTP.CD"
-cat_name = "List of recessions"
+ref = "“World Bank Open Data.” World Bank Open Data, https://data.worldbank.org. Accessed 28 February 2023."
 
 # Read in tables and get suggested tables for cleaning
 mtd = fread("ref/API_NY.GDP.MKTP.CD_DS2_en_csv_v2_4898871/Metadata_Country_API_NY.GDP.MKTP.CD_DS2_en_csv_v2_4898871.csv")
@@ -51,25 +51,35 @@ table_clean = table_clean %>%
          `Timepoint start` = as.Date(paste0(Year,"-01-01")),
          `Timepoint end` = as.Date(paste0(Year,"-12-31")),
          `Quantity outcome 1` = yoy_change_perc,
-         `Reference/link to data` = url,
+         `Reference/link to data` = ref,
          `Accessed on` = as.Date("2023-02-28")) %>%
 select(Category, Event, `Event description`, `Timepoint start`,
        `Timepoint end`, `Quantity outcome 1`, `Reference/link to data`,
        `Accessed on`,cc)
 
+cat_id_key = table_clean %>%
+  arrange(cc) %>%
+  select(Category,cc) %>%
+  distinct() %>%
+  mutate(`Category ID` = paste0("G",row_number()+16))
+
+table_clean = table_clean %>%
+  merge(cat_id_key)
+
 # Write to outputs folder
 fwrite(table_clean %>% select(-cc),
-       "output/list of recessions.csv")
+                    "output/list of recessions.csv")
 
 # create an entry for the category entry field.
 for(i in 1:length(unique(table_clean$cc))){
   cat = unique(table_clean$cc)[[i]]
   cat_desc = mtd %>% filter(`Country Code` == cat)
+  cat_id = cat_id_key[which(cat_id_key$cc == cat),"Category ID"]
   tbl_cat = table_clean %>%
     filter(cc == cat)
 
   metadata <- data.table(
-    "Category ID" = "tbd",
+    "Category ID" = cat_id,
     "Category name" = unique(tbl_cat$Category),
     "Description" = paste0("Each year labeled as recession y/n, meaning a negative year-over-year change in GDP. ",
                            "Region: ",cat_desc$TableName,
