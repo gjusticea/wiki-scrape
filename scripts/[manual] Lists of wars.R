@@ -11,6 +11,11 @@ inter = fread("ref/Inter-StateWarData_v4.0.csv")
 extra = fread("ref/Extra-StateWarData_v4.0.csv")
 non = fread("ref/Non-StateWarData_v4.0.csv")
 
+# import ccode key for country tagging
+ccode_key = fread("ref/cow wars country key.csv") %>%
+  select(stateabb,statenme,ccode) %>%
+  distinct()
+
 type_key = data.frame(
   WarType = c(1:9),
   TypeDesc = c("Inter-state war",
@@ -53,7 +58,7 @@ intra_list = intra %>%
   merge(type_key) %>%
   select(-WarType) %>%
   group_by_all() %>%
-  mutate(`Category ID` = cat_id,
+  mutate(`Category ID` = "G2",
          Category = "Intra-state (civil) wars",
          Event = WarName,
          `Event description` = paste0(TypeDesc,": ",sidea," vs. ",sideb),
@@ -67,6 +72,21 @@ intra_list = intra %>%
   select(`Category ID`,Category, Event, `Event description`, `Timepoint start`,
          `Timepoint end`, `Quantity outcome 1`, `Reference/link to data`,
          `Accessed on`)
+
+# output converted country key list
+intra %>%
+  select(Event = WarName,CcodeA,CcodeB) %>%
+  pivot_longer(cols = c(CcodeA,CcodeB),names_to = "col",values_to = "ccode") %>%
+  select(-col) %>%
+  filter(ccode > 0) %>%
+  distinct() %>%
+  merge(ccode_key) %>%
+  select(-ccode) %>%
+  merge(intra_list %>% select(`Category ID`,Category,Event,`Event description`)) %>%
+  select(`Category ID`,Category,Event,`Event description`,
+         country = statenme,ccode = stateabb) %>%
+  mutate(type = "Polity", src = "data") %>%
+  fwrite(file = "ref/country key prep/intrastate war from data.csv")
 
 # Write to outputs folder
 fwrite(intra_list,"output/list of civil wars.csv")
@@ -105,7 +125,7 @@ inter_list = inter %>%
   merge(type_key) %>%
   select(-WarType) %>%
   group_by_all() %>%
-  mutate(`Category ID` = cat_id,
+  mutate(`Category ID` = "G3",
          Category = "Inter-state wars",
          Event = WarName,
          `Event description` = paste0(TypeDesc,": ",States),
@@ -119,6 +139,20 @@ inter_list = inter %>%
   select(`Category ID`,Category, Event, `Event description`, `Timepoint start`,
          `Timepoint end`, `Quantity outcome 1`, `Reference/link to data`,
          `Accessed on`)
+
+# output converted country key list
+inter %>%
+  select(Event = WarName,ccode) %>%
+  filter(ccode > 0) %>%
+  distinct() %>%
+  merge(ccode_key) %>%
+  select(-ccode) %>%
+  merge(inter_list %>% select(`Category ID`,Category,Event,`Event description`),
+        by = "Event") %>%
+  select(`Category ID`,Category,Event,`Event description`,
+         country = statenme,ccode = stateabb) %>%
+  mutate(type = "Polity", src = "data") %>%
+  fwrite(file = "ref/country key prep/interstate war from data.csv")
 
 # Write to outputs folder
 fwrite(inter_list,"output/list of interstate wars.csv")
@@ -158,7 +192,7 @@ colonial_list = extra %>%
   merge(type_key) %>%
   select(-WarType) %>%
   group_by_all() %>%
-  mutate(`Category ID` = cat_id,
+  mutate(`Category ID` = "G4",
          Category = "Colonial wars",
          Event = WarName,
          `Event description` = paste0(TypeDesc,": ",sidea," vs. ",sideb),
@@ -172,6 +206,22 @@ colonial_list = extra %>%
   select(`Category ID`,Category, Event, `Event description`, `Timepoint start`,
          `Timepoint end`, `Quantity outcome 1`, `Reference/link to data`,
          `Accessed on`)
+
+# output converted country key list
+extra %>%
+  select(Event = WarName,ccode1,ccode2) %>%
+  pivot_longer(cols = c(ccode1,ccode2),names_to = "col",values_to = "ccode") %>%
+  select(-col) %>%
+  filter(ccode > 0) %>%
+  distinct() %>%
+  merge(ccode_key) %>%
+  select(-ccode) %>%
+  merge(colonial_list %>% select(`Category ID`,Category,Event,`Event description`)) %>%
+  select(`Category ID`,Category,Event,`Event description`,
+         country = statenme,ccode = stateabb) %>%
+  mutate(type = "Polity", src = "data") %>%
+  fwrite(file = "ref/country key prep/colonial war from data.csv")
+
 
 # Write to outputs folder
 fwrite(colonial_list,"output/list of colonial wars.csv")
@@ -211,7 +261,7 @@ sns_list = extra %>%
   merge(type_key) %>%
   select(-WarType) %>%
   group_by_all() %>%
-  mutate(`Category ID` = cat_id,
+  mutate(`Category ID` = "G5",
          Category = "State-nonstate wars",
          Event = WarName,
          `Event description` = paste0(TypeDesc,": ",sidea," vs. ",sideb),
@@ -225,6 +275,21 @@ sns_list = extra %>%
   select(`Category ID`,Category, Event, `Event description`, `Timepoint start`,
          `Timepoint end`, `Quantity outcome 1`, `Reference/link to data`,
          `Accessed on`)
+
+# output converted country key list
+extra %>%
+  select(Event = WarName,ccode1,ccode2) %>%
+  pivot_longer(cols = c(ccode1,ccode2),names_to = "col",values_to = "ccode") %>%
+  select(-col) %>%
+  filter(ccode > 0) %>%
+  distinct() %>%
+  merge(ccode_key) %>%
+  select(-ccode) %>%
+  merge(sns_list %>% select(`Category ID`,Category,Event,`Event description`)) %>%
+  select(`Category ID`,Category,Event,`Event description`,
+         country = statenme,ccode = stateabb) %>%
+  mutate(type = "Polity", src = "data") %>%
+  fwrite(file = "ref/country key prep/state nonstate war from data.csv")
 
 # Write to outputs folder
 fwrite(sns_list,"output/list of state nonstate wars.csv")
@@ -263,7 +328,7 @@ non_list = non %>%
   merge(type_key) %>%
   select(-WarType) %>%
   group_by_all() %>%
-  mutate(`Category ID` = cat_id,
+  mutate(`Category ID` = "G6",
          Category = "Nonstate wars",
          Event = WarName,
          `Event description` = paste0(TypeDesc,": ",sidea," vs. ",sideb),

@@ -7,6 +7,7 @@ library(rlist)
 library(lubridate) # cheat sheet: https://rawgit.com/rstudio/cheatsheets/main/lubridate.pdf
 library(tidyr)
 library(stringr)
+library(magrittr)
 
 
 #' Download all wiki tables from a given URL
@@ -180,6 +181,11 @@ try_to_parse_date <- function(date) {
 
 
 
-## need to add a function that takes all the csv files and combines them
-
+# output rows with any info relevant to country tagging
+get_country_raw_info = function(tbl){
+  cat_name = unique(tbl$`Category ID`)
+  tbl %>%
+    select(`Category ID`,`Category`,Event,`Event description`,Country) %>%
+    fwrite(paste0("ref/country key prep/",cat_name," by country.csv"))
+}
 

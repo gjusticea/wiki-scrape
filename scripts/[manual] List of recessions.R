@@ -52,7 +52,9 @@ table_clean = table_clean %>%
          `Timepoint end` = as.Date(paste0(Year,"-12-31")),
          `Quantity outcome 1` = yoy_change_perc,
          `Reference/link to data` = ref,
-         `Accessed on` = as.Date("2023-02-28")) %>%
+         `Accessed on` = as.Date("2023-02-28"))
+
+table_clean %<>%
 select(Category, Event, `Event description`, `Timepoint start`,
        `Timepoint end`, `Quantity outcome 1`, `Reference/link to data`,
        `Accessed on`,cc)
@@ -65,6 +67,9 @@ cat_id_key = table_clean %>%
 
 table_clean = table_clean %>%
   merge(cat_id_key)
+
+# write category key for country identification
+fwrite(cat_id_key, file = "ref/country key starter lists/worldbank groups.csv")
 
 # Write to outputs folder
 fwrite(table_clean %>% select(-cc),

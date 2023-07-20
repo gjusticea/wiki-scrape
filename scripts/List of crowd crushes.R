@@ -32,8 +32,13 @@ table = do.call(rbind,tables[suggested_tables$`max cols`]) %>%
          `Timepoint end` = Date,
          `Quantity outcome 1` = deaths,
          `Reference/link to data` = url,
-         `Accessed on` = Sys.Date()) %>%
+         `Accessed on` = Sys.Date())
 
+# get country info
+table %>%
+  get_country_raw_info()
+
+table %<>%
 select(`Category ID`,Category, Event, `Event description`, `Timepoint start`,
        `Timepoint end`, `Quantity outcome 1`, `Reference/link to data`,
        `Accessed on`)

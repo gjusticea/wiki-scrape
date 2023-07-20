@@ -23,8 +23,14 @@ table = fread("ref/coup attempts files/powell_thyne_coups_final.txt") %>%
          `Timepoint end` = date,
          `Quantity outcome 1` = as.numeric(successful),
          `Reference/link to data` = ref,
-         `Accessed on` = as.Date("2023-06-24")) %>%
+         `Accessed on` = as.Date("2023-06-24"))
 
+# get country info
+table %>%
+  rename(Country = country) %>%
+  get_country_raw_info()
+
+table %<>%
 select(`Category ID`, Category, Event, `Event description`, `Timepoint start`,
        `Timepoint end`, `Quantity outcome 1`, `Reference/link to data`,
        `Accessed on`)

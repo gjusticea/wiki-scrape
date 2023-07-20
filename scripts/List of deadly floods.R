@@ -33,8 +33,14 @@ table_clean = table %>%
          `Quantity outcome 1` = mean(c(deaths_low,deaths_high),na.rm=TRUE),
          `Reference/link to data` = url,
          `Accessed on` = Sys.Date()) %>%
-  ungroup() %>%
+  ungroup()
 
+# get country info
+table_clean %>%
+  rename(Country = Location) %>%
+  get_country_raw_info()
+
+table_clean %<>%
 select(`Category ID`, Category, Event, `Event description`, `Timepoint start`,
        `Timepoint end`, `Quantity outcome 1`, `Reference/link to data`,
        `Accessed on`)

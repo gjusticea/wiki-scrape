@@ -25,8 +25,14 @@ table = fread("ref/structural failures.csv") %>%
          `Timepoint end` = as.Date(paste0(Year,"-12-31")),
          `Quantity outcome 1` = deaths,
          `Reference/link to data` = url,
-         `Accessed on` = as.Date("2023-03-20")) %>%
+         `Accessed on` = as.Date("2023-03-20"))
 
+# get country info
+table %>%
+  rename(Country = Location) %>%
+  get_country_raw_info()
+
+table %<>%
 select(`Category ID`, Category, Event, `Event description`, `Timepoint start`,
        `Timepoint end`, `Quantity outcome 1`, `Reference/link to data`,
        `Accessed on`)
@@ -47,3 +53,4 @@ metadata <- data.table(
 )
 
 update_category_info_sheet(metadata)
+

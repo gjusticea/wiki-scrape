@@ -22,8 +22,10 @@ table <- fread("ref/usgs earthquake world 6 1900 present.csv") %>%
          `Timepoint end` = time,
          `Quantity outcome 1` = magnitude,
          `Reference/link to data` = ref,
-         `Accessed on` = as.Date("2023-04-29")) %>%
+         `Accessed on` = as.Date("2023-04-29"))
 
+
+table %<>%
 select(`Category ID`,Category, Event, `Event description`, `Timepoint start`,
        `Timepoint end`, `Quantity outcome 1`, `Reference/link to data`,
        `Accessed on`)

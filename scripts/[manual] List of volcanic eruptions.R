@@ -24,8 +24,13 @@ table = table %>%
          `Quantity outcome 1` = VEI,
          `Reference/link to data` = ref,
          `Accessed on` = as.Date("2023-02-27")) %>%
-  ungroup() %>%
+  ungroup()
 
+# output country info
+table %>%
+  get_country_raw_info()
+
+table %<>%
 select(`Category ID`,Category, Event, `Event description`, `Timepoint start`,
        `Timepoint end`, `Quantity outcome 1`, `Reference/link to data`,
        `Accessed on`)
@@ -46,3 +51,4 @@ metadata <- data.table(
 )
 
 update_category_info_sheet(metadata)
+

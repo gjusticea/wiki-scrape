@@ -21,8 +21,14 @@ table = table_raw %>%
          `Timepoint end` = dte,
          `Quantity outcome 1` = nkill,
          `Reference/link to data` = ref,
-         `Accessed on` = as.Date("2023-07-04")) %>%
+         `Accessed on` = as.Date("2023-07-04"))
 
+# get country info
+table %>%
+  rename(Country = country_txt) %>%
+  get_country_raw_info()
+
+table %<>%
 select(`Category ID`, Category, Event, `Event description`, `Timepoint start`,
        `Timepoint end`, `Quantity outcome 1`, `Reference/link to data`,
        `Accessed on`)
