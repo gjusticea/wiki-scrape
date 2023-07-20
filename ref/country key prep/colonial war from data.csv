@@ -1,0 +1,67 @@
+Category ID,Category,Event,Event description,country,ccode,type,src
+G4,Colonial wars,Al Aqsa Intifada,Colonial - conflict with colony: Israel vs. Palestinians,Israel,ISR,Polity,data
+G4,Colonial wars,American-Philippine,Colonial - conflict with colony: United States of America vs. Philippines,United States of America,USA,Polity,data
+G4,Colonial wars,Angolan-Portuguese,Colonial - conflict with colony: Portugal vs. Angola,Portugal,POR,Polity,data
+G4,Colonial wars,British-Bharatpuran,Colonial - conflict with colony: United Kingdom vs. Bharatpuran rebels,United Kingdom,UKG,Polity,data
+G4,Colonial wars,British-Kandyan,Colonial - conflict with colony: United Kingdom vs. Kandyan rebels,United Kingdom,UKG,Polity,data
+G4,Colonial wars,British-Maori,Colonial - conflict with colony: United Kingdom vs. New Zealand Maori,United Kingdom,UKG,Polity,data
+G4,Colonial wars,British-Maratha,Colonial - conflict with colony: United Kingdom vs. Marathas,United Kingdom,UKG,Polity,data
+G4,Colonial wars,British-Mau Mau,Colonial - conflict with colony: United Kingdom vs. Mau Mau,United Kingdom,UKG,Polity,data
+G4,Colonial wars,British-Palestinian,Colonial - conflict with colony: United Kingdom vs. Palestinians,United Kingdom,UKG,Polity,data
+G4,Colonial wars,British-Pathan,Colonial - conflict with colony: United Kingdom vs. Pathans,United Kingdom,UKG,Polity,data
+G4,Colonial wars,British-Santal,Colonial - conflict with colony: United Kingdom vs. Santal,United Kingdom,UKG,Polity,data
+G4,Colonial wars,Caco Revolt,Colonial - conflict with colony: United States vs. Caco Rebels,United States of America,USA,Polity,data
+G4,Colonial wars,Dutch - Javanese,Colonial - conflict with colony: Netherlands vs. Javanese rebels,Netherlands,NTH,Polity,data
+G4,Colonial wars,First Boer War,Colonial - conflict with colony: United Kingdom vs. Transvaal,United Kingdom,UKG,Polity,data
+G4,Colonial wars,First Bolivar Expedition,Colonial - conflict with colony: Spain vs. New Granada,Spain,SPN,Polity,data
+G4,Colonial wars,First British-Mahdi,"Colonial - conflict with colony: Egypt, United Kingdom vs. Mahdist Empire",United Kingdom,UKG,Polity,data
+G4,Colonial wars,First British-Mahdi,"Colonial - conflict with colony: Egypt, United Kingdom vs. Mahdist Empire",Egypt,EGY,Polity,data
+G4,Colonial wars,First Sino-Tibetan,Colonial - conflict with colony: China vs. Tibet,China,CHN,Polity,data
+G4,Colonial wars,First Spanish-Cuban,Colonial - conflict with colony: Spain vs. Cuba,Spain,SPN,Polity,data
+G4,Colonial wars,Franco-Druze,Colonial - conflict with colony: France vs. Druze,France,FRN,Polity,data
+G4,Colonial wars,Franco-Tunisian,Colonial - conflict with colony: France vs. Tunisia,France,FRN,Polity,data
+G4,Colonial wars,French-Berber,Colonial - conflict with colony: France vs. Berbers,France,FRN,Polity,data
+G4,Colonial wars,French-Cameroon,Colonial - conflict with colony: France vs. UPC,France,FRN,Polity,data
+G4,Colonial wars,French-Indochina,Colonial - conflict with colony: France vs. Vietminh,France,FRN,Polity,data
+G4,Colonial wars,French Conquest of Kabylia,Colonial - conflict with colony: France vs. Kabylia,France,FRN,Polity,data
+G4,Colonial wars,Gun War,Colonial - conflict with colony: United Kingdom vs. Basuto,United Kingdom,UKG,Polity,data
+G4,Colonial wars,Hodeida Seige,Colonial - conflict with colony: Ottoman Empire vs. Beni Aseer tribe,Turkey,TUR,Polity,data
+G4,Colonial wars,Hut Tax,Colonial - conflict with colony: United Kingdom vs. Sierra Leone rebels,United Kingdom,UKG,Polity,data
+G4,Colonial wars,Indian Mutiny,Colonial - conflict with colony: United Kingdom vs. Indian sepoys,United Kingdom,UKG,Polity,data
+G4,Colonial wars,Indonesian,"Colonial - conflict with colony: United Kingdom, Netherlands vs. Indonesia",United Kingdom,UKG,Polity,data
+G4,Colonial wars,Indonesian,"Colonial - conflict with colony: United Kingdom, Netherlands vs. Indonesia",Netherlands,NTH,Polity,data
+G4,Colonial wars,Iraqi-British,Colonial - conflict with colony: United Kingdom vs. Iraq,United Kingdom,UKG,Polity,data
+G4,Colonial wars,Italian-Sanusi,Colonial - conflict with colony: Italy vs. Sanusi tribe,Italy,ITA,Polity,data
+G4,Colonial wars,Japan-Korean Guerrillas,Colonial - conflict with colony: Japan vs. Korea,Japan,JPN,Polity,data
+G4,Colonial wars,Japan-Taiwanese,Colonial - conflict with colony: Japan vs. Taiwanese,Japan,JPN,Polity,data
+G4,Colonial wars,Liberation of Chile,Colonial - conflict with colony: Spain vs. San Martin revolutionaries,Spain,SPN,Polity,data
+G4,Colonial wars,Liberation of Peru,Colonial - conflict with colony: Spain vs. Latin American revolutionaries,Spain,SPN,Polity,data
+G4,Colonial wars,Maji-Maji Revolt,Colonial - conflict with colony: Germany vs. Maji-Maji in Tanganyika,Germany,GMY,Polity,data
+G4,Colonial wars,Malayan Rebellion,Colonial - conflict with colony: United Kingdom vs. Malayan Communists,United Kingdom,UKG,Polity,data
+G4,Colonial wars,Mexican Independence,Colonial - conflict with colony: Spain vs. Mina Expedition,Spain,SPN,Polity,data
+G4,Colonial wars,Moplah Rebellion,Colonial - conflict with colony: United Kingdom vs. Muslim Moplahs,United Kingdom,UKG,Polity,data
+G4,Colonial wars,Moro Rebellion,Colonial - conflict with colony: United States vs. Moro,United States of America,USA,Polity,data
+G4,Colonial wars,Moroccan Berber,"Colonial - conflict with colony: France, Spain vs. Berbers",France,FRN,Polity,data
+G4,Colonial wars,Moroccan Berber,"Colonial - conflict with colony: France, Spain vs. Berbers",Spain,SPN,Polity,data
+G4,Colonial wars,Moroccan Independence,Colonial - conflict with colony: France vs. Morocco,France,FRN,Polity,data
+G4,Colonial wars,Mozambique-Portuguese,Colonial - conflict with colony: Portugal vs. Mozambique,Portugal,POR,Polity,data
+G4,Colonial wars,Namibian,Colonial - conflict with colony: South Africa vs. SWAPO-Namibia,South Africa,SAF,Polity,data
+G4,Colonial wars,Rif Rebellion,"Colonial - conflict with colony: France, Spain vs. Riffs",Spain,SPN,Polity,data
+G4,Colonial wars,Rif Rebellion,"Colonial - conflict with colony: France, Spain vs. Riffs",France,FRN,Polity,data
+G4,Colonial wars,Saya San's Rebellion,Colonial - conflict with colony: United Kingdom vs. Peasant Rebels,United Kingdom,UKG,Polity,data
+G4,Colonial wars,Second Bolivar Expedition,Colonial - conflict with colony: Spain vs. New Granada,Spain,SPN,Polity,data
+G4,Colonial wars,Second British-Xhosa,Colonial - conflict with colony: United Kingdom vs. Xhosa,United Kingdom,UKG,Polity,data
+G4,Colonial wars,Second Dutch-Achinese,Colonial - conflict with colony: Netherlands vs. Aceh,Netherlands,NTH,Polity,data
+G4,Colonial wars,Second Franco-Algerian,Colonial - conflict with colony: France vs. Algeria,France,FRN,Polity,data
+G4,Colonial wars,Second Spanish-Cuban,Colonial - conflict with colony: Spain vs. Cuba,Spain,SPN,Polity,data
+G4,Colonial wars,Sokoto Uprising,Colonial - conflict with colony: United Kingdom vs. Mahdist rebels,United Kingdom,UKG,Polity,data
+G4,Colonial wars,Somali Rebellion,"Colonial - conflict with colony: United Kingdom, Ethiopia vs. ",Ethiopia,ETH,Polity,data
+G4,Colonial wars,Somali Rebellion,"Colonial - conflict with colony: United Kingdom, Ethiopia vs. ",United Kingdom,UKG,Polity,data
+G4,Colonial wars,South West African Revolt,Colonial - conflict with colony: Germany vs. Herero & Nama,Germany,GMY,Polity,data
+G4,Colonial wars,Spanish-Philippine,Colonial - conflict with colony: Spain vs. Philippines,Spain,SPN,Polity,data
+G4,Colonial wars,Spanish-Santo Dominican,Colonial - conflict with colony: Spain vs. Santo Domingo,Spain,SPN,Polity,data
+G4,Colonial wars,Third British-Xhosa,Colonial - conflict with colony: United Kingdom vs. S. Africa Xhosa,United Kingdom,UKG,Polity,data
+G4,Colonial wars,Third British-Zulu,Colonial - conflict with colony: United Kingdom vs. Zulu,United Kingdom,UKG,Polity,data
+G4,Colonial wars,Third Franco-Algerian,Colonial - conflict with colony: France vs. Algeria,France,FRN,Polity,data
+G4,Colonial wars,Third Franco-Madagascan,Colonial - conflict with colony: France vs. Madagascar,France,FRN,Polity,data
+G4,Colonial wars,Yen Bai Uprising,Colonial - conflict with colony: France vs. Vietnamese Nationalists,France,FRN,Polity,data

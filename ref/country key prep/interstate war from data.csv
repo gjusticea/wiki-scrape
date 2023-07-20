@@ -1,0 +1,333 @@
+Category ID,Category,Event,Event description,country,ccode,type,src
+G3,Inter-state wars,Anglo-Persian,"Inter-state war: United Kingdom, Iran",United Kingdom,UKG,Polity,data
+G3,Inter-state wars,Anglo-Persian,"Inter-state war: United Kingdom, Iran",Iran,IRN,Polity,data
+G3,Inter-state wars,Arab-Israeli,"Inter-state war: Israel, Egypt, Syria, Lebanon, Jordan, Iraq",Iraq,IRQ,Polity,data
+G3,Inter-state wars,Arab-Israeli,"Inter-state war: Israel, Egypt, Syria, Lebanon, Jordan, Iraq",Egypt,EGY,Polity,data
+G3,Inter-state wars,Arab-Israeli,"Inter-state war: Israel, Egypt, Syria, Lebanon, Jordan, Iraq",Syria,SYR,Polity,data
+G3,Inter-state wars,Arab-Israeli,"Inter-state war: Israel, Egypt, Syria, Lebanon, Jordan, Iraq",Lebanon,LEB,Polity,data
+G3,Inter-state wars,Arab-Israeli,"Inter-state war: Israel, Egypt, Syria, Lebanon, Jordan, Iraq",Jordan,JOR,Polity,data
+G3,Inter-state wars,Arab-Israeli,"Inter-state war: Israel, Egypt, Syria, Lebanon, Jordan, Iraq",Israel,ISR,Polity,data
+G3,Inter-state wars,Assam,"Inter-state war: India, China (PRC)",China,CHN,Polity,data
+G3,Inter-state wars,Assam,"Inter-state war: India, China (PRC)",India,IND,Polity,data
+G3,Inter-state wars,Austro-Sardinian,"Inter-state war: Tuscany, Italy, Austria, Modena",Austria-Hungary,AUH,Polity,data
+G3,Inter-state wars,Austro-Sardinian,"Inter-state war: Tuscany, Italy, Austria, Modena",Italy,ITA,Polity,data
+G3,Inter-state wars,Austro-Sardinian,"Inter-state war: Tuscany, Italy, Austria, Modena",Modena,MOD,Polity,data
+G3,Inter-state wars,Austro-Sardinian,"Inter-state war: Tuscany, Italy, Austria, Modena",Tuscany,TUS,Polity,data
+G3,Inter-state wars,Azeri-Armenian,"Inter-state war: Azerbaijan, Armenia",Armenia,ARM,Polity,data
+G3,Inter-state wars,Azeri-Armenian,"Inter-state war: Azerbaijan, Armenia",Azerbaijan,AZE,Polity,data
+G3,Inter-state wars,Badme Border,"Inter-state war: Eritrea, Ethiopia",Ethiopia,ETH,Polity,data
+G3,Inter-state wars,Badme Border,"Inter-state war: Eritrea, Ethiopia",Eritrea,ERI,Polity,data
+G3,Inter-state wars,Bangladesh,"Inter-state war: India, Pakistan",India,IND,Polity,data
+G3,Inter-state wars,Bangladesh,"Inter-state war: India, Pakistan",Pakistan,PAK,Polity,data
+G3,Inter-state wars,Bosnian Independence,"Inter-state war: Croatia, Bosnia, Yugoslavia",Croatia,CRO,Polity,data
+G3,Inter-state wars,Bosnian Independence,"Inter-state war: Croatia, Bosnia, Yugoslavia",Yugoslavia,YUG,Polity,data
+G3,Inter-state wars,Bosnian Independence,"Inter-state war: Croatia, Bosnia, Yugoslavia",Bosnia and Herzegovina,BOS,Polity,data
+G3,Inter-state wars,Boxer Rebellion,"Inter-state war: Russia, Japan, United States of America, China, United Kingdom, France",United States of America,USA,Polity,data
+G3,Inter-state wars,Boxer Rebellion,"Inter-state war: Russia, Japan, United States of America, China, United Kingdom, France",United Kingdom,UKG,Polity,data
+G3,Inter-state wars,Boxer Rebellion,"Inter-state war: Russia, Japan, United States of America, China, United Kingdom, France",France,FRN,Polity,data
+G3,Inter-state wars,Boxer Rebellion,"Inter-state war: Russia, Japan, United States of America, China, United Kingdom, France",Russia,RUS,Polity,data
+G3,Inter-state wars,Boxer Rebellion,"Inter-state war: Russia, Japan, United States of America, China, United Kingdom, France",China,CHN,Polity,data
+G3,Inter-state wars,Boxer Rebellion,"Inter-state war: Russia, Japan, United States of America, China, United Kingdom, France",Japan,JPN,Polity,data
+G3,Inter-state wars,Cenepa Valley,"Inter-state war: Ecuador, Peru",Ecuador,ECU,Polity,data
+G3,Inter-state wars,Cenepa Valley,"Inter-state war: Ecuador, Peru",Peru,PER,Polity,data
+G3,Inter-state wars,Chaco,"Inter-state war: Bolivia, Paraguay",Bolivia,BOL,Polity,data
+G3,Inter-state wars,Chaco,"Inter-state war: Bolivia, Paraguay",Paraguay,PAR,Polity,data
+G3,Inter-state wars,Changkufeng,"Inter-state war: USSR, Japan",Russia,RUS,Polity,data
+G3,Inter-state wars,Changkufeng,"Inter-state war: USSR, Japan",Japan,JPN,Polity,data
+G3,Inter-state wars,Communist Coalition,"Inter-state war: Vietnam, United States of America, Cambodia, South Vietnam",United States of America,USA,Polity,data
+G3,Inter-state wars,Communist Coalition,"Inter-state war: Vietnam, United States of America, Cambodia, South Vietnam",Cambodia,CAM,Polity,data
+G3,Inter-state wars,Communist Coalition,"Inter-state war: Vietnam, United States of America, Cambodia, South Vietnam",Vietnam,DRV,Polity,data
+G3,Inter-state wars,Communist Coalition,"Inter-state war: Vietnam, United States of America, Cambodia, South Vietnam",Republic of Vietnam,RVN,Polity,data
+G3,Inter-state wars,Conquest of Egypt,"Inter-state war: Egypt, United Kingdom",United Kingdom,UKG,Polity,data
+G3,Inter-state wars,Conquest of Egypt,"Inter-state war: Egypt, United Kingdom",Egypt,EGY,Polity,data
+G3,Inter-state wars,Conquest of Ethiopia,"Inter-state war: Italy, Ethiopia",Italy,ITA,Polity,data
+G3,Inter-state wars,Conquest of Ethiopia,"Inter-state war: Italy, Ethiopia",Ethiopia,ETH,Polity,data
+G3,Inter-state wars,Crimean,"Inter-state war: Turkey, Italy, France, United Kingdom, Russia",United Kingdom,UKG,Polity,data
+G3,Inter-state wars,Crimean,"Inter-state war: Turkey, Italy, France, United Kingdom, Russia",France,FRN,Polity,data
+G3,Inter-state wars,Crimean,"Inter-state war: Turkey, Italy, France, United Kingdom, Russia",Italy,ITA,Polity,data
+G3,Inter-state wars,Crimean,"Inter-state war: Turkey, Italy, France, United Kingdom, Russia",Russia,RUS,Polity,data
+G3,Inter-state wars,Crimean,"Inter-state war: Turkey, Italy, France, United Kingdom, Russia",Turkey,TUR,Polity,data
+G3,Inter-state wars,Ecuadorian-Colombian,"Inter-state war: Colombia, Ecuador",Colombia,COL,Polity,data
+G3,Inter-state wars,Ecuadorian-Colombian,"Inter-state war: Colombia, Ecuador",Ecuador,ECU,Polity,data
+G3,Inter-state wars,Estonian Liberation,"Inter-state war: Estonia, Finland, Russia",Russia,RUS,Polity,data
+G3,Inter-state wars,Estonian Liberation,"Inter-state war: Estonia, Finland, Russia",Estonia,EST,Polity,data
+G3,Inter-state wars,Estonian Liberation,"Inter-state war: Estonia, Finland, Russia",Finland,FIN,Polity,data
+G3,Inter-state wars,Falkland Islands,"Inter-state war: United Kingdom, Argentina",Argentina,ARG,Polity,data
+G3,Inter-state wars,Falkland Islands,"Inter-state war: United Kingdom, Argentina",United Kingdom,UKG,Polity,data
+G3,Inter-state wars,First Balkan,"Inter-state war: Turkey, Greece, Bulgaria, Yugoslavia",Yugoslavia,YUG,Polity,data
+G3,Inter-state wars,First Balkan,"Inter-state war: Turkey, Greece, Bulgaria, Yugoslavia",Greece,GRC,Polity,data
+G3,Inter-state wars,First Balkan,"Inter-state war: Turkey, Greece, Bulgaria, Yugoslavia",Bulgaria,BUL,Polity,data
+G3,Inter-state wars,First Balkan,"Inter-state war: Turkey, Greece, Bulgaria, Yugoslavia",Turkey,TUR,Polity,data
+G3,Inter-state wars,First Central American,"Inter-state war: Guatemala, El Salvador",Guatemala,GUA,Polity,data
+G3,Inter-state wars,First Central American,"Inter-state war: Guatemala, El Salvador",El Salvador,SAL,Polity,data
+G3,Inter-state wars,First Kashmir,"Inter-state war: India, Pakistan",India,IND,Polity,data
+G3,Inter-state wars,First Kashmir,"Inter-state war: India, Pakistan",Pakistan,PAK,Polity,data
+G3,Inter-state wars,First Russo-Turkish,"Inter-state war: Ottoman Empire, Russia",Russia,RUS,Polity,data
+G3,Inter-state wars,First Russo-Turkish,"Inter-state war: Ottoman Empire, Russia",Turkey,TUR,Polity,data
+G3,Inter-state wars,First Schleswig-Holstein,"Inter-state war: Prussia, Denmark",Germany,GMY,Polity,data
+G3,Inter-state wars,First Schleswig-Holstein,"Inter-state war: Prussia, Denmark",Denmark,DEN,Polity,data
+G3,Inter-state wars,First Sino-Japanese,"Inter-state war: China, Japan",China,CHN,Polity,data
+G3,Inter-state wars,First Sino-Japanese,"Inter-state war: China, Japan",Japan,JPN,Polity,data
+G3,Inter-state wars,First Spanish-Moroccan,"Inter-state war: Morocco, Spain",Spain,SPN,Polity,data
+G3,Inter-state wars,First Spanish-Moroccan,"Inter-state war: Morocco, Spain",Morocco,MOR,Polity,data
+G3,Inter-state wars,Football War,"Inter-state war: Honduras, El Salvador",Honduras,HON,Polity,data
+G3,Inter-state wars,Football War,"Inter-state war: Honduras, El Salvador",El Salvador,SAL,Polity,data
+G3,Inter-state wars,Fourth Central American,"Inter-state war: Nicaragua, El Salvador, Honduras",Honduras,HON,Polity,data
+G3,Inter-state wars,Fourth Central American,"Inter-state war: Nicaragua, El Salvador, Honduras",El Salvador,SAL,Polity,data
+G3,Inter-state wars,Fourth Central American,"Inter-state war: Nicaragua, El Salvador, Honduras",Nicaragua,NIC,Polity,data
+G3,Inter-state wars,Franco-Mexican,"Inter-state war: Mexico, France",Mexico,MEX,Polity,data
+G3,Inter-state wars,Franco-Mexican,"Inter-state war: Mexico, France",France,FRN,Polity,data
+G3,Inter-state wars,Franco-Prussian,"Inter-state war: Wuerttemburg, Baden, Germany, Bavaria, France",France,FRN,Polity,data
+G3,Inter-state wars,Franco-Prussian,"Inter-state war: Wuerttemburg, Baden, Germany, Bavaria, France",Bavaria,BAV,Polity,data
+G3,Inter-state wars,Franco-Prussian,"Inter-state war: Wuerttemburg, Baden, Germany, Bavaria, France",Germany,GMY,Polity,data
+G3,Inter-state wars,Franco-Prussian,"Inter-state war: Wuerttemburg, Baden, Germany, Bavaria, France",Baden,BAD,Polity,data
+G3,Inter-state wars,Franco-Prussian,"Inter-state war: Wuerttemburg, Baden, Germany, Bavaria, France",Wuerttemburg,WRT,Polity,data
+G3,Inter-state wars,Franco-Spanish War,"Inter-state war: Spain, France",France,FRN,Polity,data
+G3,Inter-state wars,Franco-Spanish War,"Inter-state war: Spain, France",Spain,SPN,Polity,data
+G3,Inter-state wars,Franco-Thai,"Inter-state war: France, Thailand",France,FRN,Polity,data
+G3,Inter-state wars,Franco-Thai,"Inter-state war: France, Thailand",Thailand,THI,Polity,data
+G3,Inter-state wars,Franco-Turkish,"Inter-state war: Turkey, France",France,FRN,Polity,data
+G3,Inter-state wars,Franco-Turkish,"Inter-state war: Turkey, France",Turkey,TUR,Polity,data
+G3,Inter-state wars,Greco-Turkish,"Inter-state war: Greece, Turkey",Greece,GRC,Polity,data
+G3,Inter-state wars,Greco-Turkish,"Inter-state war: Greece, Turkey",Turkey,TUR,Polity,data
+G3,Inter-state wars,Gulf War,"Inter-state war: Kuwait, United States of America, Canada, United Kingdom, Italy, Morocco, Iraq, Egypt, Oman, France, United Arab Emirates, Qatar, Saudi Arabia, Syria",United States of America,USA,Polity,data
+G3,Inter-state wars,Gulf War,"Inter-state war: Kuwait, United States of America, Canada, United Kingdom, Italy, Morocco, Iraq, Egypt, Oman, France, United Arab Emirates, Qatar, Saudi Arabia, Syria",Canada,CAN,Polity,data
+G3,Inter-state wars,Gulf War,"Inter-state war: Kuwait, United States of America, Canada, United Kingdom, Italy, Morocco, Iraq, Egypt, Oman, France, United Arab Emirates, Qatar, Saudi Arabia, Syria",United Kingdom,UKG,Polity,data
+G3,Inter-state wars,Gulf War,"Inter-state war: Kuwait, United States of America, Canada, United Kingdom, Italy, Morocco, Iraq, Egypt, Oman, France, United Arab Emirates, Qatar, Saudi Arabia, Syria",France,FRN,Polity,data
+G3,Inter-state wars,Gulf War,"Inter-state war: Kuwait, United States of America, Canada, United Kingdom, Italy, Morocco, Iraq, Egypt, Oman, France, United Arab Emirates, Qatar, Saudi Arabia, Syria",Italy,ITA,Polity,data
+G3,Inter-state wars,Gulf War,"Inter-state war: Kuwait, United States of America, Canada, United Kingdom, Italy, Morocco, Iraq, Egypt, Oman, France, United Arab Emirates, Qatar, Saudi Arabia, Syria",Morocco,MOR,Polity,data
+G3,Inter-state wars,Gulf War,"Inter-state war: Kuwait, United States of America, Canada, United Kingdom, Italy, Morocco, Iraq, Egypt, Oman, France, United Arab Emirates, Qatar, Saudi Arabia, Syria",Iraq,IRQ,Polity,data
+G3,Inter-state wars,Gulf War,"Inter-state war: Kuwait, United States of America, Canada, United Kingdom, Italy, Morocco, Iraq, Egypt, Oman, France, United Arab Emirates, Qatar, Saudi Arabia, Syria",Egypt,EGY,Polity,data
+G3,Inter-state wars,Gulf War,"Inter-state war: Kuwait, United States of America, Canada, United Kingdom, Italy, Morocco, Iraq, Egypt, Oman, France, United Arab Emirates, Qatar, Saudi Arabia, Syria",Syria,SYR,Polity,data
+G3,Inter-state wars,Gulf War,"Inter-state war: Kuwait, United States of America, Canada, United Kingdom, Italy, Morocco, Iraq, Egypt, Oman, France, United Arab Emirates, Qatar, Saudi Arabia, Syria",Saudi Arabia,SAU,Polity,data
+G3,Inter-state wars,Gulf War,"Inter-state war: Kuwait, United States of America, Canada, United Kingdom, Italy, Morocco, Iraq, Egypt, Oman, France, United Arab Emirates, Qatar, Saudi Arabia, Syria",Kuwait,KUW,Polity,data
+G3,Inter-state wars,Gulf War,"Inter-state war: Kuwait, United States of America, Canada, United Kingdom, Italy, Morocco, Iraq, Egypt, Oman, France, United Arab Emirates, Qatar, Saudi Arabia, Syria",Qatar,QAT,Polity,data
+G3,Inter-state wars,Gulf War,"Inter-state war: Kuwait, United States of America, Canada, United Kingdom, Italy, Morocco, Iraq, Egypt, Oman, France, United Arab Emirates, Qatar, Saudi Arabia, Syria",United Arab Emirates,UAE,Polity,data
+G3,Inter-state wars,Gulf War,"Inter-state war: Kuwait, United States of America, Canada, United Kingdom, Italy, Morocco, Iraq, Egypt, Oman, France, United Arab Emirates, Qatar, Saudi Arabia, Syria",Oman,OMA,Polity,data
+G3,Inter-state wars,Hungarian Adversaries,"Inter-state war: Hungary, Czechoslovakia, Romania",Hungary,HUN,Polity,data
+G3,Inter-state wars,Hungarian Adversaries,"Inter-state war: Hungary, Czechoslovakia, Romania",Czechoslovakia,CZE,Polity,data
+G3,Inter-state wars,Hungarian Adversaries,"Inter-state war: Hungary, Czechoslovakia, Romania",Romania,ROM,Polity,data
+G3,Inter-state wars,IfniWar,"Inter-state war: France, Spain, Morocco",France,FRN,Polity,data
+G3,Inter-state wars,IfniWar,"Inter-state war: France, Spain, Morocco",Spain,SPN,Polity,data
+G3,Inter-state wars,IfniWar,"Inter-state war: France, Spain, Morocco",Morocco,MOR,Polity,data
+G3,Inter-state wars,Invasion of Afghanistan,"Inter-state war: Canada, France, United Kingdom, United States of America, Australia, Afghanistan",United States of America,USA,Polity,data
+G3,Inter-state wars,Invasion of Afghanistan,"Inter-state war: Canada, France, United Kingdom, United States of America, Australia, Afghanistan",Canada,CAN,Polity,data
+G3,Inter-state wars,Invasion of Afghanistan,"Inter-state war: Canada, France, United Kingdom, United States of America, Australia, Afghanistan",United Kingdom,UKG,Polity,data
+G3,Inter-state wars,Invasion of Afghanistan,"Inter-state war: Canada, France, United Kingdom, United States of America, Australia, Afghanistan",France,FRN,Polity,data
+G3,Inter-state wars,Invasion of Afghanistan,"Inter-state war: Canada, France, United Kingdom, United States of America, Australia, Afghanistan",Afghanistan,AFG,Polity,data
+G3,Inter-state wars,Invasion of Afghanistan,"Inter-state war: Canada, France, United Kingdom, United States of America, Australia, Afghanistan",Australia,AUL,Polity,data
+G3,Inter-state wars,Invasion of Iraq,"Inter-state war: Australia, United Kingdom, United States of America, Iraq",United States of America,USA,Polity,data
+G3,Inter-state wars,Invasion of Iraq,"Inter-state war: Australia, United Kingdom, United States of America, Iraq",United Kingdom,UKG,Polity,data
+G3,Inter-state wars,Invasion of Iraq,"Inter-state war: Australia, United Kingdom, United States of America, Iraq",Iraq,IRQ,Polity,data
+G3,Inter-state wars,Invasion of Iraq,"Inter-state war: Australia, United Kingdom, United States of America, Iraq",Australia,AUL,Polity,data
+G3,Inter-state wars,Iran-Iraq,"Inter-state war: Iraq, Iran",Iran,IRN,Polity,data
+G3,Inter-state wars,Iran-Iraq,"Inter-state war: Iraq, Iran",Iraq,IRQ,Polity,data
+G3,Inter-state wars,Italian Unification,"Inter-state war: Sardinia/Piedmont, Austria, France",France,FRN,Polity,data
+G3,Inter-state wars,Italian Unification,"Inter-state war: Sardinia/Piedmont, Austria, France",Austria-Hungary,AUH,Polity,data
+G3,Inter-state wars,Italian Unification,"Inter-state war: Sardinia/Piedmont, Austria, France",Italy,ITA,Polity,data
+G3,Inter-state wars,Italian-Roman,"Inter-state war: Sardinia/Piedmont, Papal States",Italy,ITA,Polity,data
+G3,Inter-state wars,Italian-Roman,"Inter-state war: Sardinia/Piedmont, Papal States",Papal States,PAP,Polity,data
+G3,Inter-state wars,Italian-Turkish,"Inter-state war: Italy, Turkey",Italy,ITA,Polity,data
+G3,Inter-state wars,Italian-Turkish,"Inter-state war: Italy, Turkey",Turkey,TUR,Polity,data
+G3,Inter-state wars,Kargil War,"Inter-state war: India, Pakistan",India,IND,Polity,data
+G3,Inter-state wars,Kargil War,"Inter-state war: India, Pakistan",Pakistan,PAK,Polity,data
+G3,Inter-state wars,Korean,"Inter-state war: China, Belgium, Canada, Colombia, United Kingdom, Netherlands, Greece, France, Turkey, Philippines, Thailand, North Korea, Ethiopia, Australia, South Korea, United States of America",United States of America,USA,Polity,data
+G3,Inter-state wars,Korean,"Inter-state war: China, Belgium, Canada, Colombia, United Kingdom, Netherlands, Greece, France, Turkey, Philippines, Thailand, North Korea, Ethiopia, Australia, South Korea, United States of America",Canada,CAN,Polity,data
+G3,Inter-state wars,Korean,"Inter-state war: China, Belgium, Canada, Colombia, United Kingdom, Netherlands, Greece, France, Turkey, Philippines, Thailand, North Korea, Ethiopia, Australia, South Korea, United States of America",Colombia,COL,Polity,data
+G3,Inter-state wars,Korean,"Inter-state war: China, Belgium, Canada, Colombia, United Kingdom, Netherlands, Greece, France, Turkey, Philippines, Thailand, North Korea, Ethiopia, Australia, South Korea, United States of America",United Kingdom,UKG,Polity,data
+G3,Inter-state wars,Korean,"Inter-state war: China, Belgium, Canada, Colombia, United Kingdom, Netherlands, Greece, France, Turkey, Philippines, Thailand, North Korea, Ethiopia, Australia, South Korea, United States of America",Netherlands,NTH,Polity,data
+G3,Inter-state wars,Korean,"Inter-state war: China, Belgium, Canada, Colombia, United Kingdom, Netherlands, Greece, France, Turkey, Philippines, Thailand, North Korea, Ethiopia, Australia, South Korea, United States of America",Belgium,BEL,Polity,data
+G3,Inter-state wars,Korean,"Inter-state war: China, Belgium, Canada, Colombia, United Kingdom, Netherlands, Greece, France, Turkey, Philippines, Thailand, North Korea, Ethiopia, Australia, South Korea, United States of America",France,FRN,Polity,data
+G3,Inter-state wars,Korean,"Inter-state war: China, Belgium, Canada, Colombia, United Kingdom, Netherlands, Greece, France, Turkey, Philippines, Thailand, North Korea, Ethiopia, Australia, South Korea, United States of America",Greece,GRC,Polity,data
+G3,Inter-state wars,Korean,"Inter-state war: China, Belgium, Canada, Colombia, United Kingdom, Netherlands, Greece, France, Turkey, Philippines, Thailand, North Korea, Ethiopia, Australia, South Korea, United States of America",Ethiopia,ETH,Polity,data
+G3,Inter-state wars,Korean,"Inter-state war: China, Belgium, Canada, Colombia, United Kingdom, Netherlands, Greece, France, Turkey, Philippines, Thailand, North Korea, Ethiopia, Australia, South Korea, United States of America",Turkey,TUR,Polity,data
+G3,Inter-state wars,Korean,"Inter-state war: China, Belgium, Canada, Colombia, United Kingdom, Netherlands, Greece, France, Turkey, Philippines, Thailand, North Korea, Ethiopia, Australia, South Korea, United States of America",China,CHN,Polity,data
+G3,Inter-state wars,Korean,"Inter-state war: China, Belgium, Canada, Colombia, United Kingdom, Netherlands, Greece, France, Turkey, Philippines, Thailand, North Korea, Ethiopia, Australia, South Korea, United States of America",North Korea,PRK,Polity,data
+G3,Inter-state wars,Korean,"Inter-state war: China, Belgium, Canada, Colombia, United Kingdom, Netherlands, Greece, France, Turkey, Philippines, Thailand, North Korea, Ethiopia, Australia, South Korea, United States of America",South Korea,ROK,Polity,data
+G3,Inter-state wars,Korean,"Inter-state war: China, Belgium, Canada, Colombia, United Kingdom, Netherlands, Greece, France, Turkey, Philippines, Thailand, North Korea, Ethiopia, Australia, South Korea, United States of America",Thailand,THI,Polity,data
+G3,Inter-state wars,Korean,"Inter-state war: China, Belgium, Canada, Colombia, United Kingdom, Netherlands, Greece, France, Turkey, Philippines, Thailand, North Korea, Ethiopia, Australia, South Korea, United States of America",Philippines,PHI,Polity,data
+G3,Inter-state wars,Korean,"Inter-state war: China, Belgium, Canada, Colombia, United Kingdom, Netherlands, Greece, France, Turkey, Philippines, Thailand, North Korea, Ethiopia, Australia, South Korea, United States of America",Australia,AUL,Polity,data
+G3,Inter-state wars,La Plata,"Inter-state war: Argentina, Brazil",Brazil,BRA,Polity,data
+G3,Inter-state wars,La Plata,"Inter-state war: Argentina, Brazil",Argentina,ARG,Polity,data
+G3,Inter-state wars,Latvian Liberation,"Inter-state war: Germany, Russia, Estonia, Latvia",Germany,GMY,Polity,data
+G3,Inter-state wars,Latvian Liberation,"Inter-state war: Germany, Russia, Estonia, Latvia",Russia,RUS,Polity,data
+G3,Inter-state wars,Latvian Liberation,"Inter-state war: Germany, Russia, Estonia, Latvia",Estonia,EST,Polity,data
+G3,Inter-state wars,Latvian Liberation,"Inter-state war: Germany, Russia, Estonia, Latvia",Latvia,LAT,Polity,data
+G3,Inter-state wars,Lithuanian-Polish,"Inter-state war: Lithuania, Poland",Poland,POL,Polity,data
+G3,Inter-state wars,Lithuanian-Polish,"Inter-state war: Lithuania, Poland",Lithuania,LIT,Polity,data
+G3,Inter-state wars,Lopez,"Inter-state war: Argentina, Paraguay, Brazil",Brazil,BRA,Polity,data
+G3,Inter-state wars,Lopez,"Inter-state war: Argentina, Paraguay, Brazil",Paraguay,PAR,Polity,data
+G3,Inter-state wars,Lopez,"Inter-state war: Argentina, Paraguay, Brazil",Argentina,ARG,Polity,data
+G3,Inter-state wars,Manchurian,"Inter-state war: USSR, China",Russia,RUS,Polity,data
+G3,Inter-state wars,Manchurian,"Inter-state war: USSR, China",China,CHN,Polity,data
+G3,Inter-state wars,Mexican-American,"Inter-state war: Mexico, United States of America",United States of America,USA,Polity,data
+G3,Inter-state wars,Mexican-American,"Inter-state war: Mexico, United States of America",Mexico,MEX,Polity,data
+G3,Inter-state wars,Naval War,"Inter-state war: Chile, Peru, Spain",Peru,PER,Polity,data
+G3,Inter-state wars,Naval War,"Inter-state war: Chile, Peru, Spain",Chile,CHL,Polity,data
+G3,Inter-state wars,Naval War,"Inter-state war: Chile, Peru, Spain",Spain,SPN,Polity,data
+G3,Inter-state wars,Neapolitan,"Inter-state war: Two Sicilies, Sardinia/Piedmont",Italy,ITA,Polity,data
+G3,Inter-state wars,Neapolitan,"Inter-state war: Two Sicilies, Sardinia/Piedmont",Two Sicilies,SIC,Polity,data
+G3,Inter-state wars,Nomonhan,"Inter-state war: USSR, Mongolia, Japan",Russia,RUS,Polity,data
+G3,Inter-state wars,Nomonhan,"Inter-state war: USSR, Mongolia, Japan",Mongolia,MON,Polity,data
+G3,Inter-state wars,Nomonhan,"Inter-state war: USSR, Mongolia, Japan",Japan,JPN,Polity,data
+G3,Inter-state wars,Off-shore Islands,"Inter-state war: China, Taiwan",China,CHN,Polity,data
+G3,Inter-state wars,Off-shore Islands,"Inter-state war: China, Taiwan",Taiwan,TAW,Polity,data
+G3,Inter-state wars,Roman Republic,"Inter-state war: France, Two Sicilies, Austria, Papal States",France,FRN,Polity,data
+G3,Inter-state wars,Roman Republic,"Inter-state war: France, Two Sicilies, Austria, Papal States",Austria-Hungary,AUH,Polity,data
+G3,Inter-state wars,Roman Republic,"Inter-state war: France, Two Sicilies, Austria, Papal States",Papal States,PAP,Polity,data
+G3,Inter-state wars,Roman Republic,"Inter-state war: France, Two Sicilies, Austria, Papal States",Two Sicilies,SIC,Polity,data
+G3,Inter-state wars,Russo-Finnish,"Inter-state war: Finland, USSR",Russia,RUS,Polity,data
+G3,Inter-state wars,Russo-Finnish,"Inter-state war: Finland, USSR",Finland,FIN,Polity,data
+G3,Inter-state wars,Russo-Japanese,"Inter-state war: Japan, Russia",Russia,RUS,Polity,data
+G3,Inter-state wars,Russo-Japanese,"Inter-state war: Japan, Russia",Japan,JPN,Polity,data
+G3,Inter-state wars,Russo-Polish,"Inter-state war: Russia, Poland",Poland,POL,Polity,data
+G3,Inter-state wars,Russo-Polish,"Inter-state war: Russia, Poland",Russia,RUS,Polity,data
+G3,Inter-state wars,Saudi-Yemeni,"Inter-state war: Saudi Arabia, Yemen Arab Republic",Saudi Arabia,SAU,Polity,data
+G3,Inter-state wars,Saudi-Yemeni,"Inter-state war: Saudi Arabia, Yemen Arab Republic",Yemen Arab Republic,YAR,Polity,data
+G3,Inter-state wars,Second Balkan,"Inter-state war: Turkey, Yugoslavia, Greece, Bulgaria, Romania",Yugoslavia,YUG,Polity,data
+G3,Inter-state wars,Second Balkan,"Inter-state war: Turkey, Yugoslavia, Greece, Bulgaria, Romania",Greece,GRC,Polity,data
+G3,Inter-state wars,Second Balkan,"Inter-state war: Turkey, Yugoslavia, Greece, Bulgaria, Romania",Bulgaria,BUL,Polity,data
+G3,Inter-state wars,Second Balkan,"Inter-state war: Turkey, Yugoslavia, Greece, Bulgaria, Romania",Romania,ROM,Polity,data
+G3,Inter-state wars,Second Balkan,"Inter-state war: Turkey, Yugoslavia, Greece, Bulgaria, Romania",Turkey,TUR,Polity,data
+G3,Inter-state wars,Second Central American,"Inter-state war: El Salvador, Guatemala",Guatemala,GUA,Polity,data
+G3,Inter-state wars,Second Central American,"Inter-state war: El Salvador, Guatemala",El Salvador,SAL,Polity,data
+G3,Inter-state wars,Second Greco-Turkish,"Inter-state war: Turkey, Greece",Greece,GRC,Polity,data
+G3,Inter-state wars,Second Greco-Turkish,"Inter-state war: Turkey, Greece",Turkey,TUR,Polity,data
+G3,Inter-state wars,Second Kashmir,"Inter-state war: India, Pakistan",India,IND,Polity,data
+G3,Inter-state wars,Second Kashmir,"Inter-state war: India, Pakistan",Pakistan,PAK,Polity,data
+G3,Inter-state wars,"Second Laotian, Phase 2","Inter-state war: United States of America, Thailand, Laos, Vietnam",United States of America,USA,Polity,data
+G3,Inter-state wars,"Second Laotian, Phase 2","Inter-state war: United States of America, Thailand, Laos, Vietnam",Thailand,THI,Polity,data
+G3,Inter-state wars,"Second Laotian, Phase 2","Inter-state war: United States of America, Thailand, Laos, Vietnam",Laos,LAO,Polity,data
+G3,Inter-state wars,"Second Laotian, Phase 2","Inter-state war: United States of America, Thailand, Laos, Vietnam",Vietnam,DRV,Polity,data
+G3,Inter-state wars,"Second Ogaden War, Phase 2","Inter-state war: Ethiopia, Cuba, Somalia",Cuba,CUB,Polity,data
+G3,Inter-state wars,"Second Ogaden War, Phase 2","Inter-state war: Ethiopia, Cuba, Somalia",Somalia,SOM,Polity,data
+G3,Inter-state wars,"Second Ogaden War, Phase 2","Inter-state war: Ethiopia, Cuba, Somalia",Ethiopia,ETH,Polity,data
+G3,Inter-state wars,Second Russo-Turkish,"Inter-state war: Turkey, Russia",Russia,RUS,Polity,data
+G3,Inter-state wars,Second Russo-Turkish,"Inter-state war: Turkey, Russia",Turkey,TUR,Polity,data
+G3,Inter-state wars,Second Schleswig-Holstein,"Inter-state war: Germany, Denmark, Austria",Germany,GMY,Polity,data
+G3,Inter-state wars,Second Schleswig-Holstein,"Inter-state war: Germany, Denmark, Austria",Austria-Hungary,AUH,Polity,data
+G3,Inter-state wars,Second Schleswig-Holstein,"Inter-state war: Germany, Denmark, Austria",Denmark,DEN,Polity,data
+G3,Inter-state wars,Second Sino-Japanese,"Inter-state war: Japan, China",China,CHN,Polity,data
+G3,Inter-state wars,Second Sino-Japanese,"Inter-state war: Japan, China",Japan,JPN,Polity,data
+G3,Inter-state wars,Second Spanish-Moroccan,"Inter-state war: Spain, Morocco",Spain,SPN,Polity,data
+G3,Inter-state wars,Second Spanish-Moroccan,"Inter-state war: Spain, Morocco",Morocco,MOR,Polity,data
+G3,Inter-state wars,Seven Weeks,"Inter-state war: Italy, Hesse Grand Ducal, Wuerttemburg, Bavaria, Austria, Germany, Mecklenburg Schwerin, Hesse Electoral, Saxony, Baden, Hanover",Hanover,HAN,Polity,data
+G3,Inter-state wars,Seven Weeks,"Inter-state war: Italy, Hesse Grand Ducal, Wuerttemburg, Bavaria, Austria, Germany, Mecklenburg Schwerin, Hesse Electoral, Saxony, Baden, Hanover",Bavaria,BAV,Polity,data
+G3,Inter-state wars,Seven Weeks,"Inter-state war: Italy, Hesse Grand Ducal, Wuerttemburg, Bavaria, Austria, Germany, Mecklenburg Schwerin, Hesse Electoral, Saxony, Baden, Hanover",Germany,GMY,Polity,data
+G3,Inter-state wars,Seven Weeks,"Inter-state war: Italy, Hesse Grand Ducal, Wuerttemburg, Bavaria, Austria, Germany, Mecklenburg Schwerin, Hesse Electoral, Saxony, Baden, Hanover",Baden,BAD,Polity,data
+G3,Inter-state wars,Seven Weeks,"Inter-state war: Italy, Hesse Grand Ducal, Wuerttemburg, Bavaria, Austria, Germany, Mecklenburg Schwerin, Hesse Electoral, Saxony, Baden, Hanover",Saxony,SAX,Polity,data
+G3,Inter-state wars,Seven Weeks,"Inter-state war: Italy, Hesse Grand Ducal, Wuerttemburg, Bavaria, Austria, Germany, Mecklenburg Schwerin, Hesse Electoral, Saxony, Baden, Hanover",Wuerttemburg,WRT,Polity,data
+G3,Inter-state wars,Seven Weeks,"Inter-state war: Italy, Hesse Grand Ducal, Wuerttemburg, Bavaria, Austria, Germany, Mecklenburg Schwerin, Hesse Electoral, Saxony, Baden, Hanover",Hesse Electoral,HSE,Polity,data
+G3,Inter-state wars,Seven Weeks,"Inter-state war: Italy, Hesse Grand Ducal, Wuerttemburg, Bavaria, Austria, Germany, Mecklenburg Schwerin, Hesse Electoral, Saxony, Baden, Hanover",Hesse Grand Ducal,HSG,Polity,data
+G3,Inter-state wars,Seven Weeks,"Inter-state war: Italy, Hesse Grand Ducal, Wuerttemburg, Bavaria, Austria, Germany, Mecklenburg Schwerin, Hesse Electoral, Saxony, Baden, Hanover",Mecklenburg Schwerin,MEC,Polity,data
+G3,Inter-state wars,Seven Weeks,"Inter-state war: Italy, Hesse Grand Ducal, Wuerttemburg, Bavaria, Austria, Germany, Mecklenburg Schwerin, Hesse Electoral, Saxony, Baden, Hanover",Austria-Hungary,AUH,Polity,data
+G3,Inter-state wars,Seven Weeks,"Inter-state war: Italy, Hesse Grand Ducal, Wuerttemburg, Bavaria, Austria, Germany, Mecklenburg Schwerin, Hesse Electoral, Saxony, Baden, Hanover",Italy,ITA,Polity,data
+G3,Inter-state wars,Sinai War,"Inter-state war: France, Israel, Egypt, United Kingdom",United Kingdom,UKG,Polity,data
+G3,Inter-state wars,Sinai War,"Inter-state war: France, Israel, Egypt, United Kingdom",France,FRN,Polity,data
+G3,Inter-state wars,Sinai War,"Inter-state war: France, Israel, Egypt, United Kingdom",Egypt,EGY,Polity,data
+G3,Inter-state wars,Sinai War,"Inter-state war: France, Israel, Egypt, United Kingdom",Israel,ISR,Polity,data
+G3,Inter-state wars,Sino-French,"Inter-state war: France, China",France,FRN,Polity,data
+G3,Inter-state wars,Sino-French,"Inter-state war: France, China",China,CHN,Polity,data
+G3,Inter-state wars,Sino-Russian,"Inter-state war: Russia, China",Russia,RUS,Polity,data
+G3,Inter-state wars,Sino-Russian,"Inter-state war: Russia, China",China,CHN,Polity,data
+G3,Inter-state wars,Sino-Vietnamese Border War,"Inter-state war: Vietnam, China",China,CHN,Polity,data
+G3,Inter-state wars,Sino-Vietnamese Border War,"Inter-state war: Vietnam, China",Vietnam,DRV,Polity,data
+G3,Inter-state wars,Sino-Vietnamese Punitive,"Inter-state war: China, Vietnam",China,CHN,Polity,data
+G3,Inter-state wars,Sino-Vietnamese Punitive,"Inter-state war: China, Vietnam",Vietnam,DRV,Polity,data
+G3,Inter-state wars,Six Day War,"Inter-state war: Israel, Egypt, Jordan, Syria",Egypt,EGY,Polity,data
+G3,Inter-state wars,Six Day War,"Inter-state war: Israel, Egypt, Jordan, Syria",Syria,SYR,Polity,data
+G3,Inter-state wars,Six Day War,"Inter-state war: Israel, Egypt, Jordan, Syria",Jordan,JOR,Polity,data
+G3,Inter-state wars,Six Day War,"Inter-state war: Israel, Egypt, Jordan, Syria",Israel,ISR,Polity,data
+G3,Inter-state wars,Soviet Invasion of Hungary,"Inter-state war: Hungary, USSR",Hungary,HUN,Polity,data
+G3,Inter-state wars,Soviet Invasion of Hungary,"Inter-state war: Hungary, USSR",Russia,RUS,Polity,data
+G3,Inter-state wars,Spanish-American,"Inter-state war: Spain, United States of America",United States of America,USA,Polity,data
+G3,Inter-state wars,Spanish-American,"Inter-state war: Spain, United States of America",Spain,SPN,Polity,data
+G3,Inter-state wars,Taiwan Straits,"Inter-state war: China (PRC), Taiwan (ROC)",China,CHN,Polity,data
+G3,Inter-state wars,Taiwan Straits,"Inter-state war: China (PRC), Taiwan (ROC)",Taiwan,TAW,Polity,data
+G3,Inter-state wars,Third Central American,"Inter-state war: Honduras, El Salvador, Guatemala",Guatemala,GUA,Polity,data
+G3,Inter-state wars,Third Central American,"Inter-state war: Honduras, El Salvador, Guatemala",Honduras,HON,Polity,data
+G3,Inter-state wars,Third Central American,"Inter-state war: Honduras, El Salvador, Guatemala",El Salvador,SAL,Polity,data
+G3,Inter-state wars,Third Sino-Japanese,"Inter-state war: China, Japan",China,CHN,Polity,data
+G3,Inter-state wars,Third Sino-Japanese,"Inter-state war: China, Japan",Japan,JPN,Polity,data
+G3,Inter-state wars,Turco-Cypriot,"Inter-state war: Turkey, Cyprus",Cyprus,CYP,Polity,data
+G3,Inter-state wars,Turco-Cypriot,"Inter-state war: Turkey, Cyprus",Turkey,TUR,Polity,data
+G3,Inter-state wars,Ugandian-Tanzanian,"Inter-state war: Uganda, Tanzania, Libya",Uganda,UGA,Polity,data
+G3,Inter-state wars,Ugandian-Tanzanian,"Inter-state war: Uganda, Tanzania, Libya",Tanzania,TAZ,Polity,data
+G3,Inter-state wars,Ugandian-Tanzanian,"Inter-state war: Uganda, Tanzania, Libya",Libya,LIB,Polity,data
+G3,Inter-state wars,"Vietnam War, Phase 2","Inter-state war: United States of America, Cambodia, South Korea, Philippines, South Vietnam, Vietnam, Thailand, Australia",United States of America,USA,Polity,data
+G3,Inter-state wars,"Vietnam War, Phase 2","Inter-state war: United States of America, Cambodia, South Korea, Philippines, South Vietnam, Vietnam, Thailand, Australia",South Korea,ROK,Polity,data
+G3,Inter-state wars,"Vietnam War, Phase 2","Inter-state war: United States of America, Cambodia, South Korea, Philippines, South Vietnam, Vietnam, Thailand, Australia",Thailand,THI,Polity,data
+G3,Inter-state wars,"Vietnam War, Phase 2","Inter-state war: United States of America, Cambodia, South Korea, Philippines, South Vietnam, Vietnam, Thailand, Australia",Cambodia,CAM,Polity,data
+G3,Inter-state wars,"Vietnam War, Phase 2","Inter-state war: United States of America, Cambodia, South Korea, Philippines, South Vietnam, Vietnam, Thailand, Australia",Vietnam,DRV,Polity,data
+G3,Inter-state wars,"Vietnam War, Phase 2","Inter-state war: United States of America, Cambodia, South Korea, Philippines, South Vietnam, Vietnam, Thailand, Australia",Republic of Vietnam,RVN,Polity,data
+G3,Inter-state wars,"Vietnam War, Phase 2","Inter-state war: United States of America, Cambodia, South Korea, Philippines, South Vietnam, Vietnam, Thailand, Australia",Philippines,PHI,Polity,data
+G3,Inter-state wars,"Vietnam War, Phase 2","Inter-state war: United States of America, Cambodia, South Korea, Philippines, South Vietnam, Vietnam, Thailand, Australia",Australia,AUL,Polity,data
+G3,Inter-state wars,Vietnamese-Cambodian,"Inter-state war: Vietnam, Cambodia",Cambodia,CAM,Polity,data
+G3,Inter-state wars,Vietnamese-Cambodian,"Inter-state war: Vietnam, Cambodia",Vietnam,DRV,Polity,data
+G3,Inter-state wars,War for Kosovo,"Inter-state war: Turkey, Italy, United Kingdom, United States of America, Netherlands, France, Yugoslavia, Germany",United States of America,USA,Polity,data
+G3,Inter-state wars,War for Kosovo,"Inter-state war: Turkey, Italy, United Kingdom, United States of America, Netherlands, France, Yugoslavia, Germany",United Kingdom,UKG,Polity,data
+G3,Inter-state wars,War for Kosovo,"Inter-state war: Turkey, Italy, United Kingdom, United States of America, Netherlands, France, Yugoslavia, Germany",Netherlands,NTH,Polity,data
+G3,Inter-state wars,War for Kosovo,"Inter-state war: Turkey, Italy, United Kingdom, United States of America, Netherlands, France, Yugoslavia, Germany",France,FRN,Polity,data
+G3,Inter-state wars,War for Kosovo,"Inter-state war: Turkey, Italy, United Kingdom, United States of America, Netherlands, France, Yugoslavia, Germany",Germany,GMY,Polity,data
+G3,Inter-state wars,War for Kosovo,"Inter-state war: Turkey, Italy, United Kingdom, United States of America, Netherlands, France, Yugoslavia, Germany",Italy,ITA,Polity,data
+G3,Inter-state wars,War for Kosovo,"Inter-state war: Turkey, Italy, United Kingdom, United States of America, Netherlands, France, Yugoslavia, Germany",Yugoslavia,YUG,Polity,data
+G3,Inter-state wars,War for Kosovo,"Inter-state war: Turkey, Italy, United Kingdom, United States of America, Netherlands, France, Yugoslavia, Germany",Turkey,TUR,Polity,data
+G3,Inter-state wars,War of Attrition,"Inter-state war: Egypt, Israel",Egypt,EGY,Polity,data
+G3,Inter-state wars,War of Attrition,"Inter-state war: Egypt, Israel",Israel,ISR,Polity,data
+G3,Inter-state wars,War of the Pacific,"Inter-state war: Chile, Peru, Bolivia",Peru,PER,Polity,data
+G3,Inter-state wars,War of the Pacific,"Inter-state war: Chile, Peru, Bolivia",Bolivia,BOL,Polity,data
+G3,Inter-state wars,War of the Pacific,"Inter-state war: Chile, Peru, Bolivia",Chile,CHL,Polity,data
+G3,Inter-state wars,War over Angola,"Inter-state war: Cuba, South Africa, Democratic Republic of the Congo, Angola",Cuba,CUB,Polity,data
+G3,Inter-state wars,War over Angola,"Inter-state war: Cuba, South Africa, Democratic Republic of the Congo, Angola",Democratic Republic of the Congo,DRC,Polity,data
+G3,Inter-state wars,War over Angola,"Inter-state war: Cuba, South Africa, Democratic Republic of the Congo, Angola",Angola,ANG,Polity,data
+G3,Inter-state wars,War over Angola,"Inter-state war: Cuba, South Africa, Democratic Republic of the Congo, Angola",South Africa,SAF,Polity,data
+G3,Inter-state wars,War over Lebanon,"Inter-state war: Israel, Syria",Syria,SYR,Polity,data
+G3,Inter-state wars,War over Lebanon,"Inter-state war: Israel, Syria",Israel,ISR,Polity,data
+G3,Inter-state wars,War over the Aouzou Strip,"Inter-state war: Chad, Libya",Chad,CHA,Polity,data
+G3,Inter-state wars,War over the Aouzou Strip,"Inter-state war: Chad, Libya",Libya,LIB,Polity,data
+G3,Inter-state wars,World War I,"Inter-state war: Yugoslavia, Russia, Bulgaria, United Kingdom, Japan, Portugal, Turkey, Belgium, Germany, Greece, Romania, Austria-Hungary, France, Italy, United States of America",United States of America,USA,Polity,data
+G3,Inter-state wars,World War I,"Inter-state war: Yugoslavia, Russia, Bulgaria, United Kingdom, Japan, Portugal, Turkey, Belgium, Germany, Greece, Romania, Austria-Hungary, France, Italy, United States of America",United Kingdom,UKG,Polity,data
+G3,Inter-state wars,World War I,"Inter-state war: Yugoslavia, Russia, Bulgaria, United Kingdom, Japan, Portugal, Turkey, Belgium, Germany, Greece, Romania, Austria-Hungary, France, Italy, United States of America",Belgium,BEL,Polity,data
+G3,Inter-state wars,World War I,"Inter-state war: Yugoslavia, Russia, Bulgaria, United Kingdom, Japan, Portugal, Turkey, Belgium, Germany, Greece, Romania, Austria-Hungary, France, Italy, United States of America",France,FRN,Polity,data
+G3,Inter-state wars,World War I,"Inter-state war: Yugoslavia, Russia, Bulgaria, United Kingdom, Japan, Portugal, Turkey, Belgium, Germany, Greece, Romania, Austria-Hungary, France, Italy, United States of America",Portugal,POR,Polity,data
+G3,Inter-state wars,World War I,"Inter-state war: Yugoslavia, Russia, Bulgaria, United Kingdom, Japan, Portugal, Turkey, Belgium, Germany, Greece, Romania, Austria-Hungary, France, Italy, United States of America",Germany,GMY,Polity,data
+G3,Inter-state wars,World War I,"Inter-state war: Yugoslavia, Russia, Bulgaria, United Kingdom, Japan, Portugal, Turkey, Belgium, Germany, Greece, Romania, Austria-Hungary, France, Italy, United States of America",Austria-Hungary,AUH,Polity,data
+G3,Inter-state wars,World War I,"Inter-state war: Yugoslavia, Russia, Bulgaria, United Kingdom, Japan, Portugal, Turkey, Belgium, Germany, Greece, Romania, Austria-Hungary, France, Italy, United States of America",Italy,ITA,Polity,data
+G3,Inter-state wars,World War I,"Inter-state war: Yugoslavia, Russia, Bulgaria, United Kingdom, Japan, Portugal, Turkey, Belgium, Germany, Greece, Romania, Austria-Hungary, France, Italy, United States of America",Yugoslavia,YUG,Polity,data
+G3,Inter-state wars,World War I,"Inter-state war: Yugoslavia, Russia, Bulgaria, United Kingdom, Japan, Portugal, Turkey, Belgium, Germany, Greece, Romania, Austria-Hungary, France, Italy, United States of America",Greece,GRC,Polity,data
+G3,Inter-state wars,World War I,"Inter-state war: Yugoslavia, Russia, Bulgaria, United Kingdom, Japan, Portugal, Turkey, Belgium, Germany, Greece, Romania, Austria-Hungary, France, Italy, United States of America",Bulgaria,BUL,Polity,data
+G3,Inter-state wars,World War I,"Inter-state war: Yugoslavia, Russia, Bulgaria, United Kingdom, Japan, Portugal, Turkey, Belgium, Germany, Greece, Romania, Austria-Hungary, France, Italy, United States of America",Romania,ROM,Polity,data
+G3,Inter-state wars,World War I,"Inter-state war: Yugoslavia, Russia, Bulgaria, United Kingdom, Japan, Portugal, Turkey, Belgium, Germany, Greece, Romania, Austria-Hungary, France, Italy, United States of America",Russia,RUS,Polity,data
+G3,Inter-state wars,World War I,"Inter-state war: Yugoslavia, Russia, Bulgaria, United Kingdom, Japan, Portugal, Turkey, Belgium, Germany, Greece, Romania, Austria-Hungary, France, Italy, United States of America",Turkey,TUR,Polity,data
+G3,Inter-state wars,World War I,"Inter-state war: Yugoslavia, Russia, Bulgaria, United Kingdom, Japan, Portugal, Turkey, Belgium, Germany, Greece, Romania, Austria-Hungary, France, Italy, United States of America",Japan,JPN,Polity,data
+G3,Inter-state wars,World War II,"Inter-state war: Hungary, Belgium, France, Yugoslavia, Finland, Norway, Canada, United States of America, United Kingdom, Netherlands, Italy, Romania, Bulgaria, Greece, Brazil, Australia, New Zealand, USSR, Germany, Poland, Japan, Mongolia, China, South Africa, Ethiopia",United States of America,USA,Polity,data
+G3,Inter-state wars,World War II,"Inter-state war: Hungary, Belgium, France, Yugoslavia, Finland, Norway, Canada, United States of America, United Kingdom, Netherlands, Italy, Romania, Bulgaria, Greece, Brazil, Australia, New Zealand, USSR, Germany, Poland, Japan, Mongolia, China, South Africa, Ethiopia",Canada,CAN,Polity,data
+G3,Inter-state wars,World War II,"Inter-state war: Hungary, Belgium, France, Yugoslavia, Finland, Norway, Canada, United States of America, United Kingdom, Netherlands, Italy, Romania, Bulgaria, Greece, Brazil, Australia, New Zealand, USSR, Germany, Poland, Japan, Mongolia, China, South Africa, Ethiopia",Brazil,BRA,Polity,data
+G3,Inter-state wars,World War II,"Inter-state war: Hungary, Belgium, France, Yugoslavia, Finland, Norway, Canada, United States of America, United Kingdom, Netherlands, Italy, Romania, Bulgaria, Greece, Brazil, Australia, New Zealand, USSR, Germany, Poland, Japan, Mongolia, China, South Africa, Ethiopia",United Kingdom,UKG,Polity,data
+G3,Inter-state wars,World War II,"Inter-state war: Hungary, Belgium, France, Yugoslavia, Finland, Norway, Canada, United States of America, United Kingdom, Netherlands, Italy, Romania, Bulgaria, Greece, Brazil, Australia, New Zealand, USSR, Germany, Poland, Japan, Mongolia, China, South Africa, Ethiopia",Netherlands,NTH,Polity,data
+G3,Inter-state wars,World War II,"Inter-state war: Hungary, Belgium, France, Yugoslavia, Finland, Norway, Canada, United States of America, United Kingdom, Netherlands, Italy, Romania, Bulgaria, Greece, Brazil, Australia, New Zealand, USSR, Germany, Poland, Japan, Mongolia, China, South Africa, Ethiopia",Belgium,BEL,Polity,data
+G3,Inter-state wars,World War II,"Inter-state war: Hungary, Belgium, France, Yugoslavia, Finland, Norway, Canada, United States of America, United Kingdom, Netherlands, Italy, Romania, Bulgaria, Greece, Brazil, Australia, New Zealand, USSR, Germany, Poland, Japan, Mongolia, China, South Africa, Ethiopia",France,FRN,Polity,data
+G3,Inter-state wars,World War II,"Inter-state war: Hungary, Belgium, France, Yugoslavia, Finland, Norway, Canada, United States of America, United Kingdom, Netherlands, Italy, Romania, Bulgaria, Greece, Brazil, Australia, New Zealand, USSR, Germany, Poland, Japan, Mongolia, China, South Africa, Ethiopia",Germany,GMY,Polity,data
+G3,Inter-state wars,World War II,"Inter-state war: Hungary, Belgium, France, Yugoslavia, Finland, Norway, Canada, United States of America, United Kingdom, Netherlands, Italy, Romania, Bulgaria, Greece, Brazil, Australia, New Zealand, USSR, Germany, Poland, Japan, Mongolia, China, South Africa, Ethiopia",Poland,POL,Polity,data
+G3,Inter-state wars,World War II,"Inter-state war: Hungary, Belgium, France, Yugoslavia, Finland, Norway, Canada, United States of America, United Kingdom, Netherlands, Italy, Romania, Bulgaria, Greece, Brazil, Australia, New Zealand, USSR, Germany, Poland, Japan, Mongolia, China, South Africa, Ethiopia",Hungary,HUN,Polity,data
+G3,Inter-state wars,World War II,"Inter-state war: Hungary, Belgium, France, Yugoslavia, Finland, Norway, Canada, United States of America, United Kingdom, Netherlands, Italy, Romania, Bulgaria, Greece, Brazil, Australia, New Zealand, USSR, Germany, Poland, Japan, Mongolia, China, South Africa, Ethiopia",Italy,ITA,Polity,data
+G3,Inter-state wars,World War II,"Inter-state war: Hungary, Belgium, France, Yugoslavia, Finland, Norway, Canada, United States of America, United Kingdom, Netherlands, Italy, Romania, Bulgaria, Greece, Brazil, Australia, New Zealand, USSR, Germany, Poland, Japan, Mongolia, China, South Africa, Ethiopia",Yugoslavia,YUG,Polity,data
+G3,Inter-state wars,World War II,"Inter-state war: Hungary, Belgium, France, Yugoslavia, Finland, Norway, Canada, United States of America, United Kingdom, Netherlands, Italy, Romania, Bulgaria, Greece, Brazil, Australia, New Zealand, USSR, Germany, Poland, Japan, Mongolia, China, South Africa, Ethiopia",Greece,GRC,Polity,data
+G3,Inter-state wars,World War II,"Inter-state war: Hungary, Belgium, France, Yugoslavia, Finland, Norway, Canada, United States of America, United Kingdom, Netherlands, Italy, Romania, Bulgaria, Greece, Brazil, Australia, New Zealand, USSR, Germany, Poland, Japan, Mongolia, China, South Africa, Ethiopia",Bulgaria,BUL,Polity,data
+G3,Inter-state wars,World War II,"Inter-state war: Hungary, Belgium, France, Yugoslavia, Finland, Norway, Canada, United States of America, United Kingdom, Netherlands, Italy, Romania, Bulgaria, Greece, Brazil, Australia, New Zealand, USSR, Germany, Poland, Japan, Mongolia, China, South Africa, Ethiopia",Romania,ROM,Polity,data
+G3,Inter-state wars,World War II,"Inter-state war: Hungary, Belgium, France, Yugoslavia, Finland, Norway, Canada, United States of America, United Kingdom, Netherlands, Italy, Romania, Bulgaria, Greece, Brazil, Australia, New Zealand, USSR, Germany, Poland, Japan, Mongolia, China, South Africa, Ethiopia",Russia,RUS,Polity,data
+G3,Inter-state wars,World War II,"Inter-state war: Hungary, Belgium, France, Yugoslavia, Finland, Norway, Canada, United States of America, United Kingdom, Netherlands, Italy, Romania, Bulgaria, Greece, Brazil, Australia, New Zealand, USSR, Germany, Poland, Japan, Mongolia, China, South Africa, Ethiopia",Finland,FIN,Polity,data
+G3,Inter-state wars,World War II,"Inter-state war: Hungary, Belgium, France, Yugoslavia, Finland, Norway, Canada, United States of America, United Kingdom, Netherlands, Italy, Romania, Bulgaria, Greece, Brazil, Australia, New Zealand, USSR, Germany, Poland, Japan, Mongolia, China, South Africa, Ethiopia",Norway,NOR,Polity,data
+G3,Inter-state wars,World War II,"Inter-state war: Hungary, Belgium, France, Yugoslavia, Finland, Norway, Canada, United States of America, United Kingdom, Netherlands, Italy, Romania, Bulgaria, Greece, Brazil, Australia, New Zealand, USSR, Germany, Poland, Japan, Mongolia, China, South Africa, Ethiopia",Ethiopia,ETH,Polity,data
+G3,Inter-state wars,World War II,"Inter-state war: Hungary, Belgium, France, Yugoslavia, Finland, Norway, Canada, United States of America, United Kingdom, Netherlands, Italy, Romania, Bulgaria, Greece, Brazil, Australia, New Zealand, USSR, Germany, Poland, Japan, Mongolia, China, South Africa, Ethiopia",South Africa,SAF,Polity,data
+G3,Inter-state wars,World War II,"Inter-state war: Hungary, Belgium, France, Yugoslavia, Finland, Norway, Canada, United States of America, United Kingdom, Netherlands, Italy, Romania, Bulgaria, Greece, Brazil, Australia, New Zealand, USSR, Germany, Poland, Japan, Mongolia, China, South Africa, Ethiopia",China,CHN,Polity,data
+G3,Inter-state wars,World War II,"Inter-state war: Hungary, Belgium, France, Yugoslavia, Finland, Norway, Canada, United States of America, United Kingdom, Netherlands, Italy, Romania, Bulgaria, Greece, Brazil, Australia, New Zealand, USSR, Germany, Poland, Japan, Mongolia, China, South Africa, Ethiopia",Mongolia,MON,Polity,data
+G3,Inter-state wars,World War II,"Inter-state war: Hungary, Belgium, France, Yugoslavia, Finland, Norway, Canada, United States of America, United Kingdom, Netherlands, Italy, Romania, Bulgaria, Greece, Brazil, Australia, New Zealand, USSR, Germany, Poland, Japan, Mongolia, China, South Africa, Ethiopia",Japan,JPN,Polity,data
+G3,Inter-state wars,World War II,"Inter-state war: Hungary, Belgium, France, Yugoslavia, Finland, Norway, Canada, United States of America, United Kingdom, Netherlands, Italy, Romania, Bulgaria, Greece, Brazil, Australia, New Zealand, USSR, Germany, Poland, Japan, Mongolia, China, South Africa, Ethiopia",Australia,AUL,Polity,data
+G3,Inter-state wars,World War II,"Inter-state war: Hungary, Belgium, France, Yugoslavia, Finland, Norway, Canada, United States of America, United Kingdom, Netherlands, Italy, Romania, Bulgaria, Greece, Brazil, Australia, New Zealand, USSR, Germany, Poland, Japan, Mongolia, China, South Africa, Ethiopia",New Zealand,NEW,Polity,data
+G3,Inter-state wars,Yom Kippur War,"Inter-state war: Egypt, Saudi Arabia, Israel, Jordan, Syria, Iraq",Iraq,IRQ,Polity,data
+G3,Inter-state wars,Yom Kippur War,"Inter-state war: Egypt, Saudi Arabia, Israel, Jordan, Syria, Iraq",Egypt,EGY,Polity,data
+G3,Inter-state wars,Yom Kippur War,"Inter-state war: Egypt, Saudi Arabia, Israel, Jordan, Syria, Iraq",Syria,SYR,Polity,data
+G3,Inter-state wars,Yom Kippur War,"Inter-state war: Egypt, Saudi Arabia, Israel, Jordan, Syria, Iraq",Jordan,JOR,Polity,data
+G3,Inter-state wars,Yom Kippur War,"Inter-state war: Egypt, Saudi Arabia, Israel, Jordan, Syria, Iraq",Israel,ISR,Polity,data
+G3,Inter-state wars,Yom Kippur War,"Inter-state war: Egypt, Saudi Arabia, Israel, Jordan, Syria, Iraq",Saudi Arabia,SAU,Polity,data
