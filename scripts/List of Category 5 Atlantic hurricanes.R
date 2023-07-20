@@ -2,15 +2,14 @@ source("utils/functions.R")
 
 url = "https://en.wikipedia.org/wiki/List_of_Category_5_Atlantic_hurricanes"
 cat_name = "List of Category 5 Atlantic hurricanes"
-cat_id = "G70"
 
 tables = download_tables(url)
 suggested_tables = suggest_tables_to_keep(tables)
 
 # Table 2 is the one we want
 # Table 5 may be interesting if we want a better picture of damage
-table = tables[[1]] %>%
-  .[2:nrow(.),c(1:8)] %>%
+table = tables[[2]] %>%
+  .[,c(1:8)] %>%
   clean_table()
 colnames(table) = c("Name","Dates","Duration","Wind","Pressure","Areas",
                     "Damage","Deaths")
@@ -47,8 +46,7 @@ table = table %>%
 
 # put into uniform format
 table = table %>%
-  mutate(`Category ID` = cat_id,
-         Category = cat_name,
+  mutate(Category = cat_name,
          Event = Name,
          `Event description` = paste0("Peak winds(km/h): ",Wind,
                                       "; Pressure(hPa): ",Pressure,
@@ -58,19 +56,15 @@ table = table %>%
          `Timepoint start` = start,
          `Timepoint end` = end,
          `Quantity outcome 1` = Duration,
-         `Quantity outcome 2` = Deaths,
-         `Reference/link to data` = url,
-         `Accessed on` = Sys.Date()
+         `Quantity outcome 2` = Deaths
   ) %>%
-  select(`Category ID`, Category, Event, `Event description`, `Timepoint start`,
-         `Timepoint end`, `Quantity outcome 1`, `Reference/link to data`,
-         `Accessed on`)
+  add_and_keep_relevant_cols()
 
 fwrite(table,"output/list of cat 5 atlantic hurricanes.csv")
 
 # create an entry for the category entry field.
 metadata <- data.table(
-  "Category ID" = cat_id,
+  "Category ID" = "tbd",
   "Category name" = cat_name,
   "Description" = cat_name,
   "Description quantity column 1" = "Time spent as a category 5 storm, in hours",

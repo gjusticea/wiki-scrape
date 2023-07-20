@@ -2,7 +2,6 @@ source("utils/functions.R")
 
 url = "https://en.wikipedia.org/wiki/List_of_Category_5_Pacific_hurricanes"
 cat_name = "List of Category 5 Pacific hurricanes"
-cat_id = "G69"
 cat_start = as.Date("")
 
 tables = download_tables(url)
@@ -10,7 +9,8 @@ suggested_tables = suggest_tables_to_keep(tables)
 
 # only one useful table included, heuristics 1/3/4 all work
 table = tables[[suggested_tables$`max cols`]] %>%
-  .[c(2:nrow(.)),c(1:4,6,7)]
+  .[,c(1:4,6,7)] %>%
+  clean_table()
 colnames(table) = c("Name","Year","Dates","Time.as.cat.5","kmh","hPa")
 
 table = table %>%
@@ -24,26 +24,21 @@ table = table %>%
          end = ifelse(start != end, paste0(gsub("[^a-zA-z]", " ", start),end),end),
          across(c(start,end),paste0,", ",Year)
   ) %>%
-  mutate(`Category ID` = cat_id,
-         Category = cat_name,
+  mutate(Category = cat_name,
          Event = Name,
          `Event description` = paste0("Peak one-minute sustained winds(km/h): ",kmh,
                                       "; Pressure(hPa): ",hPa),
          `Timepoint start` = as_date(start,format = "%B%d, %Y"),
          `Timepoint end` = as_date(end,format = "%B%d, %Y"),
-         `Quantity outcome 1` = Time.as.cat.5,
-         `Reference/link to data` = url,
-         `Accessed on` = Sys.Date()
+         `Quantity outcome 1` = Time.as.cat.5
   ) %>%
-  select(`Category ID`,Category, Event, `Event description`, `Timepoint start`,
-         `Timepoint end`, `Quantity outcome 1`, `Reference/link to data`,
-         `Accessed on`)
+  add_and_keep_relevant_cols()
 
 fwrite(table,"output/list of cat 5 pacific hurricanes.csv")
 
 # create an entry for the category entry field.
 metadata <- data.table(
-  "Category ID" = cat_id,
+  "Category ID" = "tbd",
   "Category name" = cat_name,
   "Description" = cat_name,
   "Description quantity column 1" = "Time spent as a category 5 storm, in hours",
