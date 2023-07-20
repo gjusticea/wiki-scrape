@@ -1,0 +1,133 @@
+Category ID,Category,Event,Event description,country,ccode,type,src
+G5,State-nonstate wars,Afghan Resistance,"State vs. nonstate: France, Australia, Germany, United Kingdom, Canada, United States, Afghanistan vs. al-Qaeda & Taliban",Australia,AUL,Polity,data
+G5,State-nonstate wars,Afghan Resistance,"State vs. nonstate: France, Australia, Germany, United Kingdom, Canada, United States, Afghanistan vs. al-Qaeda & Taliban",United States of America,USA,Polity,data
+G5,State-nonstate wars,Afghan Resistance,"State vs. nonstate: France, Australia, Germany, United Kingdom, Canada, United States, Afghanistan vs. al-Qaeda & Taliban",Afghanistan,AFG,Polity,data
+G5,State-nonstate wars,Afghan Resistance,"State vs. nonstate: France, Australia, Germany, United Kingdom, Canada, United States, Afghanistan vs. al-Qaeda & Taliban",Germany,GMY,Polity,data
+G5,State-nonstate wars,Afghan Resistance,"State vs. nonstate: France, Australia, Germany, United Kingdom, Canada, United States, Afghanistan vs. al-Qaeda & Taliban",United Kingdom,UKG,Polity,data
+G5,State-nonstate wars,Afghan Resistance,"State vs. nonstate: France, Australia, Germany, United Kingdom, Canada, United States, Afghanistan vs. al-Qaeda & Taliban",Canada,CAN,Polity,data
+G5,State-nonstate wars,Afghan Resistance,"State vs. nonstate: France, Australia, Germany, United Kingdom, Canada, United States, Afghanistan vs. al-Qaeda & Taliban",France,FRN,Polity,data
+G5,State-nonstate wars,Allied Bombardment of Algiers,"State vs. nonstate: Netherlands, United Kingdom vs. Algeria",United Kingdom,UKG,Polity,data
+G5,State-nonstate wars,Allied Bombardment of Algiers,"State vs. nonstate: Netherlands, United Kingdom vs. Algeria",Netherlands,NTH,Polity,data
+G5,State-nonstate wars,Anti-Foreign Revolt,State vs. nonstate: France vs. Sheikh Ma Al-Ainie,France,FRN,Polity,data
+G5,State-nonstate wars,Argentine-Buenos Aires,State vs. nonstate: Argentina vs. Buenos Aires,Argentina,ARG,Polity,data
+G5,State-nonstate wars,Attack on Bahr el-Ghazal,State vs. nonstate: Egypt vs. Bahr el-Ghazal,Egypt,EGY,Polity,data
+G5,State-nonstate wars,Austrian-Bosnian,State vs. nonstate: Austria-Hungary vs. Bosnia,Austria-Hungary,AUH,Polity,data
+G5,State-nonstate wars,Bailundu Revolt,State vs. nonstate: Portugal vs. Bailundu of Angola,Portugal,POR,Polity,data
+G5,State-nonstate wars,Belgian-Tib,State vs. nonstate: Belgium vs. Tippu Tib Empire,Belgium,BEL,Polity,data
+G5,State-nonstate wars,Brazil-Argentine,State vs. nonstate: Brazil vs. Argentina,Brazil,BRA,Polity,data
+G5,State-nonstate wars,British-Bhutanese,State vs. nonstate: United Kingdom vs. Bhutan,United Kingdom,UKG,Polity,data
+G5,State-nonstate wars,British-Ethiopian,State vs. nonstate: United Kingdom vs. Ethiopians,United Kingdom,UKG,Polity,data
+G5,State-nonstate wars,British-Sind,State vs. nonstate: United Kingdom vs. Sind,United Kingdom,UKG,Polity,data
+G5,State-nonstate wars,British-South Nigerian,State vs. nonstate: United Kingdom vs. Nigeria,United Kingdom,UKG,Polity,data
+G5,State-nonstate wars,British Conquest of Kano & Sokoto,State vs. nonstate: United Kingdom vs. Kano & Sokoto,United Kingdom,UKG,Polity,data
+G5,State-nonstate wars,British Umbeyla Campaign,State vs. nonstate: United Kingdom vs. Pathan tribe,United Kingdom,UKG,Polity,data
+G5,State-nonstate wars,Chinese Pirates,State vs. nonstate: United Kingdom vs. Chinese Pirates,United Kingdom,UKG,Polity,data
+G5,State-nonstate wars,Conquest of Mongolia,"State vs. nonstate: USSR, China vs. ",China,CHN,Polity,data
+G5,State-nonstate wars,Conquest of Mongolia,"State vs. nonstate: USSR, China vs. ",Russia,RUS,Polity,data
+G5,State-nonstate wars,Cracow Revolt,"State vs. nonstate: Russia, Prussia, Austria vs. Cracow",Russia,RUS,Polity,data
+G5,State-nonstate wars,Cracow Revolt,"State vs. nonstate: Russia, Prussia, Austria vs. Cracow",Germany,GMY,Polity,data
+G5,State-nonstate wars,Cracow Revolt,"State vs. nonstate: Russia, Prussia, Austria vs. Cracow",Austria-Hungary,AUH,Polity,data
+G5,State-nonstate wars,Dembos War,State vs. nonstate: Portugal vs. Dembos,Portugal,POR,Polity,data
+G5,State-nonstate wars,"East Timorese, Phase 2",State vs. nonstate: Indonesia vs. Fretilin & UDT,Indonesia,INS,Polity,data
+G5,State-nonstate wars,Egypt-Sudanese Slavers,State vs. nonstate: Egypt vs. Sudanese Slavers,Egypt,EGY,Polity,data
+G5,State-nonstate wars,Egyptian-Ethiopian,State vs. nonstate: Egypt vs. Ethiopia,Egypt,EGY,Polity,data
+G5,State-nonstate wars,First British-Afghan,State vs. nonstate: United Kingdom vs. Afghanistan,United Kingdom,UKG,Polity,data
+G5,State-nonstate wars,First British-Ashanti,State vs. nonstate: United Kingdom vs. Ashanti-Ghana,United Kingdom,UKG,Polity,data
+G5,State-nonstate wars,First British-Burmese,State vs. nonstate: United Kingdom vs. Burma,United Kingdom,UKG,Polity,data
+G5,State-nonstate wars,First British-Sikh,State vs. nonstate: United Kingdom vs. Sikhs,United Kingdom,UKG,Polity,data
+G5,State-nonstate wars,First British-Waziristan,State vs. nonstate: United Kingdom vs. Waziristan,United Kingdom,UKG,Polity,data
+G5,State-nonstate wars,First British-Xhosa,State vs. nonstate: United Kingdom vs. Khosa,United Kingdom,UKG,Polity,data
+G5,State-nonstate wars,First British-Zulu,State vs. nonstate: United Kingdom vs. Zulu tribe,United Kingdom,UKG,Polity,data
+G5,State-nonstate wars,First Dutch-Achinese,State vs. nonstate: Netherlands vs. Aceh,Netherlands,NTH,Polity,data
+G5,State-nonstate wars,First Dutch-Bali,State vs. nonstate: Netherlands vs. Bali,Netherlands,NTH,Polity,data
+G5,State-nonstate wars,First Franco-Algerian,State vs. nonstate: France vs. Algerian forces,France,FRN,Polity,data
+G5,State-nonstate wars,First Franco-Dahomeyan,State vs. nonstate: France vs. Dahomey,France,FRN,Polity,data
+G5,State-nonstate wars,First Franco-Madagascan,State vs. nonstate: France vs. Madagasar,France,FRN,Polity,data
+G5,State-nonstate wars,First Franco-Vietnamese,State vs. nonstate: France vs. Vietnam,France,FRN,Polity,data
+G5,State-nonstate wars,First Italian-Ethiopian,State vs. nonstate: Italy vs. Ethiopia,Italy,ITA,Polity,data
+G5,State-nonstate wars,First Opium,State vs. nonstate: United Kingdom vs. China,United Kingdom,UKG,Polity,data
+G5,State-nonstate wars,First PKK in Iraq,State vs. nonstate: Turkey vs. PKK in Iraq,Turkey,TUR,Polity,data
+G5,State-nonstate wars,Franco-Jolof,State vs. nonstate: France vs. Jolof/Tukulor,France,FRN,Polity,data
+G5,State-nonstate wars,Franco-Moroccan,State vs. nonstate: France vs. Morocco,France,FRN,Polity,data
+G5,State-nonstate wars,Franco-Syrian,State vs. nonstate: France vs. Syrians,France,FRN,Polity,data
+G5,State-nonstate wars,Franco-Tunisian,State vs. nonstate: France vs. Tunisia,France,FRN,Polity,data
+G5,State-nonstate wars,French-Mandinka,State vs. nonstate: France vs. Mandinka,France,FRN,Polity,data
+G5,State-nonstate wars,French-Tukulor War,State vs. nonstate: France vs. Tukulor,France,FRN,Polity,data
+G5,State-nonstate wars,French Conquest of Chad,State vs. nonstate: France vs. Rabih az-Zubayr,France,FRN,Polity,data
+G5,State-nonstate wars,French Conquest of Wadai,State vs. nonstate: France vs. Wadai sultanate,France,FRN,Polity,data
+G5,State-nonstate wars,French Occupation of Algiers,State vs. nonstate: France vs. Algeria,France,FRN,Polity,data
+G5,State-nonstate wars,Garibaldi Expedition,State vs. nonstate: Two Sicilies vs. Red Shirts,Two Sicilies,SIC,Polity,data
+G5,State-nonstate wars,Gwalior,State vs. nonstate: United Kingdom vs. Gwalior,United Kingdom,UKG,Polity,data
+G5,State-nonstate wars,Indo-Hyderabad,State vs. nonstate: India vs. Hyderabad,India,IND,Polity,data
+G5,State-nonstate wars,Iraqi Resistance,"State vs. nonstate: Australia, United States, United Kingdom, Netherlands, Spain, Poland, Italy, Ukraine, Iraq, Republic of Korea vs. al-Qaeda & Iraqi resistence",Italy,ITA,Polity,data
+G5,State-nonstate wars,Iraqi Resistance,"State vs. nonstate: Australia, United States, United Kingdom, Netherlands, Spain, Poland, Italy, Ukraine, Iraq, Republic of Korea vs. al-Qaeda & Iraqi resistence",South Korea,ROK,Polity,data
+G5,State-nonstate wars,Iraqi Resistance,"State vs. nonstate: Australia, United States, United Kingdom, Netherlands, Spain, Poland, Italy, Ukraine, Iraq, Republic of Korea vs. al-Qaeda & Iraqi resistence",Netherlands,NTH,Polity,data
+G5,State-nonstate wars,Iraqi Resistance,"State vs. nonstate: Australia, United States, United Kingdom, Netherlands, Spain, Poland, Italy, Ukraine, Iraq, Republic of Korea vs. al-Qaeda & Iraqi resistence",United Kingdom,UKG,Polity,data
+G5,State-nonstate wars,Iraqi Resistance,"State vs. nonstate: Australia, United States, United Kingdom, Netherlands, Spain, Poland, Italy, Ukraine, Iraq, Republic of Korea vs. al-Qaeda & Iraqi resistence",Ukraine,UKR,Polity,data
+G5,State-nonstate wars,Iraqi Resistance,"State vs. nonstate: Australia, United States, United Kingdom, Netherlands, Spain, Poland, Italy, Ukraine, Iraq, Republic of Korea vs. al-Qaeda & Iraqi resistence",Poland,POL,Polity,data
+G5,State-nonstate wars,Iraqi Resistance,"State vs. nonstate: Australia, United States, United Kingdom, Netherlands, Spain, Poland, Italy, Ukraine, Iraq, Republic of Korea vs. al-Qaeda & Iraqi resistence",Australia,AUL,Polity,data
+G5,State-nonstate wars,Iraqi Resistance,"State vs. nonstate: Australia, United States, United Kingdom, Netherlands, Spain, Poland, Italy, Ukraine, Iraq, Republic of Korea vs. al-Qaeda & Iraqi resistence",Spain,SPN,Polity,data
+G5,State-nonstate wars,Iraqi Resistance,"State vs. nonstate: Australia, United States, United Kingdom, Netherlands, Spain, Poland, Italy, Ukraine, Iraq, Republic of Korea vs. al-Qaeda & Iraqi resistence",Iraq,IRQ,Polity,data
+G5,State-nonstate wars,Iraqi Resistance,"State vs. nonstate: Australia, United States, United Kingdom, Netherlands, Spain, Poland, Italy, Ukraine, Iraq, Republic of Korea vs. al-Qaeda & Iraqi resistence",United States of America,USA,Polity,data
+G5,State-nonstate wars,Khmer Insurgency,"State vs. nonstate: Vietnam, Cambodia vs. Khmer Rouge",Vietnam,DRV,Polity,data
+G5,State-nonstate wars,Khmer Insurgency,"State vs. nonstate: Vietnam, Cambodia vs. Khmer Rouge",Cambodia,CAM,Polity,data
+G5,State-nonstate wars,Kokand Rebellion,State vs. nonstate: Russia vs. Kokand,Russia,RUS,Polity,data
+G5,State-nonstate wars,Kuanhama Rebellion,State vs. nonstate: Portugal vs. Kuanhama of Angola,Portugal,POR,Polity,data
+G5,State-nonstate wars,Last Ashanti War,State vs. nonstate: United Kingdom vs. Ashanti,United Kingdom,UKG,Polity,data
+G5,State-nonstate wars,Mahdist-Italian,State vs. nonstate: Italy vs. Mahdist Empire,Italy,ITA,Polity,data
+G5,State-nonstate wars,Mazrui Rebellion,State vs. nonstate: United Kingdom vs. Mazrui clan of Kenya,United Kingdom,UKG,Polity,data
+G5,State-nonstate wars,Melilla War,State vs. nonstate: Spain vs. Rif tribes,Spain,SPN,Polity,data
+G5,State-nonstate wars,Netherlands-Bone,State vs. nonstate: Netherlands vs. Bone,Netherlands,NTH,Polity,data
+G5,State-nonstate wars,Ottoman-Bilmez-Asiri War,State vs. nonstate: Ottoman Empire vs. Bilmez-Asiri,Turkey,TUR,Polity,data
+G5,State-nonstate wars,Ottoman-Wahhabi,State vs. nonstate: Ottoman Empire vs. Saudi Wahhabis,Turkey,TUR,Polity,data
+G5,State-nonstate wars,Ottoman-Yam,State vs. nonstate: Turkey/Ottoman Empire/Egypt vs. Yam,Turkey,TUR,Polity,data
+G5,State-nonstate wars,Ottoman Conquest of Arabia,"State vs. nonstate: Ottoman Empire vs. Yemen, Asir, Hasa",Turkey,TUR,Polity,data
+G5,State-nonstate wars,Ottoman Conquest of Sudan,State vs. nonstate: Ottoman Empire vs. Sudan states,Turkey,TUR,Polity,data
+G5,State-nonstate wars,Peru-Bolivian,State vs. nonstate: Peru vs. Bolivia,Peru,PER,Polity,data
+G5,State-nonstate wars,Portuguese-Gaza Empire,State vs. nonstate: Portugal vs. Gaza Empire,Portugal,POR,Polity,data
+G5,State-nonstate wars,Russian-Bukharan,State vs. nonstate: Russia vs. Bukhara,Russia,RUS,Polity,data
+G5,State-nonstate wars,Russian-Kokand,State vs. nonstate: Russia vs. Kokand,Russia,RUS,Polity,data
+G5,State-nonstate wars,Russo-Afghan,State vs. nonstate: Russia vs. Afghanistan,Russia,RUS,Polity,data
+G5,State-nonstate wars,Russo-Persian,State vs. nonstate: Russia vs. Persia,Russia,RUS,Polity,data
+G5,State-nonstate wars,Russo-Turkoman,State vs. nonstate: Russia vs. Turkomans,Russia,RUS,Polity,data
+G5,State-nonstate wars,Second Boer War,State vs. nonstate: United Kingdom vs. Boer Republics,United Kingdom,UKG,Polity,data
+G5,State-nonstate wars,Second British-Afghan,State vs. nonstate: United Kingdom vs. Afghanistan,United Kingdom,UKG,Polity,data
+G5,State-nonstate wars,Second British-Ashanti,State vs. nonstate: United Kingdom vs. Ashanti,United Kingdom,UKG,Polity,data
+G5,State-nonstate wars,Second British-Burmese,State vs. nonstate: United Kingdom vs. Burma,United Kingdom,UKG,Polity,data
+G5,State-nonstate wars,Second British-Mahdi,State vs. nonstate: United Kingdom vs. Mahdist Empire,United Kingdom,UKG,Polity,data
+G5,State-nonstate wars,Second British-Sikh,State vs. nonstate: United Kingdom vs. Sikhs,United Kingdom,UKG,Polity,data
+G5,State-nonstate wars,Second British-Waziristan,State vs. nonstate: United Kingdom vs. Pathan tribes,United Kingdom,UKG,Polity,data
+G5,State-nonstate wars,Second British-Zulu,State vs. nonstate: United Kingdom vs. Zulu,United Kingdom,UKG,Polity,data
+G5,State-nonstate wars,Second Dutch-Bali,State vs. nonstate: Netherlands vs. Bali,Netherlands,NTH,Polity,data
+G5,State-nonstate wars,Second Franco-Dahomeyan,State vs. nonstate: France vs. Dahomey,France,FRN,Polity,data
+G5,State-nonstate wars,Second Franco-Madagascan,State vs. nonstate: France vs. Madagasar,France,FRN,Polity,data
+G5,State-nonstate wars,Second Franco-Vietnamese,State vs. nonstate: France vs. Vietnam,France,FRN,Polity,data
+G5,State-nonstate wars,Second Italian-Ethiopian,State vs. nonstate: Italy vs. Ethiopia,Italy,ITA,Polity,data
+G5,State-nonstate wars,Second Opium,"State vs. nonstate: United Kingdom, France vs. China",France,FRN,Polity,data
+G5,State-nonstate wars,Second Opium,"State vs. nonstate: United Kingdom, France vs. China",United Kingdom,UKG,Polity,data
+G5,State-nonstate wars,Second PKK in Iraq,State vs. nonstate: Turkey vs. PKK in Iraq,Turkey,TUR,Polity,data
+G5,State-nonstate wars,Second Sino-Tibetan,State vs. nonstate: China vs. Tibet,China,CHN,Polity,data
+G5,State-nonstate wars,Serbian-Bulgarian,State vs. nonstate: Serbia vs. Bulgaria,Yugoslavia,YUG,Polity,data
+G5,State-nonstate wars,Serbian-Turkish,"State vs. nonstate: Ottoman Empire vs. Serbia, Montenegro",Turkey,TUR,Polity,data
+G5,State-nonstate wars,Shimonoseki War,"State vs. nonstate: United States, United Kingdom, Netherlands, France vs. Choshu Daimyo",United Kingdom,UKG,Polity,data
+G5,State-nonstate wars,Shimonoseki War,"State vs. nonstate: United States, United Kingdom, Netherlands, France vs. Choshu Daimyo",Netherlands,NTH,Polity,data
+G5,State-nonstate wars,Shimonoseki War,"State vs. nonstate: United States, United Kingdom, Netherlands, France vs. Choshu Daimyo",France,FRN,Polity,data
+G5,State-nonstate wars,Shimonoseki War,"State vs. nonstate: United States, United Kingdom, Netherlands, France vs. Choshu Daimyo",United States of America,USA,Polity,data
+G5,State-nonstate wars,Soviet Quagmire,"State vs. nonstate: USSR, Afghanistan vs. Muhajadin",Afghanistan,AFG,Polity,data
+G5,State-nonstate wars,Soviet Quagmire,"State vs. nonstate: USSR, Afghanistan vs. Muhajadin",Russia,RUS,Polity,data
+G5,State-nonstate wars,Spanish Reconquest of Mexico,State vs. nonstate: Spain vs. Mexico,Spain,SPN,Polity,data
+G5,State-nonstate wars,Third British-Afghan,State vs. nonstate: United Kingdom vs. Afghanistan,United Kingdom,UKG,Polity,data
+G5,State-nonstate wars,Third British-Ashanti,State vs. nonstate: United Kingdom vs. Ashanti,United Kingdom,UKG,Polity,data
+G5,State-nonstate wars,Third British-Burmese,State vs. nonstate: United Kingdom vs. Burma,United Kingdom,UKG,Polity,data
+G5,State-nonstate wars,Third Franco-Vietnamese,"State vs. nonstate: France vs. Vietnam, Black Flag, China",China,CHN,Polity,data
+G5,State-nonstate wars,Third Franco-Vietnamese,"State vs. nonstate: France vs. Vietnam, Black Flag, China",France,FRN,Polity,data
+G5,State-nonstate wars,Third Sino-Tibetan,State vs. nonstate: China vs. Tibet,China,CHN,Polity,data
+G5,State-nonstate wars,Turco-Persian,State vs. nonstate: Ottoman Empire vs. Persia,Turkey,TUR,Polity,data
+G5,State-nonstate wars,Uruguay War,"State vs. nonstate: Argentina vs. Uruguay, United Kingdom, France",Argentina,ARG,Polity,data
+G5,State-nonstate wars,Uruguay War,"State vs. nonstate: Argentina vs. Uruguay, United Kingdom, France",United Kingdom,UKG,Polity,data
+G5,State-nonstate wars,Uruguay War,"State vs. nonstate: Argentina vs. Uruguay, United Kingdom, France",France,FRN,Polity,data
+G5,State-nonstate wars,Western Saharan,"State vs. nonstate: Morocco, Mauritania vs. Polisario, Algeria",Mauritania,MAA,Polity,data
+G5,State-nonstate wars,Western Saharan,"State vs. nonstate: Morocco, Mauritania vs. Polisario, Algeria",Morocco,MOR,Polity,data
+G5,State-nonstate wars,Western Saharan,"State vs. nonstate: Morocco, Mauritania vs. Polisario, Algeria",Algeria,ALG,Polity,data
+G5,State-nonstate wars,Younghusband Expedition,State vs. nonstate: United Kingdom vs. Tibet,United Kingdom,UKG,Polity,data
+G5,State-nonstate wars,Zambezi Conquest,State vs. nonstate: Portugal vs. Prazero da Cruz,Portugal,POR,Polity,data

@@ -2,7 +2,6 @@ source("utils/functions.R")
 
 url = "https://en.wikipedia.org/wiki/List_of_Category_5_Pacific_hurricanes"
 cat_name = "List of Category 5 Pacific hurricanes"
-cat_id = "G69"
 cat_start = as.Date("")
 
 tables = download_tables(url)
@@ -25,8 +24,7 @@ table = table %>%
          end = ifelse(start != end, paste0(gsub("[^a-zA-z]", " ", start),end),end),
          across(c(start,end),paste0,", ",Year)
   ) %>%
-  mutate(`Category ID` = cat_id,
-         Category = cat_name,
+  mutate(Category = cat_name,
          Event = Name,
          `Event description` = paste0("Peak one-minute sustained winds(km/h): ",kmh,
                                       "; Pressure(hPa): ",hPa),
@@ -40,7 +38,7 @@ fwrite(table,"output/list of cat 5 pacific hurricanes.csv")
 
 # create an entry for the category entry field.
 metadata <- data.table(
-  "Category ID" = cat_id,
+  "Category ID" = "tbd",
   "Category name" = cat_name,
   "Description" = cat_name,
   "Description quantity column 1" = "Time spent as a category 5 storm, in hours",

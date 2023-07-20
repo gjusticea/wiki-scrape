@@ -29,6 +29,11 @@ table_raw = do.call(rbind,tables[c(5,6)]) %>%
          `Quantity outcome 1` = NA,
          `Reference/link to data` = url,
          `Accessed on` = Sys.Date())
+
+# get country info
+table_raw %>%
+  get_country_raw_info()
+
 table = table_raw %>%
   select(`Category ID`,Category, Event, `Event description`, `Timepoint start`,
          `Timepoint end`, `Quantity outcome 1`, `Reference/link to data`,
@@ -50,3 +55,4 @@ metadata <- data.table(
 )
 
 update_category_info_sheet(metadata)
+

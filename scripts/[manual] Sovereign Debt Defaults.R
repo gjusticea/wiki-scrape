@@ -60,8 +60,14 @@ table = fread("ref/BoC-BoE-Database-2022-08-18.csv") %>%
          `Timepoint end` = year_end,
          `Quantity outcome 1` = max_default,
          `Reference/link to data` = ref,
-         `Accessed on` = as.Date("2023-03-30")) %>%
+         `Accessed on` = as.Date("2023-03-30"))
 
+# Output country key information
+table %>%
+  rename(Country = COUNTRY) %>%
+  get_country_raw_info()
+
+table %<>%
 select(`Category ID`,Category, Event, `Event description`, `Timepoint start`,
        `Timepoint end`, `Quantity outcome 1`, `Reference/link to data`,
        `Accessed on`)

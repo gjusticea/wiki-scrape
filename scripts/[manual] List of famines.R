@@ -33,8 +33,13 @@ table = tables$`tablepress-73` %>%
          `Quantity outcome 1` = `Excess Mortality midpoint`,
          `Reference/link to data` = ref,
          `Accessed on` = Sys.Date()) %>%
-  ungroup() %>%
+  ungroup()
 
+# add country info
+table %>%
+  get_country_raw_info()
+
+table %<>%
 select(`Category ID`,Category, Event, `Event description`, `Timepoint start`,
        `Timepoint end`, `Quantity outcome 1`, `Reference/link to data`,
        `Accessed on`)

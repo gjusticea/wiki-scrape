@@ -26,8 +26,14 @@ table = table %>%
          `Quantity outcome 1` = yield,
          `Reference/link to data` = ifelse(country == "North Korea",
                                            ref2,ref1),
-         `Accessed on` = as.Date("2023-05-01")) %>%
+         `Accessed on` = as.Date("2023-05-01"))
 
+# output country info
+table %>%
+  rename(Country = country) %>%
+  get_country_raw_info()
+
+table %<>%
 select(`Category ID`,Category, Event, `Event description`, `Timepoint start`,
        `Timepoint end`, `Quantity outcome 1`, `Reference/link to data`,
        `Accessed on`)
@@ -48,3 +54,4 @@ metadata <- data.table(
 )
 
 update_category_info_sheet(metadata)
+
