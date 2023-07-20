@@ -58,13 +58,10 @@ table = table %>%
          `Timepoint start` = start,
          `Timepoint end` = end,
          `Quantity outcome 1` = Duration,
-         `Quantity outcome 2` = Deaths,
-         `Reference/link to data` = url,
-         `Accessed on` = Sys.Date()
+         `Quantity outcome 2` = Deaths
   ) %>%
-  select(`Category ID`, Category, Event, `Event description`, `Timepoint start`,
-         `Timepoint end`, `Quantity outcome 1`, `Reference/link to data`,
-         `Accessed on`)
+  add_and_keep_relevant_cols()
+
 
 fwrite(table,"output/list of cat 5 atlantic hurricanes.csv")
 

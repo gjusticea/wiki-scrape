@@ -13,10 +13,6 @@ suggested_tables = suggest_tables_to_keep(tables)
 # Do the cleaning
 
 
-select(`Category ID`, Category, Event, `Event description`, `Timepoint start`,
-       `Timepoint end`, `Quantity outcome 1`, `Reference/link to data`,
-       `Accessed on`)
-
 # Write to outputs folder
 fwrite(table,file = "output/")
 

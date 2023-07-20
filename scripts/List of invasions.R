@@ -30,14 +30,9 @@ table = table %>%
                                       "; Defending forces: ",`Defending forces`),
          `Timepoint start` = year,
          `Timepoint end` = NA,
-         `Quantity outcome 1` = NA,
-         `Reference/link to data` = url,
-         `Accessed on` = Sys.Date()
+         `Quantity outcome 1` = NA
   ) %>%
-  select(`Category ID`,Category, Event, `Event description`, `Timepoint start`,
-         `Timepoint end`, `Quantity outcome 1`, `Reference/link to data`,
-         `Accessed on`)
-
+  add_and_keep_relevant_cols()
 
 # Write to outputs folder
 fwrite(table,"output/list of invasions.csv")
