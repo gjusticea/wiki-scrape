@@ -140,7 +140,7 @@ update_category_info_sheet <- function(new_metadata) {
 # helper function for the repetetive task of adding a url and date column
 # and for selecting only the columns that are needed in the end
 add_and_keep_relevant_cols <- function(data, ref = url, access_date = Sys.Date()) {
-  cols_to_keep <- c("Category ID", "Category", "Event", "Event description", "Timepoint start",
+  cols_to_keep <- c("Category ID", "Category", "Event", "Event description", "Location", "Timepoint start",
                     "Timepoint end", "subj. confidence", "Binary outcome", "Quantity outcome 1",
                     "Reference/link to data", "Accessed on", "Comment")
 
